@@ -1,0 +1,11 @@
+max-history=15
+max-visible=8
+default-timeout=0
+background-color=#222222
+text-color=#ffffff
+border-color=#555555
+border-size=1
+border-radius=5
+padding=10
+font=DejaVuSans 11
+format=%s\n%b
