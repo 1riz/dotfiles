@@ -1,0 +1,6 @@
+configuration {
+  modes: "run,drun";
+  show-icons: false;
+  matching: "normal";
+}
+@theme "arthur_custom"
