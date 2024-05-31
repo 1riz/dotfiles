@@ -1,0 +1,34 @@
+[env]
+TERM = "xterm-256color"
+
+[colors.primary]
+# background = "#1e1e2e"
+background = "#000000"
+foreground = "#cdd6f4"
+
+[cursor.style]
+blinking = "On"
+
+[font]
+size = 10.0
+
+[font.normal]
+family = "FiraCodeNerdFont"
+
+[font.offset]
+x = 0
+y = 2
+
+[window.dimensions]
+columns = 140
+lines = 40
+
+[window.padding]
+x = 2
+y = 2
+
+[[keyboard.bindings]]
+action = "CreateNewWindow"
+key = "Return"
+mode = "AppCursor"
+mods = "Control"
