@@ -56,7 +56,7 @@ bar {
 
 ### Menu Apps
 set $menu_run rofi -show run
-set $menu_apps rofi -show apps -modes "apps:/home/1ri/.config/rofi/scripts/menu_apps.sh"
+set $menu_apps rofi -show apps -modes "apps:.config/rofi/scripts/menu_apps.sh"
 
 ### Menu Windows
 set $menu_win rofi -modes window -show window
