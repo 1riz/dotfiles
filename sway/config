@@ -1,0 +1,239 @@
+# Custom config for sway
+#
+
+### General
+xwayland disable
+
+### Variables
+set $mod Mod4
+set $term alacritty
+set $term_blue alacritty -o 'colors.primary.background="#1e1e2e"'
+set $term_blur alacritty -o 'window.opacity=0.6'
+set $term_floating alacritty -o 'window.opacity=0.6' --class "alacritty-floating"
+set $term_floating_blue alacritty -o 'colors.primary.background="#1e1e2e"' --class "alacritty-floating"
+set $wallpaper_2560x1440 ~/Pictures/Wallpapers/wallpaperflarei-man-near-torii-gate-wallpaper.jpg
+set $wallpaper_1920x1080 ~/Pictures/Wallpapers/wallpaperflarei-dragon-ball-dragon-ball-z-wallpaper.jpg
+set $screensaver ~/Pictures/Wallpapers/unix-user-friendly-computer-system-yua0s6nxk6hymgwj.png
+set $screenshot grimshot
+
+### Output configuration
+output HDMI-A-1 bg $wallpaper_2560x1440 fill
+output eDP-1 bg $wallpaper_1920x1080 fill
+output HDMI-A-1 resolution 2560x1440 position 0,0
+output eDP-1 resolution 1920x1080 position 2560,0
+
+### Idle configuration
+#exec swayidle -w timeout 300 'swaylock -f -c 000000 -i $screensaver -s center' timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
+exec swayidle -w timeout 300 'swaylock -f -c 000000'
+
+### Seat configuration
+seat seat0 hide_cursor 5000
+
+### Input configuration
+input "type:keyboard" {
+    xkb_layout es
+}
+
+### Windows
+font DejaVuSans 11
+default_orientation horizontal
+default_border pixel 1
+default_floating_border pixel 1
+client.focused          #555555 #555555 #ffffff #555555 #555555
+client.focused_inactive #222222 #222222 #555555 #222222 #222222
+client.unfocused        #222222 #222222 #555555 #222222 #222222
+client.urgent           #555555 #555555 #ffffff #555555 #555555
+for_window [title="Waterfox — Sharing Indicator"] floating enable, move scratchpad
+for_window [title="Library"] floating enable, resize set 1000px 1000px
+for_window [title="About Mozilla Firefox"] floating enable
+for_window [title="About Waterfox"] floating enable
+for_window [app_id="alacritty-floating"] floating enable
+
+### Status Bar
+bar {
+    swaybar_command waybar
+}
+
+### Menu Apps
+set $menu_run rofi -show run
+set $menu_apps rofi -show apps -modes "apps:/home/1ri/.config/rofi/scripts/menu_apps.sh"
+
+### Menu Windows
+set $menu_win rofi -modes window -show window
+
+### Menu Clipboard
+exec wl-paste --watch cliphist store
+set $menu_clip cliphist list | rofi -dmenu -display-columns 2 -p "clipboard" -i | cliphist decode | wl-copy
+
+### Workspaces Icons
+exec "autoname-workspaces &"
+
+### Notifications
+exec mako
+
+### GTK themes
+set $gnome-schema org.gnome.desktop.interface
+exec_always {
+    gsettings set $gnome-schema gtk-theme "Adwaita-dark"
+    gsettings set $gnome-schema icon-theme "Adwaita-dark"
+    gsettings set $gnome-schema cursor-theme "Adwaita-dark"
+    gsettings set $gnome-schema font-name "DejaVuSans 11"
+}
+
+### Key bindings
+
+# Basics:
+    bindsym $mod+d exec $menu_apps
+    bindsym $mod+g exec $menu_run
+    bindsym $mod+z exec $menu_win
+    bindsym $mod+p exec $menu_clip
+    floating_modifier $mod normal
+    bindsym $mod+Shift+c reload
+    bindsym $mod+Shift+e exec swaymsg exit
+    bindsym $mod+Shift+q kill
+    #bindsym $mod+l exec swaylock -f -c 000000 -i $screensaver -s center
+    bindsym $mod+l exec swaylock -f -c 000000
+
+# Console apps:
+    bindsym $mod+Return exec $term_blur
+    bindsym $mod+Shift+Return exec $term_blue
+    bindsym $mod+Ctrl+Return exec $term
+    bindsym $mod+n exec $term_floating
+    bindsym $mod+o exec $term_floating_blue -T "nnn" -e nnn -deoQTv
+
+# GUI apps:
+    bindsym $mod+i exec /usr/lib/firefox/firefox
+    bindsym $mod+Shift+i exec /opt/waterfox/waterfox
+    bindsym $mod+Shift+t exec /opt/tor-browser/Browser/start-tor-browser --detach
+
+# Moving around:
+    # Move your focus around
+    bindsym $mod+Left focus left
+    bindsym $mod+Down focus down
+    bindsym $mod+Up focus up
+    bindsym $mod+Right focus right
+
+    # Move the focused window with the same, but add Shift
+    bindsym $mod+Shift+Left move left
+    bindsym $mod+Shift+Down move down
+    bindsym $mod+Shift+Up move up
+    bindsym $mod+Shift+Right move right
+
+    # Move the focused floating window
+    bindsym $mod+KP_7 move position 0 0
+    bindsym $mod+KP_5 move position center
+
+# Workspaces:
+    # Switch to workspace
+    bindsym $mod+1 workspace number 1:Local
+    bindsym $mod+2 workspace number 2:Home
+    bindsym $mod+3 workspace number 3:Devel
+    bindsym $mod+4 workspace number 4:Work
+    bindsym $mod+5 workspace number 5:Admin
+    bindsym $mod+6 workspace number 6:W6
+    bindsym $mod+7 workspace number 7:W7
+    bindsym $mod+8 workspace number 8:W8
+    bindsym $mod+9 workspace number 9:W9
+    bindsym $mod+0 workspace number 10:W10
+
+    # Move focused container to workspace
+    bindsym $mod+Shift+1 move container to workspace number 1:Local
+    bindsym $mod+Shift+2 move container to workspace number 2:Home
+    bindsym $mod+Shift+3 move container to workspace number 3:Devel
+    bindsym $mod+Shift+4 move container to workspace number 4:Work
+    bindsym $mod+Shift+5 move container to workspace number 5:Admin
+    bindsym $mod+Shift+6 move container to workspace number 6:W6
+    bindsym $mod+Shift+7 move container to workspace number 7:W7
+    bindsym $mod+Shift+8 move container to workspace number 8:W8
+    bindsym $mod+Shift+9 move container to workspace number 9:W9
+    bindsym $mod+Shift+0 move container to workspace number 10:W10
+
+    # Move around workspaces
+    bindsym $mod+Next workspace next
+    bindsym $mod+Prior workspace prev
+    bindsym $mod+Tab workspace back_and_forth
+    bindsym $mod+Shift+Tab workspace prev
+
+# Layout stuff:
+    # Split the current object of your focus
+    bindsym $mod+b splith
+    bindsym $mod+v splitv
+
+    # Switch the current container between different layout styles
+    bindsym $mod+s layout stacking
+    bindsym $mod+w layout tabbed
+    bindsym $mod+e layout toggle split
+
+    # Make the current focus fullscreen
+    bindsym $mod+f fullscreen
+
+    # Toggle the current focus between tiling and floating mode
+    bindsym $mod+Shift+space floating toggle
+
+    # Swap focus between the tiling area and the floating area
+    bindsym $mod+space focus mode_toggle
+
+    # Move focus to the parent container
+    bindsym $mod+a focus parent
+
+    # Cycles through the available border styles
+    bindsym $mod+x border toggle
+
+# Scratchpad:
+    # Move the currently focused window to the scratchpad
+    bindsym $mod+Shift+minus move scratchpad
+
+    # Show the next scratchpad window or hide the focused scratchpad window
+    bindsym $mod+minus scratchpad show
+
+# Resizing containers:
+mode "resize" {
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
+
+    # Return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+# Special keys:
+    # F1-F8
+    bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+    bindsym XF86AudioPrev exec playerctl previous
+    bindsym XF86AudioPlay exec playerctl play-pause
+    bindsym XF86AudioNext exec playerctl next
+    bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+    bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+
+    # F9
+    bindsym Shift+Mod4+XF86TouchpadToggle exec $term_floating -T "fzf" -e fzf --bind 'enter:execute(bat --paging=always {})'
+
+    # F11
+    bindsym Ctrl+Mod4+XF86TouchpadToggle exec $term_floating -T "ncspot" -e ncspot
+
+    # F12
+    bindsym Mod4+XF86TouchpadToggle exec $term_blue -T "nvim" -e nvim ~/.config/sway/config
+
+    # Calc
+    bindsym XF86Calculator exec $term_floating -T "bc" -e bc -l
+
+    # Edit
+    bindsym Shift+Mod1+Mod4+XF86TouchpadToggle exec $term_blue -T "nvim" -e nvim
+
+# Screenshots:
+bindsym Print exec $screenshot --notify save screen
+bindsym Ctrl+Print exec $screenshot --notify copy screen
+bindsym Shift+Print exec $screenshot --notify save area
+bindsym Ctrl+Shift+Print exec $screenshot --notify copy area
+
+# Notifications:
+bindsym $mod+m exec makoctl dismiss
+bindsym $mod+Shift+m exec makoctl dismiss -a
+
+### System configurations
+include /etc/sway/config.d/*
