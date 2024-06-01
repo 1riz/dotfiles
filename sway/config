@@ -6,11 +6,14 @@ xwayland disable
 
 ### Variables
 set $mod Mod4
-set $term alacritty
+set $term alacritty -o 'window.opacity=0.6'
+set $term_black alacritty
 set $term_blue alacritty -o 'colors.primary.background="#1e1e2e"'
-set $term_blur alacritty -o 'window.opacity=0.6'
+
 set $term_floating alacritty -o 'window.opacity=0.6' --class "alacritty-floating"
 set $term_floating_blue alacritty -o 'colors.primary.background="#1e1e2e"' --class "alacritty-floating"
+set $term_floating_grey alacritty -o 'colors.primary.background="#222222"' --class "alacritty-floating"
+
 set $wallpaper_2560x1440 ~/Pictures/Wallpapers/wallpaperflarei-man-near-torii-gate-wallpaper.jpg
 set $wallpaper_1920x1080 ~/Pictures/Wallpapers/wallpaperflarei-dragon-ball-dragon-ball-z-wallpaper.jpg
 set $screensaver ~/Pictures/Wallpapers/unix-user-friendly-computer-system-yua0s6nxk6hymgwj.png
@@ -56,7 +59,10 @@ bar {
 
 ### Menu Apps
 set $menu_run rofi -show run
-set $menu_apps rofi -show apps -modes "apps:.config/rofi/scripts/menu_apps.sh"
+set $menu_apps rofi -show apps
+
+### Menu Files
+set $menu_files rofi -show files
 
 ### Menu Windows
 set $menu_win rofi -modes window -show window
@@ -84,9 +90,11 @@ exec_always {
 
 # Basics:
     bindsym $mod+d exec $menu_apps
-    bindsym $mod+g exec $menu_run
+    bindsym $mod+Shift+d exec $menu_run
+    bindsym $mod+g exec $menu_files
     bindsym $mod+z exec $menu_win
     bindsym $mod+p exec $menu_clip
+
     floating_modifier $mod normal
     bindsym $mod+Shift+c reload
     bindsym $mod+Shift+e exec swaymsg exit
@@ -95,9 +103,9 @@ exec_always {
     bindsym $mod+l exec swaylock -f -c 000000
 
 # Console apps:
-    bindsym $mod+Return exec $term_blur
+    bindsym $mod+Return exec $term
     bindsym $mod+Shift+Return exec $term_blue
-    bindsym $mod+Ctrl+Return exec $term
+    bindsym $mod+Ctrl+Return exec $term_black
     bindsym $mod+n exec $term_floating
     bindsym $mod+o exec $term_floating_blue -T "nnn" -e nnn -deoQTv
 
@@ -220,7 +228,7 @@ bindsym $mod+r mode "resize"
     bindsym Mod4+XF86TouchpadToggle exec $term_blue -T "nvim" -e nvim ~/.config/sway/config
 
     # Calc
-    bindsym XF86Calculator exec $term_floating -T "bc" -e bc -l
+    bindsym XF86Calculator exec $term_floating_grey -o 'window.dimensions.lines=20' -o 'window.dimensions.columns=100' -T "qalc" -e qalc -c
 
     # Edit
     bindsym Shift+Mod1+Mod4+XF86TouchpadToggle exec $term_blue -T "nvim" -e nvim

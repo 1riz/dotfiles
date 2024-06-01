@@ -12,7 +12,7 @@ if [[ ${ROFI_RETV} == 0 ]]; then
   echo -en "btop\0display\x1f  BTop\n"
   echo -en "ncspot\0display\x1f  NCSpot\n"
   echo -en "nnn\0display\x1f  NNN\n"
-  echo -en "bc\0display\x1f  BC\n"
+  echo -en "qalc\0display\x1f  Qalc\n"
   echo -en "fzf\0display\x1f  FZF\n"
 
 elif [[ ${ROFI_RETV} == 1 ]]; then
@@ -42,8 +42,8 @@ elif [[ ${ROFI_RETV} == 1 ]]; then
     nnn)
       coproc { alacritty -o 'colors.primary.background="#1e1e2e"' --class "alacritty-floating" -T "nnn" -e nnn -deoQTv; }
       ;;
-    bc)
-      coproc { alacritty -o 'window.opacity=0.6' --class "alacritty-floating" -T "bc" -e bc -l; }
+    qalc)
+      coproc { alacritty -o 'colors.primary.background="#222222"' -o 'window.dimensions.lines=20' -o 'window.dimensions.columns=100' --class "alacritty-floating" -T "qalc" -e qalc -c; }
       ;;
     fzf)
       coproc { alacritty -o 'window.opacity=0.6' --class "alacritty-floating" -T "fzf" -e fzf --bind 'enter:execute(bat --paging=always {})'; }

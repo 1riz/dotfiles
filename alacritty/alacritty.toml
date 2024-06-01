@@ -3,6 +3,7 @@ TERM = "xterm-256color"
 
 [colors.primary]
 # background = "#1e1e2e"
+# background = "#222222"
 background = "#000000"
 foreground = "#cdd6f4"
 
@@ -19,9 +20,13 @@ family = "FiraCodeNerdFont"
 x = 0
 y = 2
 
+[window]
+# opacity = 0.6
+opacity = 1.0
+
 [window.dimensions]
-columns = 140
-lines = 40
+columns = 130
+lines = 35
 
 [window.padding]
 x = 2

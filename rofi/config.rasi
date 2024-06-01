@@ -1,6 +1,9 @@
 configuration {
-  modes: "run,drun";
+  modes: "apps:.config/rofi/scripts/apps.sh,run,files:.config/rofi/scripts/files.sh";
   show-icons: false;
+  case-sensitive: false;
   matching: "normal";
+  terminal: "alacritty";
+  window-format: "󰣆  {c}  {t}";
 }
 @theme "arthur_custom"
