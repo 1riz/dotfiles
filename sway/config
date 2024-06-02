@@ -13,17 +13,13 @@ set $term_blue alacritty -o 'colors.primary.background="#1e1e2e"'
 set $term_floating alacritty -o 'window.opacity=0.6' --class "alacritty-floating"
 set $term_floating_blue alacritty -o 'colors.primary.background="#1e1e2e"' --class "alacritty-floating"
 set $term_floating_grey alacritty -o 'colors.primary.background="#222222"' --class "alacritty-floating"
-
-set $wallpaper_2560x1440 ~/Pictures/Wallpapers/wallpaperflarei-man-near-torii-gate-wallpaper.jpg
-set $wallpaper_1920x1080 ~/Pictures/Wallpapers/wallpaperflarei-dragon-ball-dragon-ball-z-wallpaper.jpg
 set $screensaver ~/Pictures/Wallpapers/unix-user-friendly-computer-system-yua0s6nxk6hymgwj.png
 set $screenshot grimshot
 
 ### Output configuration
-output HDMI-A-1 bg $wallpaper_2560x1440 fill
-output eDP-1 bg $wallpaper_1920x1080 fill
 output HDMI-A-1 resolution 2560x1440 position 0,0
 output eDP-1 resolution 1920x1080 position 2560,0
+exec wpaperd -d
 
 ### Idle configuration
 #exec swayidle -w timeout 300 'swaylock -f -c 000000 -i $screensaver -s center' timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
@@ -242,6 +238,12 @@ bindsym Ctrl+Shift+Print exec $screenshot --notify copy area
 # Notifications:
 bindsym $mod+m exec makoctl dismiss
 bindsym $mod+Shift+m exec makoctl dismiss -a
+
+# Wallpapers:
+bindsym $mod+u exec wpaperctl next eDP-1
+bindsym $mod+Shift+u exec wpaperctl previous eDP-1
+bindsym $mod+y exec wpaperctl next HDMI-A-1
+bindsym $mod+Shift+y exec wpaperctl previous HDMI-A-1
 
 ### System configurations
 include /etc/sway/config.d/*

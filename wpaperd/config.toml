@@ -1,0 +1,10 @@
+[default]
+mode = "center"
+sorting = "ascending"
+
+[eDP-1]
+path = "~/Pictures/Wallpapers/1920x1080"
+duration = "30m"
+
+[HDMI-A-1]
+path = "~/Pictures/Wallpapers/2560x1440"
