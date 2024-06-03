@@ -6,11 +6,11 @@ xwayland disable
 
 ### Variables
 set $mod Mod4
-set $term alacritty -o 'window.opacity=0.6'
+set $term alacritty -o 'window.opacity=0.8'
 set $term_black alacritty
 set $term_blue alacritty -o 'colors.primary.background="#1e1e2e"'
 
-set $term_floating alacritty -o 'window.opacity=0.6' --class "alacritty-floating"
+set $term_floating alacritty -o 'window.opacity=0.8' --class "alacritty-floating"
 set $term_floating_blue alacritty -o 'colors.primary.background="#1e1e2e"' --class "alacritty-floating"
 set $term_floating_grey alacritty -o 'colors.primary.background="#222222"' --class "alacritty-floating"
 set $screensaver ~/Pictures/Wallpapers/unix-user-friendly-computer-system-yua0s6nxk6hymgwj.png
@@ -19,6 +19,7 @@ set $screenshot grimshot
 ### Output configuration
 output HDMI-A-1 resolution 2560x1440 position 0,0
 output eDP-1 resolution 1920x1080 position 2560,0
+swaybg_command -
 exec wpaperd -d
 
 ### Idle configuration
@@ -69,6 +70,9 @@ set $menu_clip cliphist list | rofi -dmenu -display-columns 2 -p "clipboard" -i 
 
 ### Workspaces Icons
 exec "autoname-workspaces &"
+
+### Workspaces Layout
+exec_always autotiling
 
 ### Notifications
 exec mako

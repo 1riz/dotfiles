@@ -37,7 +37,7 @@ elif [[ ${ROFI_RETV} == 1 ]]; then
       coproc { alacritty -T "btop" -e btop; }
       ;;
     ncspot)
-      coproc { alacritty -o 'window.opacity=0.6' --class "alacritty-floating" -T "ncspot" -e ncspot; }
+      coproc { alacritty -o 'window.opacity=0.8' --class "alacritty-floating" -T "ncspot" -e ncspot; }
       ;;
     nnn)
       coproc { alacritty -o 'colors.primary.background="#1e1e2e"' --class "alacritty-floating" -T "nnn" -e nnn -deoQTv; }
@@ -46,7 +46,7 @@ elif [[ ${ROFI_RETV} == 1 ]]; then
       coproc { alacritty -o 'colors.primary.background="#222222"' -o 'window.dimensions.lines=20' -o 'window.dimensions.columns=100' --class "alacritty-floating" -T "qalc" -e qalc -c; }
       ;;
     fzf)
-      coproc { alacritty -o 'window.opacity=0.6' --class "alacritty-floating" -T "fzf" -e fzf --bind 'enter:execute(bat --paging=always {})'; }
+      coproc { alacritty -o 'window.opacity=0.8' --class "alacritty-floating" -T "fzf" -e fzf --bind 'enter:execute(bat --paging=always {})'; }
       ;;
   esac
 

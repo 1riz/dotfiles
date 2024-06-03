@@ -19,3 +19,4 @@ My personal dotfiles.
 - [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
 - [grim](https://git.sr.ht/~emersion/grim)
 - [slurp](https://github.com/emersion/slurp)
+- [autotiling](https://github.com/nwg-piotr/autotiling)

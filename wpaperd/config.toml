@@ -1,5 +1,5 @@
 [default]
-mode = "center"
+mode = "stretch"
 sorting = "ascending"
 
 [eDP-1]
