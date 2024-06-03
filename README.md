@@ -13,7 +13,7 @@ My personal dotfiles.
 - [waybar](https://github.com/Alexays/Waybar)
 - [wpaperd](https://github.com/danyspin97/wpaperd)
 - [sway-contrib](https://github.com/OctopusET/sway-contrib)
-- [mako](https://github.com/emersion/mako)
+- [dunst](https://github.com/dunst-project/dunst)
 - [rofi](https://github.com/davatorium/rofi)
 - [cliphist](https://github.com/sentriz/cliphist)
 - [wl-clipboard](https://github.com/bugaevc/wl-clipboard)

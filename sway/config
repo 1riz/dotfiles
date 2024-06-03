@@ -13,8 +13,7 @@ set $term_blue alacritty -o 'colors.primary.background="#1e1e2e"'
 set $term_floating alacritty -o 'window.opacity=0.8' --class "alacritty-floating"
 set $term_floating_blue alacritty -o 'colors.primary.background="#1e1e2e"' --class "alacritty-floating"
 set $term_floating_grey alacritty -o 'colors.primary.background="#222222"' --class "alacritty-floating"
-set $screensaver ~/Pictures/Wallpapers/unix-user-friendly-computer-system-yua0s6nxk6hymgwj.png
-set $screenshot grimshot
+set $screensaver swaylock -f -c 000000 -i ~/Pictures/Wallpapers/swaylock/wallpaper-001-UHD-text-arch-linux-dark-logo.jpg -s stretch
 
 ### Output configuration
 output HDMI-A-1 resolution 2560x1440 position 0,0
@@ -23,8 +22,7 @@ swaybg_command -
 exec wpaperd -d
 
 ### Idle configuration
-#exec swayidle -w timeout 300 'swaylock -f -c 000000 -i $screensaver -s center' timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
-exec swayidle -w timeout 300 'swaylock -f -c 000000'
+exec swayidle -w timeout 300 '$screensaver' timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
 
 ### Seat configuration
 seat seat0 hide_cursor 5000
@@ -39,6 +37,7 @@ font DejaVuSans 11
 default_orientation horizontal
 default_border pixel 1
 default_floating_border pixel 1
+smart_borders on
 client.focused          #555555 #555555 #ffffff #555555 #555555
 client.focused_inactive #222222 #222222 #555555 #222222 #222222
 client.unfocused        #222222 #222222 #555555 #222222 #222222
@@ -74,9 +73,6 @@ exec "autoname-workspaces &"
 ### Workspaces Layout
 exec_always autotiling
 
-### Notifications
-exec mako
-
 ### GTK themes
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
@@ -99,8 +95,7 @@ exec_always {
     bindsym $mod+Shift+c reload
     bindsym $mod+Shift+e exec swaymsg exit
     bindsym $mod+Shift+q kill
-    #bindsym $mod+l exec swaylock -f -c 000000 -i $screensaver -s center
-    bindsym $mod+l exec swaylock -f -c 000000
+    bindsym $mod+l exec $screensaver
 
 # Console apps:
     bindsym $mod+Return exec $term
@@ -234,14 +229,15 @@ bindsym $mod+r mode "resize"
     bindsym Shift+Mod1+Mod4+XF86TouchpadToggle exec $term_blue -T "nvim" -e nvim
 
 # Screenshots:
-bindsym Print exec $screenshot --notify save screen
-bindsym Ctrl+Print exec $screenshot --notify copy screen
-bindsym Shift+Print exec $screenshot --notify save area
-bindsym Ctrl+Shift+Print exec $screenshot --notify copy area
+bindsym Print exec grimshot --notify save screen
+bindsym Ctrl+Print exec grimshot --notify copy screen
+bindsym Shift+Print exec grimshot --notify save area
+bindsym Ctrl+Shift+Print exec grimshot --notify copy area
 
 # Notifications:
-bindsym $mod+m exec makoctl dismiss
-bindsym $mod+Shift+m exec makoctl dismiss -a
+bindsym $mod+m exec dunstctl close
+bindsym $mod+Shift+m exec dunstctl close-all
+bindsym $mod+Ctrl+m exec dunstctl history-pop
 
 # Wallpapers:
 bindsym $mod+u exec wpaperctl next eDP-1
