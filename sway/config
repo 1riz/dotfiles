@@ -13,7 +13,6 @@ set $term_blue alacritty -o 'colors.primary.background="#1e1e2e"'
 set $term_floating alacritty -o 'window.opacity=0.8' --class "alacritty-floating"
 set $term_floating_blue alacritty -o 'colors.primary.background="#1e1e2e"' --class "alacritty-floating"
 set $term_floating_grey alacritty -o 'colors.primary.background="#222222"' --class "alacritty-floating"
-set $screensaver swaylock -f -c 000000 -i ~/Pictures/Wallpapers/swaylock/wallpaper-001-UHD-text-arch-linux-dark-logo.jpg -s stretch
 
 ### Output configuration
 output HDMI-A-1 resolution 2560x1440 position 0,0
@@ -22,7 +21,7 @@ swaybg_command -
 exec wpaperd -d
 
 ### Idle configuration
-exec swayidle -w timeout 300 '$screensaver' timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
+exec swayidle -w timeout 300 swaylock timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
 
 ### Seat configuration
 seat seat0 hide_cursor 5000
@@ -95,7 +94,7 @@ exec_always {
     bindsym $mod+Shift+c reload
     bindsym $mod+Shift+e exec swaymsg exit
     bindsym $mod+Shift+q kill
-    bindsym $mod+l exec $screensaver
+    bindsym $mod+l exec swaylock
 
 # Console apps:
     bindsym $mod+Return exec $term
