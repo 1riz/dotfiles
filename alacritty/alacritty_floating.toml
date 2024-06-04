@@ -1,0 +1,7 @@
+import = [
+  "~/.config/alacritty/alacritty.toml"
+]
+
+[window.padding]
+x = 8
+y = 6

@@ -6,13 +6,11 @@ xwayland disable
 
 ### Variables
 set $mod Mod4
-set $term alacritty -o 'window.opacity=0.8'
-set $term_black alacritty
-set $term_blue alacritty -o 'colors.primary.background="#1e1e2e"'
-
-set $term_floating alacritty -o 'window.opacity=0.8' --class "alacritty-floating"
-set $term_floating_blue alacritty -o 'colors.primary.background="#1e1e2e"' --class "alacritty-floating"
-set $term_floating_grey alacritty -o 'colors.primary.background="#222222"' --class "alacritty-floating"
+set $term alacritty
+set $term_black alacritty --config-file ~/.config/alacritty/alacritty_black.toml
+set $term_blue alacritty --config-file ~/.config/alacritty/alacritty_blue.toml
+set $term_floating alacritty --config-file ~/.config/alacritty/alacritty_floating.toml --class "alacritty-floating"
+set $term_floating_blue alacritty --config-file ~/.config/alacritty/alacritty_floating_blue.toml --class "alacritty-floating"
 
 ### Output configuration
 output HDMI-A-1 resolution 2560x1440 position 0,0
@@ -30,6 +28,12 @@ seat seat0 hide_cursor 5000
 input "type:keyboard" {
     xkb_layout es
 }
+
+### Appearance (SwayFX only)
+corner_radius 20
+blur on
+shadows on
+shadow_blur_radius 20
 
 ### Windows
 font DejaVuSans 11
@@ -222,7 +226,7 @@ bindsym $mod+r mode "resize"
     bindsym Mod4+XF86TouchpadToggle exec $term_blue -T "nvim" -e nvim ~/.config/sway/config
 
     # Calc
-    bindsym XF86Calculator exec $term_floating_grey -o 'window.dimensions.lines=20' -o 'window.dimensions.columns=100' -T "qalc" -e qalc -c
+    bindsym XF86Calculator exec $term_floating_blue -o 'window.dimensions.lines=20' -o 'window.dimensions.columns=100' -T "qalc" -e qalc -c
 
     # Edit
     bindsym Shift+Mod1+Mod4+XF86TouchpadToggle exec $term_blue -T "nvim" -e nvim

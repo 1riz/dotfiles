@@ -1,0 +1,9 @@
+import = [
+  "~/.config/alacritty/alacritty.toml"
+]
+
+[colors.primary]
+background = "#1e1e2e"
+
+[window]
+opacity = 1.0

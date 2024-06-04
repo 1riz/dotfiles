@@ -8,6 +8,7 @@ My personal dotfiles.
 - [alacritty](https://github.com/alacritty/alacritty)
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [sway](https://github.com/swaywm/sway)
+- [swayfx](https://github.com/WillPower3309/swayfx)
 - [swayidle](https://github.com/swaywm/swayidle)
 - [swalock](https://github.com/swaywm/swaylock)
 - [waybar](https://github.com/Alexays/Waybar)
