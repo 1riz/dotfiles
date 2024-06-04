@@ -53,8 +53,8 @@ window {
     location: center;
     anchor:   center;
     transparency: "real";
-    padding: 10px;
-    border:  0px;
+    padding: 0;
+    border:  0;
     border-radius: 10px;
     color: @magenta;
     background-color: @transparent;
