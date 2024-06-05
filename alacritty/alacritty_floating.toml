@@ -2,6 +2,9 @@ import = [
   "~/.config/alacritty/alacritty.toml"
 ]
 
+[window.class]
+general = "alacritty-floating"
+
 [window.padding]
 x = 8
 y = 6

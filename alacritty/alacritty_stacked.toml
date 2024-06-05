@@ -2,14 +2,8 @@ import = [
   "~/.config/alacritty/alacritty.toml"
 ]
 
-[colors.primary]
-background = "#1e1e2e"
-
-[window]
-opacity = 1.0
-
 [window.class]
-general = "alacritty-floating"
+general = "alacritty-stacked"
 
 [window.padding]
 x = 8

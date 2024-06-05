@@ -21,6 +21,9 @@ y = 2
 [window]
 opacity = 0.6
 
+[window.class]
+general = "alacritty-tiling"
+
 [window.dimensions]
 columns = 130
 lines = 35

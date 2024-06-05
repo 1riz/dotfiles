@@ -1,6 +1,0 @@
-import = [
-  "~/.config/alacritty/alacritty.toml"
-]
-
-[window]
-opacity = 1.0

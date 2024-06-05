@@ -7,10 +7,10 @@ xwayland disable
 ### Variables
 set $mod Mod4
 set $term alacritty
-set $term_black alacritty --config-file ~/.config/alacritty/alacritty_black.toml
+set $term_stacked alacritty --config-file ~/.config/alacritty/alacritty_stacked.toml
 set $term_blue alacritty --config-file ~/.config/alacritty/alacritty_blue.toml
-set $term_floating alacritty --config-file ~/.config/alacritty/alacritty_floating.toml --class "alacritty-floating"
-set $term_floating_blue alacritty --config-file ~/.config/alacritty/alacritty_floating_blue.toml --class "alacritty-floating"
+set $term_floating alacritty --config-file ~/.config/alacritty/alacritty_floating.toml
+set $term_floating_blue alacritty --config-file ~/.config/alacritty/alacritty_floating_blue.toml
 
 ### Output configuration
 output HDMI-A-1 resolution 2560x1440 position 0,0
@@ -53,33 +53,30 @@ for_window [title="Library"] floating enable, resize set 1000px 1000px
 for_window [title="About Mozilla Firefox"] floating enable
 for_window [title="About Waterfox"] floating enable
 for_window [app_id="alacritty-floating"] floating enable
+for_window [app_id="alacritty-tiling"] shadows off
 
 ### Status Bar
 bar {
     swaybar_command waybar
 }
 
-### Menu Apps
+### Menus
 set $menu_run rofi -show run
 set $menu_apps rofi -show apps
-
-### Menu Files
 set $menu_files rofi -show files
-
-### Menu Windows
 set $menu_win rofi -modes window -show window
-
-### Menu Clipboard
-exec wl-paste --watch cliphist store
 set $menu_clip cliphist list | rofi -dmenu -display-columns 2 -p "clipboard" -i | cliphist decode | wl-copy
+
+### Clipboard History
+exec wl-paste --watch cliphist store
 
 ### Workspaces Icons
 exec "autoname-workspaces &"
 
 ### Workspaces Layout
 exec_always autotiling
-workspace 5:Admin gaps inner 8
-workspace 6:Hacking gaps inner 8
+workspace 5:Admin gaps inner 10
+workspace 6:Hacking gaps inner 10
 
 ### GTK themes
 set $gnome-schema org.gnome.desktop.interface
@@ -109,7 +106,7 @@ exec_always {
 # Console apps:
     bindsym $mod+Return exec $term
     bindsym $mod+Shift+Return exec $term_blue
-    bindsym $mod+Ctrl+Return exec $term_black
+    bindsym $mod+Ctrl+Return exec $term_stacked
     bindsym $mod+n exec $term_floating
     bindsym $mod+o exec $term_floating_blue -T "nnn" -e nnn -deoQTv
 
