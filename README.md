@@ -7,6 +7,7 @@ My personal dotfiles.
 - [zsh](https://github.com/zsh-users/zsh) + [omz](https://github.com/ohmyzsh/ohmyzsh)
 - [alacritty](https://github.com/alacritty/alacritty)
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
+- [tmux](https://github.com/tmux/tmux)
 - [sway](https://github.com/swaywm/sway)
 - [swayfx](https://github.com/WillPower3309/swayfx)
 - [swayidle](https://github.com/swaywm/swayidle)

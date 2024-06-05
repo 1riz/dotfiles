@@ -24,9 +24,11 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR="nvim"
 export GPG_TTY="$(tty)"
 export ZSH_THEME_TERM_TITLE_IDLE="%~"
+export ZSH_TMUX_UNICODE="true"
 
 alias vc='~/.config/nvim/scripts/nvim-cleanup.lua'
 alias v='nvim'
+alias t='tmux'
 alias n='nnn -deHoQTv'
 alias sp='ncspot'
 alias la='ls -lAhv --group-directories-first'
