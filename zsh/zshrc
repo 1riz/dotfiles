@@ -15,6 +15,7 @@ plugins=(
   thefuck
   fzf
   fp
+  pe
   z
 )
 

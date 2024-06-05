@@ -93,16 +93,17 @@ exec_always {
 ### Key bindings
 
 # Basics:
-    bindsym $mod+d exec $menu_apps
-    bindsym $mod+Shift+d exec $menu_run
-    bindsym $mod+g exec $menu_files
-    bindsym $mod+z exec $menu_win
+    # bindsym $mod+d exec $menu_apps
+    bindsym $mod+space exec $menu_apps
+    bindsym $mod+Shift+space exec $menu_files
+    bindsym $mod+Ctrl+space exec $menu_run
+    bindsym $mod+Tab exec $menu_win
     bindsym $mod+p exec $menu_clip
 
     floating_modifier $mod normal
     bindsym $mod+Shift+c reload
-    bindsym $mod+Shift+e exec swaymsg exit
     bindsym $mod+Shift+q kill
+    bindsym $mod+Shift+e exec swaymsg exit
     bindsym $mod+l exec swaylock
 
 # Console apps:
@@ -113,9 +114,7 @@ exec_always {
     bindsym $mod+o exec $term_floating_blue -T "nnn" -e nnn -deoQTv
 
 # GUI apps:
-    bindsym $mod+i exec /usr/lib/firefox/firefox
-    bindsym $mod+Shift+i exec /opt/waterfox/waterfox
-    bindsym $mod+Shift+t exec /opt/tor-browser/Browser/start-tor-browser --detach
+    bindsym $mod+i exec firefox
 
 # Moving around:
     # Move your focus around
@@ -162,8 +161,7 @@ exec_always {
     # Move around workspaces
     bindsym $mod+Next workspace next
     bindsym $mod+Prior workspace prev
-    bindsym $mod+Tab workspace back_and_forth
-    bindsym $mod+Shift+Tab workspace prev
+    # bindsym $mod+Tab workspace back_and_forth
 
 # Layout stuff:
     # Split the current object of your focus
@@ -171,24 +169,26 @@ exec_always {
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
+    # bindsym $mod+s layout stacking
+    # bindsym $mod+w layout tabbed
     bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Shift+space floating toggle
+    # bindsym $mod+Shift+space floating toggle
+    bindsym $mod+t floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    # bindsym $mod+space focus mode_toggle
+    bindsym $mod+z focus mode_toggle
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
 
     # Cycles through the available border styles
-    bindsym $mod+x border toggle
+    # bindsym $mod+x border toggle
 
 # Scratchpad:
     # Move the currently focused window to the scratchpad
@@ -221,13 +221,13 @@ bindsym $mod+r mode "resize"
     bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 
-    # F9
+    # F9 (Search)
     bindsym Shift+Mod4+XF86TouchpadToggle exec $term_floating -T "fzf" -e fzf --bind 'enter:execute(bat --paging=always {})'
 
-    # F11
+    # F11 (Media)
     bindsym Ctrl+Mod4+XF86TouchpadToggle exec $term_floating -T "ncspot" -e ncspot
 
-    # F12
+    # F12 (Config)
     bindsym Mod4+XF86TouchpadToggle exec $term_blue -T "nvim" -e nvim ~/.config/sway/config
 
     # Calc
