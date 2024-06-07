@@ -1,5 +1,12 @@
+color:
+  when: always
+  theme: custom
+icons:
+  when: always
+  theme: fancy
+  separator: "  "
 display: almost-all
 date: relative
-total-size: true
+permission: octal
 sorting:
   dir-grouping: first
