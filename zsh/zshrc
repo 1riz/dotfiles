@@ -18,6 +18,7 @@ plugins=(
   fp
   pe
   z
+  tmux
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -27,12 +28,12 @@ export GPG_TTY="$(tty)"
 export ZSH_THEME_TERM_TITLE_IDLE="%~"
 export ZSH_TMUX_UNICODE="true"
 
-alias vc='~/.config/nvim/scripts/nvim-cleanup.lua'
 alias v='nvim'
+alias vc='~/.config/nvim/scripts/nvim-cleanup.lua'
 alias t='tmux'
+alias root='sudo su -'
 alias n='nnn -deHoQTv'
 alias sp='ncspot'
-alias root='sudo su -'
 alias rbt='sudo systemctl reboot'
 alias off='sudo systemctl poweroff'
 alias sw='sway > /tmp/sway.log 2>&1'
