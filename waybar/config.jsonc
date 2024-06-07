@@ -55,7 +55,7 @@
         "interface": "wlan0",
         "format-wifi": "{signalStrength}%  ",
         "format-ethernet": "{ipaddr}/{cidr}  ",
-        "tooltip-format": "{ipaddr}/{cidr}",
+        "tooltip-format": "{essid}: {ipaddr}/{cidr}",
         "format-linked": "{ifname} (No IP)  ",
         "format-disconnected": "Disconnected  ⚠"
     },
