@@ -8,6 +8,7 @@ xwayland disable
 set $mod Mod4
 set $term alacritty
 set $term_stacked alacritty --config-file ~/.config/alacritty/alacritty_stacked.toml
+set $term_fullscreen alacritty --config-file ~/.config/alacritty/alacritty_fullscreen.toml
 set $term_blue alacritty --config-file ~/.config/alacritty/alacritty_blue.toml
 set $term_floating alacritty --config-file ~/.config/alacritty/alacritty_floating.toml
 set $term_floating_blue alacritty --config-file ~/.config/alacritty/alacritty_floating_blue.toml
@@ -53,6 +54,7 @@ for_window [title="Library"] floating enable, resize set 1000px 1000px
 for_window [title="About Mozilla Firefox"] floating enable
 for_window [title="About Waterfox"] floating enable
 for_window [app_id="alacritty-floating"] floating enable
+for_window [app_id="alacritty-fullscreen"] fullscreen enable
 for_window [app_id="alacritty-tiling"] shadows off
 
 ### Status Bar
@@ -105,8 +107,8 @@ exec_always {
 
 # Console apps:
     bindsym $mod+Return exec $term
-    bindsym $mod+Shift+Return exec $term_blue
-    bindsym $mod+Ctrl+Return exec $term_stacked
+    bindsym $mod+Shift+Return exec $term_stacked
+    bindsym $mod+Ctrl+Return exec $term_fullscreen
     bindsym $mod+n exec $term_floating
     bindsym $mod+o exec $term_floating_blue -T "nnn" -e nnn -deoQTv
 

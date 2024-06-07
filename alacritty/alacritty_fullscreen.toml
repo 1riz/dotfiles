@@ -1,0 +1,13 @@
+import = [
+  "~/.config/alacritty/alacritty.toml"
+]
+
+[window]
+opacity = 1.0
+
+[window.class]
+general = "alacritty-fullscreen"
+
+[window.padding]
+x = 0
+y = 0
