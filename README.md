@@ -1,8 +1,8 @@
-# dotfiles
+# Dotfiles
 
 My personal dotfiles.
 
-## Avalibale configs
+## Configs
 
 - [zsh](https://github.com/zsh-users/zsh) + [omz](https://github.com/ohmyzsh/ohmyzsh)
 - [alacritty](https://github.com/alacritty/alacritty)
@@ -23,3 +23,16 @@ My personal dotfiles.
 - [grim](https://git.sr.ht/~emersion/grim)
 - [slurp](https://github.com/emersion/slurp)
 - [autotiling](https://github.com/nwg-piotr/autotiling)
+
+## Neovim config
+
+- [1riz/nvim](https://github.com/1riz/nvim)
+
+## Fonts
+
+- [firacode](https://github.com/tonsky/FiraCode)
+- [firacode-nerd](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
+
+## Screenshots
+
+![Demo](./demo.png)
