@@ -32,6 +32,7 @@ My personal dotfiles.
 
 - [firacode](https://github.com/tonsky/FiraCode)
 - [firacode-nerd](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
+- [noto-fonts-emoji](https://fonts.google.com/noto/specimen/Noto+Color+Emoji)
 
 ## Screenshots
 
