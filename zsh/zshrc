@@ -10,8 +10,6 @@ zstyle ':omz:update' mode disabled
 
 plugins=(
   git
-  fd
-  ripgrep
   thefuck
   fzf
   lsd
@@ -37,6 +35,7 @@ alias sp='ncspot'
 alias rbt='sudo systemctl reboot'
 alias off='sudo systemctl poweroff'
 alias sw='sway > /tmp/sway.log 2>&1'
+alias lw='labwc > /tmp/labwc.log 2>&1'
 
 if [[ -f ~/.zshrc.local ]]; then
   . ~/.zshrc.local
