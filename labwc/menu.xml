@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu>
+
+<menu id="root-menu">
+  <item label="Go to right desktop">
+    <action name="GoToDesktop" to="right" wrap="yes" />
+  </item>
+  <item label="Go to left desktop">
+    <action name="GoToDesktop" to="left" wrap="yes" />
+  </item>
+  <item label="Lock screen">
+    <action name="Execute" command="swaylock" />
+  </item>
+  <item label="Restart">
+    <action name="Reconfigure" />
+  </item>
+  <item label="Exit">
+    <action name="Exit" />
+  </item>
+</menu>
+
+</openbox_menu>

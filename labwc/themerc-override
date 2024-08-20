@@ -1,0 +1,6 @@
+!! Titlebar
+window.inactive.title.bg.color: #414141
+window.inactive.title.bg.colorTo: #202020
+
+!! On-screen displays
+osd.border.color: #181818

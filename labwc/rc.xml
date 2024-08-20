@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+
+<labwc_config>
+
+  <theme>
+    <name>Onyx</name>
+    <font name="DejaVuSans" size="10" />
+  </theme>
+
+  <windowSwitcher show="yes" preview="no" outlines="no" allWorkspaces="no">
+    <fields>
+      <field content="trimmed_identifier" width="20%" />
+      <field content="title" width="80%" />
+    </fields>
+  </windowSwitcher>
+
+  <focus>
+    <followMouse>yes</followMouse>
+  </focus>
+
+  <desktops>
+    <popupTime>0</popupTime>
+    <number>4</number>
+  </desktops>
+
+  <keyboard>
+    <numlock>off</numlock>
+    <layoutScope>global</layoutScope>
+    <repeatRate>25</repeatRate>
+    <repeatDelay>600</repeatDelay>
+
+    <!-- Basics -->
+    <keybind key="W-Return">
+      <action name="Execute" command="alacritty" />
+    </keybind>
+    <keybind key="W-Space">
+      <action name="Execute" command="rofi -show apps" />
+    </keybind>
+    <keybind key="W-S-Space">
+      <action name="Execute" command="rofi -show files" />
+    </keybind>
+    <keybind key="W-C-Space">
+      <action name="Execute" command="rofi -show run" />
+    </keybind>
+    <keybind key="W-Tab">
+      <action name="Execute" command="rofi -modes window -show window" />
+    </keybind>
+    <keybind key="W-p">
+      <action name="Execute" command="rofi-clipboard-menu" />
+    </keybind>
+    <keybind key="W-l">
+      <action name="Execute" command="swaylock" />
+    </keybind>
+    <keybind key="W-f">
+      <action name="ToggleFullscreen" />
+    </keybind>
+    <keybind key="W-S-c">
+      <action name="Reconfigure" />
+    </keybind>
+    <keybind key="W-S-e">
+      <action name="Exit" />
+    </keybind>
+
+    <!-- Windows -->
+    <keybind key="A-Tab">
+      <action name="NextWindow" />
+    </keybind>
+    <keybind key="A-F4">
+      <action name="Close" />
+    </keybind>
+    <keybind key="W-a">
+      <action name="ToggleMaximize" />
+    </keybind>
+    <keybind key="A-Left">
+      <action name="MoveToEdge" direction="left" />
+    </keybind>
+    <keybind key="A-Right">
+      <action name="MoveToEdge" direction="right" />
+    </keybind>
+    <keybind key="A-Up">
+      <action name="MoveToEdge" direction="up" />
+    </keybind>
+    <keybind key="A-Down">
+      <action name="MoveToEdge" direction="down" />
+    </keybind>
+    <keybind key="W-Left">
+      <action name="SnapToEdge" direction="left" />
+    </keybind>
+    <keybind key="W-Right">
+      <action name="SnapToEdge" direction="right" />
+    </keybind>
+    <keybind key="W-Up">
+      <action name="SnapToEdge" direction="up" />
+    </keybind>
+    <keybind key="W-Down">
+      <action name="SnapToEdge" direction="down" />
+    </keybind>
+    <keybind key="A-Space">
+      <action name="ShowMenu" menu="client-menu" />
+    </keybind>
+
+    <!-- Workspaces -->
+    <keybind key="W-Next">
+      <action name="GoToDesktop" to="right" wrap="yes" />
+    </keybind>
+    <keybind key="W-Prior">
+      <action name="GoToDesktop" to="left" wrap="yes" />
+    </keybind>
+    <keybind key="W-1">
+      <action name="GoToDesktop" to="1" wrap="no" />
+    </keybind>
+    <keybind key="W-2">
+      <action name="GoToDesktop" to="2" wrap="no" />
+    </keybind>
+    <keybind key="W-3">
+      <action name="GoToDesktop" to="3" wrap="no" />
+    </keybind>
+    <keybind key="W-4">
+      <action name="GoToDesktop" to="4" wrap="no" />
+    </keybind>
+
+    <!-- Function keys -->
+    <keybind key="W-F1">
+      <action name="Execute" command="wireplumber-mute-toggle" />
+    </keybind>
+    <keybind key="W-F2">
+      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-" />
+    </keybind>
+    <keybind key="W-F3">
+      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+" />
+    </keybind>
+    <keybind key="W-F4">
+      <action name="Execute" command="playerctl play-pause" />
+    </keybind>
+    <keybind key="W-F5">
+      <action name="Execute" command="playerctl previous" />
+    </keybind>
+    <keybind key="W-F6">
+      <action name="Execute" command="playerctl next" />
+    </keybind>
+    <keybind key="W-F7">
+      <action name="Execute" command="brightnessctl set 5%-" />
+    </keybind>
+    <keybind key="W-F8">
+      <action name="Execute" command="brightnessctl set 5%+" />
+    </keybind>
+
+    <!-- Special keys -->
+    <keybind key="XF86AudioMute">
+      <action name="Execute" command="wireplumber-mute-toggle" />
+    </keybind>
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-" />
+    </keybind>
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute" command="wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+" />
+    </keybind>
+    <keybind key="XF86AudioPlay">
+      <action name="Execute" command="playerctl play-pause" />
+    </keybind>
+    <keybind key="XF86AudioPrev">
+      <action name="Execute" command="playerctl previous" />
+    </keybind>
+    <keybind key="XF86AudioNext">
+      <action name="Execute" command="playerctl next" />
+    </keybind>
+    <keybind key="XF86MonBrightnessDown">
+      <action name="Execute" command="brightnessctl set 5%-" />
+    </keybind>
+    <keybind key="XF86MonBrightnessUp">
+      <action name="Execute" command="brightnessctl set 5%+" />
+    </keybind>
+    <keybind key="XF86Display">
+      <action name="ToggleFullscreen" />
+    </keybind>
+  </keyboard>
+
+  <mouse>
+    <default />
+    <context name="Root">
+      <mousebind button="Left" action="Press">
+        <action name="None" />
+      </mousebind>
+      <mousebind button="Right" action="Press">
+        <action name="ShowMenu" menu="root-menu" />
+      </mousebind>
+      <mousebind button="Middle" action="Press">
+        <action name="None" />
+      </mousebind>
+      <mousebind direction="Up" action="Scroll">
+        <action name="None" />
+      </mousebind>
+      <mousebind direction="Down" action="Scroll">
+        <action name="None" />
+      </mousebind>
+    </context>
+  </mouse>
+
+</labwc_config>

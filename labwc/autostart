@@ -1,0 +1,26 @@
+### Output
+wlr-randr --output HDMI-A-1 --mode 2560x1440@74.968002Hz --pos 0,0
+wlr-randr --output eDP-1 --mode 1920x1080@60.000000Hz --pos 2560,0
+
+### Background
+# wpaperd -d &
+# swaybg -c '#43689a' &
+swaybg -m stretch -i ~/Pictures/Wallpapers/swaybg/macos-wallpaper-10-3.png &
+
+### Lock Screen
+swayidle -w timeout 600 swaylock &
+
+### Panel
+waybar &
+
+### GTK Theme
+gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark" &
+gsettings set org.gnome.desktop.interface icon-theme "Adwaita-dark" &
+gsettings set org.gnome.desktop.interface cursor-theme "Adwaita-dark" &
+gsettings set org.gnome.desktop.interface font-name "DejaVuSans 11" &
+
+### Clipboard History
+wl-paste --watch cliphist store &
+
+### Audio Profile
+pulseaudio-set-card-profile &

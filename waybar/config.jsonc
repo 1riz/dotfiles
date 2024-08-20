@@ -5,12 +5,13 @@
     "height": 26,
     "spacing": 4,
     "modules-left": [
-        "sway/workspaces",
-        "sway/scratchpad"
+        // "sway/workspaces",
+        // "sway/scratchpad"
+        "wlr/taskbar"
     ],
-    "modules-center": [
-        "sway/window"
-    ],
+    // "modules-center": [
+    //     "sway/window"
+    // ],
     "modules-right": [
         "network",
         "cpu",
@@ -19,16 +20,20 @@
         "pulseaudio",
         "clock"
     ],
-    "sway/workspaces": {
-        "format": "{name}",
+     "wlr/taskbar": {
+        "format": "{icon}  {app_id}",
+        "on-click": "minimize-raise"
     },
-    "sway/scratchpad": {
-        "format": "{icon}  {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
+    // "sway/workspaces": {
+    //     "format": "{name}"
+    // },
+    // "sway/scratchpad": {
+    //     "format": "{icon}  {count}",
+    //     "show-empty": false,
+    //     "format-icons": ["", ""],
+    //     "tooltip": true,
+    //     "tooltip-format": "{app}: {title}"
+    // },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
