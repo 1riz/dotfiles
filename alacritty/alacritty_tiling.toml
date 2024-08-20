@@ -6,8 +6,4 @@ import = [
 opacity = 0.6
 
 [window.class]
-general = "alacritty-stacked"
-
-[window.padding]
-x = 8
-y = 6
+general = "alacritty-tiling"

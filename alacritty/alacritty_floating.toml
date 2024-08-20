@@ -2,6 +2,9 @@ import = [
   "~/.config/alacritty/alacritty.toml"
 ]
 
+[window]
+opacity = 0.6
+
 [window.class]
 general = "alacritty-floating"
 

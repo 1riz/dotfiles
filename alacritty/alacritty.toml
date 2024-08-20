@@ -19,10 +19,10 @@ x = 0
 y = 2
 
 [window]
-opacity = 0.6
+opacity = 1.0
 
 [window.class]
-general = "alacritty-tiling"
+general = "alacritty"
 
 [window.dimensions]
 columns = 130

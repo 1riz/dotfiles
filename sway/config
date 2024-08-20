@@ -6,7 +6,7 @@ xwayland disable
 
 ### Variables
 set $mod Mod4
-set $term alacritty
+set $term alacritty --config-file ~/.config/alacritty/alacritty_tiling.toml
 set $term_stacked alacritty --config-file ~/.config/alacritty/alacritty_stacked.toml
 set $term_fullscreen alacritty --config-file ~/.config/alacritty/alacritty_fullscreen.toml
 set $term_blue alacritty --config-file ~/.config/alacritty/alacritty_blue.toml
@@ -56,6 +56,8 @@ for_window [title="About Waterfox"] floating enable
 for_window [app_id="alacritty-floating"] floating enable
 for_window [app_id="alacritty-fullscreen"] fullscreen enable
 for_window [app_id="alacritty-tiling"] shadows off
+for_window [app_id="org.pulseaudio.pavucontrol"] floating enable
+for_window [app_id="qemu"] floating enable
 
 ### Status Bar
 bar {
@@ -89,6 +91,9 @@ exec_always {
     gsettings set $gnome-schema font-name "DejaVuSans 11"
 }
 
+### Audio Profile
+exec_always pulseaudio-set-card-profile
+
 ### Key bindings
 
 # Basics:
@@ -104,6 +109,7 @@ exec_always {
     bindsym $mod+Shift+q kill
     bindsym $mod+Shift+e exec swaymsg exit
     bindsym $mod+l exec swaylock
+    bindsym Ctrl+Alt+Delete exec swaylock
 
 # Console apps:
     bindsym $mod+Return exec $term
@@ -209,31 +215,31 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+# Function keys:
+    bindsym $mod+F1 exec wireplumber-mute-toggle
+    bindsym $mod+F2 exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+    bindsym $mod+F3 exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+    bindsym $mod+F4 exec playerctl play-pause
+    bindsym $mod+F5 exec playerctl previous
+    bindsym $mod+F6 exec playerctl next
+    bindsym $mod+F7 exec brightnessctl set 5%-
+    bindsym $mod+F8 exec brightnessctl set 5%+
+
+    bindsym $mod+F9 exec $term_floating -T "fzf" -e fzf --bind 'enter:execute(bat --paging=always {})'
+    bindsym $mod+F10 exec $term_floating_blue -o 'window.dimensions.lines=20' -o 'window.dimensions.columns=100' -T "qalc" -e qalc -c
+    bindsym $mod+F11 exec $term_floating -T "ncspot" -e ncspot
+    bindsym $mod+F12 exec $term_blue -T "nvim" -e nvim ~/.config/sway/config
+
 # Special keys:
-    # F1-F8
-    bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+    bindsym XF86AudioMute exec wireplumber-mute-toggle
+    bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+    bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
     bindsym XF86AudioPrev exec playerctl previous
     bindsym XF86AudioPlay exec playerctl play-pause
     bindsym XF86AudioNext exec playerctl next
     bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
-
-    # F9 (Search)
-    bindsym Shift+Mod4+XF86TouchpadToggle exec $term_floating -T "fzf" -e fzf --bind 'enter:execute(bat --paging=always {})'
-
-    # F11 (Media)
-    bindsym Ctrl+Mod4+XF86TouchpadToggle exec $term_floating -T "ncspot" -e ncspot
-
-    # F12 (Config)
-    bindsym Mod4+XF86TouchpadToggle exec $term_blue -T "nvim" -e nvim ~/.config/sway/config
-
-    # Calc
-    bindsym XF86Calculator exec $term_floating_blue -o 'window.dimensions.lines=20' -o 'window.dimensions.columns=100' -T "qalc" -e qalc -c
-
-    # Edit
-    bindsym Shift+Mod1+Mod4+XF86TouchpadToggle exec $term_blue -T "nvim" -e nvim
+    bindsym XF86Display fullscreen
 
 # Screenshots:
 bindsym Print exec grimshot --notify save screen
