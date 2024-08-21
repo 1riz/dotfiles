@@ -3,7 +3,7 @@ TERM = "xterm-256color"
 
 [colors.primary]
 background = "#000000"
-foreground = "#cdd6f4"
+foreground = "#cdcecf"
 
 [cursor.style]
 blinking = "On"

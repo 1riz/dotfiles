@@ -53,7 +53,7 @@ window {
     location: center;
     anchor:   center;
     transparency: "real";
-    padding: 0;
+    padding: 10px;
     border:  0;
     border-radius: 10px;
     color: @magenta;
@@ -95,7 +95,7 @@ listview {
     border-radius: 0px 0px 15px 15px;
     border-color: @black;
     border: 0px 2px 2px 2px;
-    background-color: #1c1c1ccc;
+    background-color: #1c1c1cee;
     dynamic: false;
     lines: 10;
 }
@@ -129,8 +129,7 @@ element alternate urgent {
     foreground: @lightred;
 }
 element selected active {
-    background-color: @lightblue;
-    foreground: @dark;
+    background-color: @blue;
 }
 element selected urgent {
     background-color: @lightred;

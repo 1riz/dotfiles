@@ -6,7 +6,7 @@ xwayland disable
 
 ### Variables
 set $mod Mod4
-set $term alacritty --config-file ~/.config/alacritty/alacritty_tiling.toml
+set $term alacritty
 set $term_stacked alacritty --config-file ~/.config/alacritty/alacritty_stacked.toml
 set $term_fullscreen alacritty --config-file ~/.config/alacritty/alacritty_fullscreen.toml
 set $term_blue alacritty --config-file ~/.config/alacritty/alacritty_blue.toml

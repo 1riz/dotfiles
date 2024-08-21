@@ -4,6 +4,13 @@ configuration {
   case-sensitive: false;
   matching: "normal";
   terminal: "alacritty";
-  window-format: "󰣆  {c}  {t}";
+  window-format: " <span text_transform=\"lowercase\">{c}</span>  {t}";
+  window {
+    fallback-icon: "application-x-generic";
+  }
+  filebrowser {
+    directory: ".";
+    fallback-icon: "text-x-generic";
+  }
 }
-@theme "arthur_custom"
+@theme "spotlight"

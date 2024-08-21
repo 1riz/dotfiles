@@ -49,9 +49,10 @@ button:hover {
 #network,
 #pulseaudio,
 #scratchpad {
-    padding: 0 10px;
+    /* padding: 0 10px; */
+    padding: 0 8px;
     color: #ffffff;
-    background-color: #333333;
+    /* background-color: #333333; */
 }
 
 #network:hover,

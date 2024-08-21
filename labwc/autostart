@@ -5,7 +5,8 @@ wlr-randr --output eDP-1 --mode 1920x1080@60.000000Hz --pos 2560,0
 ### Background
 # wpaperd -d &
 # swaybg -c '#43689a' &
-swaybg -m stretch -i ~/Pictures/Wallpapers/swaybg/macos-wallpaper-10-3.png &
+# swaybg -m stretch -i ~/Pictures/Wallpapers/swaybg/macos-wallpaper-10-3.png &
+wpaperd -d &
 
 ### Lock Screen
 swayidle -w timeout 600 swaylock &
@@ -14,9 +15,7 @@ swayidle -w timeout 600 swaylock &
 waybar &
 
 ### GTK Theme
-gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark" &
-gsettings set org.gnome.desktop.interface icon-theme "Adwaita-dark" &
-gsettings set org.gnome.desktop.interface cursor-theme "Adwaita-dark" &
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark' &
 gsettings set org.gnome.desktop.interface font-name "DejaVuSans 11" &
 
 ### Clipboard History

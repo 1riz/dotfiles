@@ -21,8 +21,12 @@
         "clock"
     ],
      "wlr/taskbar": {
-        "format": "{icon}  {app_id}",
-        "on-click": "minimize-raise"
+        "format": "{icon}  <span text_transform=\"lowercase\">{app_id}</span>",
+        "markup": true,
+        "on-click": "minimize-raise",
+        "app_ids-mapping": {
+          "org.pwmt.zathura": "zathura"
+        }
     },
     // "sway/workspaces": {
     //     "format": "{name}"
