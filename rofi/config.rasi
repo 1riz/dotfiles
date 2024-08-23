@@ -13,4 +13,4 @@ configuration {
     fallback-icon: "text-x-generic";
   }
 }
-@theme "spotlight"
+@theme "theme"

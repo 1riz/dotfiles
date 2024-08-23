@@ -1,3 +1,7 @@
+!! Selected menu item
+menu.items.active.bg: raised splitvertical solid
+menu.items.active.bg.color: #6495ed
+
 !! Titlebar
 window.inactive.title.bg.color: #414141
 window.inactive.title.bg.colorTo: #202020
