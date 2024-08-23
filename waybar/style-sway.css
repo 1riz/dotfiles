@@ -8,34 +8,38 @@ window#waybar {
     color: #ffffff;
 }
 
-#taskbar button {
+button {
     border: none;
     border-radius: 0;
-    padding: 0 10px;
 }
 
-#taskbar button:hover {
+button:hover {
     background-color: #555555;
 }
 
-#custom-ws-1,
-#custom-ws-2,
-#custom-ws-3,
-#custom-ws-4,
+#workspaces button {
+    padding: 0 10px;
+}
+
+#workspaces button.focused {
+    background-color: #333333;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
 #network,
 #cpu,
 #memory,
 #battery,
 #wireplumber,
-#clock {
+#clock,
+#scratchpad {
     padding: 0 8px;
     color: #ffffff;
 }
 
-#custom-ws-1:hover,
-#custom-ws-2:hover,
-#custom-ws-3:hover,
-#custom-ws-4:hover,
 #network:hover,
 #cpu:hover,
 #memory:hover,
@@ -45,7 +49,8 @@ window#waybar {
     background-color: #555555;
 }
 
-#window {
+#window,
+#workspaces {
     margin: 0 4px;
 }
 
@@ -55,13 +60,6 @@ window#waybar {
 
 .modules-right > widget:last-child > #workspaces {
     margin-right: 0;
-}
-
-#custom-ws-1.active,
-#custom-ws-2.active,
-#custom-ws-3.active,
-#custom-ws-4.active {
-    background-color: #333333;
 }
 
 #battery.charging, #battery.plugged {
@@ -79,4 +77,12 @@ window#waybar {
 #wireplumber.muted {
     background-color: #90b1b1;
     color: #2a5c45;
+}
+
+#scratchpad {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad.empty {
+   background-color: transparent;
 }

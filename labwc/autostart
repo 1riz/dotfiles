@@ -13,6 +13,7 @@ swayidle -w timeout 600 swaylock &
 
 ### Panel
 waybar &
+echo 1 > ~/.cache/labwc-workspace
 
 ### GTK Theme
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark' &

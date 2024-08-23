@@ -5,13 +5,13 @@
     "height": 26,
     "spacing": 4,
     "modules-left": [
-        "custom/ws-1",
-        "custom/ws-2",
-        "custom/ws-3",
-        "custom/ws-4"
+        "sway/workspaces",
+        "sway/scratchpad"
+    ],
+    "modules-center": [
+        "sway/window"
     ],
     "modules-right": [
-        "wlr/taskbar",
         "network",
         "cpu",
         "memory",
@@ -19,43 +19,15 @@
         "wireplumber",
         "clock"
     ],
-     "custom/ws-1": {
-        "format": "Home",
-        "on-click": "wtype -M win -P 1",
-        "tooltip-format": "Go to workspace 1",
-        "exec": "labwc-current-workspace 1",
-        "signal": 8
+    "sway/workspaces": {
+        "format": "{name}"
     },
-     "custom/ws-2": {
-        "format": "Devel ",
-        "on-click": "wtype -M win -P 2",
-        "tooltip-format": "Go to workspace 2",
-        "exec": "labwc-current-workspace 2",
-        "signal": 8
-    },
-     "custom/ws-3": {
-        "format": "Work",
-        "on-click": "wtype -M win -P 3",
-        "tooltip-format": "Go to workspace 3",
-        "exec": "labwc-current-workspace 3",
-        "signal": 8
-    },
-     "custom/ws-4": {
-        "format": "Admin",
-        "on-click": "wtype -M win -P 4",
-        "tooltip-format": "Go to workspace 4",
-        "exec": "labwc-current-workspace 4",
-        "signal": 8
-    },
-     "wlr/taskbar": {
-        "format": "{icon}",
-        "tooltip-format": "<span text_transform=\"lowercase\">{app_id}</span>: {title}",
-        "markup": true,
-        "icon-size": 14,
-        "on-click": "minimize-raise",
-        "app_ids-mapping": {
-          "org.pwmt.zathura": "zathura"
-        }
+    "sway/scratchpad": {
+        "format": "{icon}  {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
     },
     "clock": {
         "tooltip-format": "<big>{:%Y-%m-%d}</big>\n<tt><small>{calendar}</small></tt>"
