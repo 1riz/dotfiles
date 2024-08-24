@@ -4,7 +4,7 @@ echo -en "\0prompt\x1fapps\n"
 
 if [[ ${ROFI_RETV} == 0 ]]; then
 
-  echo -en "alacritty\0display\x1f Alacritty\x1ficon\x1falacritty\n"
+  echo -en "foot\0display\x1f Foot\x1ficon\x1ffoot\n"
   echo -en "firefox\0display\x1f Firefox\x1ficon\x1ffirefox\n"
   echo -en "waterfox\0display\x1f Waterfox\x1ficon\x1fwaterfox\n"
   echo -en "nvim\0display\x1f Neovim\x1ficon\x1fneovim\n"
@@ -20,8 +20,8 @@ if [[ ${ROFI_RETV} == 0 ]]; then
 elif [[ ${ROFI_RETV} == 1 ]]; then
 
   case "${1}" in
-    alacritty)
-      coproc { alacritty; }
+    foot)
+      coproc { foot; }
       ;;
     firefox)
       coproc { /usr/lib/firefox/firefox; }
@@ -30,22 +30,22 @@ elif [[ ${ROFI_RETV} == 1 ]]; then
       coproc { /opt/waterfox/waterfox; }
       ;;
     nvim)
-      coproc { alacritty --config-file ~/.config/alacritty/alacritty_nightfox.toml -o 'window.class.general="neovim"' -o 'window.dimensions.lines=50' -o 'window.dimensions.columns=140' -e nvim; }
+      coproc { foot -c ~/.config/foot/foot_nightfox.ini -a neovim -W 140x50 -e nvim; }
       ;;
     thunar)
       coproc { thunar; }
       ;;
     btop)
-      coproc { alacritty -T "btop" -o 'window.class.general="btop"' -e btop; }
+      coproc { foot -a btop -T btop -e btop; }
       ;;
     ncspot)
-      coproc { alacritty -T "ncspot" -o 'window.class.general="ncspot"' -e ncspot; }
+      coproc { foot -a ncspot -T ncspot -e ncspot; }
       ;;
     nnn)
-      coproc { alacritty --config-file ~/.config/alacritty/alacritty_nightfox.toml -T "nnn" -o 'window.class.general="nnn"' -e nnn -deoQTv; }
+      coproc { foot -c ~/.config/foot/foot_nightfox.ini -a nnn -T nnn -e nnn -deoQTv; }
       ;;
     qalc)
-      coproc { alacritty --config-file ~/.config/alacritty/alacritty_nightfox.toml -T "qalc" -o 'window.class.general="qcalc"' -o 'window.dimensions.lines=20' -o 'window.dimensions.columns=100' -e qalc -c; }
+      coproc { foot -c ~/.config/foot/foot_nightfox.ini -a qalc -T qalc -W 100x20 -e qalc -c; }
       ;;
     qemu)
       coproc { ~/Projects/QEMU/openbsd/bin/run.sh; }

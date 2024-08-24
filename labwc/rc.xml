@@ -16,7 +16,7 @@
 
   <focus>
     <followMouse>yes</followMouse>
-    <followMouseRequiresMovement>no</followMouseRequiresMovement>
+    <followMouseRequiresMovement>yes</followMouseRequiresMovement>
     <raiseOnFocus>no</raiseOnFocus>
   </focus>
 
@@ -45,7 +45,7 @@
 
     <!-- Basics -->
     <keybind key="W-Return">
-      <action name="Execute" command="alacritty" />
+      <action name="Execute" command="foot" />
     </keybind>
     <keybind key="W-Space">
       <action name="Execute" command="rofi -show-icons -show apps" />

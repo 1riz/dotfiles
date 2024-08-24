@@ -6,6 +6,7 @@ My personal dotfiles.
 
 - [zsh](https://github.com/zsh-users/zsh) + [omz](https://github.com/ohmyzsh/ohmyzsh)
 - [alacritty](https://github.com/alacritty/alacritty)
+- [foot](https://codeberg.org/dnkl/foot)
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [tmux](https://github.com/tmux/tmux)
 - [lsd](https://github.com/lsd-rs/lsd)

@@ -3,7 +3,7 @@ configuration {
   show-icons: false;
   case-sensitive: false;
   matching: "normal";
-  terminal: "alacritty";
+  terminal: "foot";
   window-format: " <span text_transform=\"lowercase\">{c}</span>  {t}";
   window {
     fallback-icon: "application-x-generic";
