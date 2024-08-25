@@ -6,6 +6,10 @@ menu.items.active.bg.color: #6495ed
 window.inactive.title.bg.color: #414141
 window.inactive.title.bg.colorTo: #202020
 
+!! Windows shadows
+window.active.shadow.size: 80
+window.inactive.shadow.size: 40
+
 !! On-screen displays
 osd.border.color: #181818
 osd.window-switcher.preview.border.width: 1

@@ -6,13 +6,15 @@ wlr-randr --output eDP-1 --mode 1920x1080@60.000000Hz --pos 2560,0
 # wpaperd -d &
 # swaybg -c '#43689a' &
 # swaybg -m stretch -i ~/Pictures/Wallpapers/swaybg/macos-wallpaper-10-3.png &
-wpaperd -d &
+wpaperd -d
 
 ### Lock Screen
 swayidle -w timeout 600 swaylock &
 
 ### Panel
 waybar &
+
+### Reset workspace
 echo 1 > ~/.cache/labwc-workspace
 
 ### GTK Theme
@@ -21,6 +23,3 @@ gsettings set org.gnome.desktop.interface font-name "DejaVuSans 11" &
 
 ### Clipboard History
 wl-paste --watch cliphist store &
-
-### Audio Profile
-pulseaudio-set-card-profile &

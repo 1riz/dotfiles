@@ -8,10 +8,33 @@ window#waybar {
     color: #ffffff;
 }
 
+window#waybar.bottom-bar {
+    background-color: transparent;
+}
+
+.modules-left {
+    background-color: #222222;
+    padding-left: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.modules-right {
+    padding-right: 8px;
+}
+
+#taskbar {
+    background-color: #222222;
+    padding-right: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+#image,
 #taskbar button {
     border: none;
     border-radius: 0;
-    padding: 0 10px;
+    padding: 14px;
 }
 
 #taskbar button:hover {
@@ -26,7 +49,7 @@ window#waybar {
 #cpu,
 #memory,
 #battery,
-#wireplumber,
+#pulseaudio,
 #clock {
     padding: 0 8px;
     color: #ffffff;
@@ -40,7 +63,7 @@ window#waybar {
 #cpu:hover,
 #memory:hover,
 #battery:hover,
-#wireplumber:hover,
+#pulseaudio:hover,
 #clock:hover {
     background-color: #555555;
 }
@@ -76,7 +99,7 @@ window#waybar {
     background-color: #f53c3c;
 }
 
-#wireplumber.muted {
+#pulseaudio.muted {
     background-color: #90b1b1;
     color: #2a5c45;
 }

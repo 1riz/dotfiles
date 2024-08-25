@@ -5,14 +5,21 @@
   <theme>
     <name>Onyx</name>
     <font name="DejaVuSans" size="10" />
+    <dropShadows>yes</dropShadows>
   </theme>
 
-  <windowSwitcher show="no" preview="no" outlines="yes" allWorkspaces="no">
+  <windowSwitcher show="no" preview="yes" outlines="yes" allWorkspaces="no">
     <fields>
       <field content="trimmed_identifier" width="20%" />
       <field content="title" width="80%" />
     </fields>
   </windowSwitcher>
+
+  <resistance>
+    <screenEdgeStrength>50</screenEdgeStrength>
+    <windowEdgeStrength>50</windowEdgeStrength>
+    <unSnapThreshold>50</unSnapThreshold>
+  </resistance>
 
   <focus>
     <followMouse>yes</followMouse>
@@ -20,9 +27,18 @@
     <raiseOnFocus>no</raiseOnFocus>
   </focus>
 
+  <snapping>
+    <range>0</range>
+  </snapping>
+
   <desktops>
     <popupTime>0</popupTime>
-    <number>4</number>
+    <names>
+      <name>Home</name>
+      <name>Devel</name>
+      <name>Work</name>
+      <name>Admin</name>
+    </names>
   </desktops>
 
   <regions>
@@ -30,7 +46,7 @@
     <region name="top"          x="0%"  y="0%"  height="50%"  width="100%" />
     <region name="top-right"    x="50%" y="0%"  height="50%"  width="50%"  />
     <region name="left"         x="0%"  y="0%"  height="100%" width="50%"  />
-    <region name="center"       x="10%" y="10%" height="80%"  width="80%"  />
+    <region name="center"       x="15%" y="15%" height="75%"  width="75%"  />
     <region name="right"        x="50%" y="0%"  height="100%" width="50%"  />
     <region name="bottom-left"  x="0%"  y="50%" height="50%"  width="50%"  />
     <region name="bottom"       x="0%"  y="50%" height="50%"  width="100%" />
@@ -46,6 +62,12 @@
     <!-- Basics -->
     <keybind key="W-Return">
       <action name="Execute" command="foot" />
+    </keybind>
+    <keybind key="W-C-Return">
+      <action name="Execute" command="foot -F" />
+    </keybind>
+    <keybind key="W-S-Return">
+      <action name="Execute" command="foot -o colors.alpha=0.85" />
     </keybind>
     <keybind key="W-Space">
       <action name="Execute" command="rofi -show-icons -show apps" />
@@ -70,6 +92,9 @@
     </keybind>
     <keybind key="W-l">
       <action name="Execute" command="swaylock" />
+    </keybind>
+    <keybind key="W-b">
+      <action name="Execute" command="killall -SIGUSR1 waybar" />
     </keybind>
     <keybind key="W-S-c">
       <action name="Reconfigure" />
@@ -291,7 +316,7 @@
     <default />
     <context name="Root">
       <mousebind button="Left" action="Press">
-        <action name="None" />
+        <action name="Unfocus"/>
       </mousebind>
       <mousebind button="Right" action="Press">
         <action name="ShowMenu" menu="root-menu" />

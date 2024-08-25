@@ -10,7 +10,7 @@
     // Black
     black:       #3d352a;
     lightblack:  #554444;
-    tlightblack:  #333333;
+    tlightblack:  #333333fa;
     //
     // Red
     red:         #cd5c5c;
@@ -70,7 +70,7 @@ message {
     border:  0px 2px 0px 2px;
 //    border-radius: 10px;
     padding: 8px;
-    background-color: #999999;
+    background-color: #999999fa;
 }
 message {
     font:inherit;
@@ -97,7 +97,7 @@ listview {
     border-radius: 0px 0px 8px 8px;
     border-color: @transparent;
     border: 0px 2px 2px 2px;
-    background-color: #222222;
+    background-color: #222222fa;
     dynamic: false;
     lines: 10;
 }

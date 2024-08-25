@@ -1,5 +1,51 @@
 // -*- mode: jsonc -*-
+[{
+    "name": "bottom-bar",
+    "layer": "bottom",
+    "position": "bottom",
+    "exclusive": false,
+    "width": 4,
+    "spacing": 0,
+    "margin-bottom": 4,
+    "modules-left": [
+        "image",
+        "image#image2",
+        "image#image3"
+    ],
+    "modules-center": [
+        "wlr/taskbar"
+    ],
+    "image": {
+        "path": ".local/share/icons/hicolor/128x128/apps/file-manager.png",
+        "size": 48,
+        "icon-size": 48,
+        "on-click": "thunar"
+    },
+    "image#image2": {
+        "path": ".local/share/icons/hicolor/128x128/apps/browser.png",
+        "size": 48,
+        "icon-size": 48,
+        "on-click": "firefox"
+    },
+    "image#image3": {
+        "path": ".local/share/icons/hicolor/128x128/apps/terminal.png",
+        "size": 48,
+        "icon-size": 48,
+        "on-click": "foot"
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "tooltip-format": "<span text_transform=\"lowercase\">{app_id}</span>: {title}",
+        "markup": true,
+        "icon-size": 48,
+        "on-click": "minimize-raise",
+        "app_ids-mapping": {
+            "org.pwmt.zathura": "zathura"
+        }
+    }
+},
 {
+    "name": "top-bar",
     "layer": "top",
     "position": "top",
     "height": 26,
@@ -11,51 +57,40 @@
         "custom/ws-4"
     ],
     "modules-right": [
-        "wlr/taskbar",
         "network",
         "cpu",
         "memory",
+        "pulseaudio",
         "battery",
-        "wireplumber",
         "clock"
     ],
-     "custom/ws-1": {
+    "custom/ws-1": {
         "format": "Home",
         "on-click": "wtype -M win -P 1",
         "tooltip-format": "Go to workspace 1",
         "exec": "labwc-current-workspace 1",
         "signal": 8
     },
-     "custom/ws-2": {
+    "custom/ws-2": {
         "format": "Devel ",
         "on-click": "wtype -M win -P 2",
         "tooltip-format": "Go to workspace 2",
         "exec": "labwc-current-workspace 2",
         "signal": 8
     },
-     "custom/ws-3": {
+    "custom/ws-3": {
         "format": "Work",
         "on-click": "wtype -M win -P 3",
         "tooltip-format": "Go to workspace 3",
         "exec": "labwc-current-workspace 3",
         "signal": 8
     },
-     "custom/ws-4": {
+    "custom/ws-4": {
         "format": "Admin",
         "on-click": "wtype -M win -P 4",
         "tooltip-format": "Go to workspace 4",
         "exec": "labwc-current-workspace 4",
         "signal": 8
-    },
-     "wlr/taskbar": {
-        "format": "{icon}",
-        "tooltip-format": "<span text_transform=\"lowercase\">{app_id}</span>: {title}",
-        "markup": true,
-        "icon-size": 14,
-        "on-click": "minimize-raise",
-        "app_ids-mapping": {
-          "org.pwmt.zathura": "zathura"
-        }
     },
     "clock": {
         "tooltip-format": "<big>{:%Y-%m-%d}</big>\n<tt><small>{calendar}</small></tt>"
@@ -86,8 +121,12 @@
         "format-linked": "{ifname} (No IP)  ",
         "format-disconnected": "Disconnected  ⚠"
     },
-    "wireplumber": {
-        "format": "{volume}%  ",
-        "format-muted": " "
+    "pulseaudio": {
+        "format": "{volume}%  {icon}",
+        "format-muted": " ",
+        "format-icons": {
+            "headphone": "",
+            "default": ["", "", ""]
+        }
     }
-}
+}]

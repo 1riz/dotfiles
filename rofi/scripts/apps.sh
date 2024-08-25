@@ -16,6 +16,7 @@ if [[ ${ROFI_RETV} == 0 ]]; then
   echo -en "qalc\0display\x1f Qalc\x1ficon\x1faccessories-calculator\n"
   echo -en "qemu\0display\x1f QEMU\x1ficon\x1fqemu\n"
   echo -en "dosbox\0display\x1f Dosbox\x1ficon\x1fdosbox\n"
+  echo -en "pavucontrol\0display\x1f Pavucontrol\x1ficon\x1faudio-speakers\n"
 
 elif [[ ${ROFI_RETV} == 1 ]]; then
 
@@ -38,6 +39,9 @@ elif [[ ${ROFI_RETV} == 1 ]]; then
     btop)
       coproc { foot -a btop -T btop -e btop; }
       ;;
+    htop)
+      coproc { foot -a htop -T htop -e htop; }
+      ;;
     ncspot)
       coproc { foot -a ncspot -T ncspot -e ncspot; }
       ;;
@@ -52,6 +56,9 @@ elif [[ ${ROFI_RETV} == 1 ]]; then
       ;;
     dosbox)
       coproc { dosbox ~/Projects/DOS/devel; }
+      ;;
+    pavucontrol)
+      coproc { pavucontrol; }
       ;;
   esac
 
