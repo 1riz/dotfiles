@@ -335,5 +335,9 @@
 
   <windowRules>
     <windowRule identifier="imv" serverDecoration="yes"/>
+    <windowRule title="Waterfox — Sharing Indicator">
+      <skipTaskbar>yes</skipTaskbar>
+      <action name="Iconify" />
+    </windowRule>
   </windowRules>
 </labwc_config>

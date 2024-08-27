@@ -8,11 +8,12 @@ if [[ ${ROFI_RETV} == 0 ]]; then
   echo -en "firefox\0display\x1f Firefox\x1ficon\x1ffirefox\n"
   echo -en "waterfox\0display\x1f Waterfox\x1ficon\x1fwaterfox\n"
   echo -en "nvim\0display\x1f Neovim\x1ficon\x1fneovim\n"
+  echo -en "tmux\0display\x1f Tmux\x1ficon\x1ftmux\n"
   echo -en "thunar\0display\x1f Thunar\x1ficon\x1fthunar\n"
+  echo -en "nnn\0display\x1f NNN\x1ficon\x1fnnn\n"
   echo -en "btop\0display\x1f BTop\x1ficon\x1fbtop\n"
   echo -en "htop\0display\x1f HTop\x1ficon\x1fhtop\n"
   echo -en "ncspot\0display\x1f NCSpot\x1ficon\x1fncspot\n"
-  echo -en "nnn\0display\x1f NNN\x1ficon\x1fnnn\n"
   echo -en "qalc\0display\x1f Qalc\x1ficon\x1faccessories-calculator\n"
   echo -en "qemu\0display\x1f QEMU\x1ficon\x1fqemu\n"
   echo -en "dosbox\0display\x1f Dosbox\x1ficon\x1fdosbox\n"
@@ -31,7 +32,7 @@ elif [[ ${ROFI_RETV} == 1 ]]; then
       coproc { /opt/waterfox/waterfox; }
       ;;
     nvim)
-      coproc { foot -c ~/.config/foot/foot_nightfox.ini -a neovim -W 140x50 -e nvim; }
+      coproc { foot -c ~/.config/foot/foot_github.ini -a neovim -W 140x60 -e nvim; }
       ;;
     thunar)
       coproc { thunar; }
@@ -47,6 +48,9 @@ elif [[ ${ROFI_RETV} == 1 ]]; then
       ;;
     nnn)
       coproc { foot -c ~/.config/foot/foot_nightfox.ini -a nnn -T nnn -e nnn -deoQTv; }
+      ;;
+    tmux)
+      coproc { foot -a tmux -W 140x60 -e tmux; }
       ;;
     qalc)
       coproc { foot -c ~/.config/foot/foot_nightfox.ini -a qalc -T qalc -W 100x20 -e qalc -c; }

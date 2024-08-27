@@ -7,8 +7,8 @@ window.inactive.title.bg.color: #414141
 window.inactive.title.bg.colorTo: #202020
 
 !! Windows shadows
-window.active.shadow.size: 80
-window.inactive.shadow.size: 40
+window.active.shadow.size: 30
+window.inactive.shadow.size: 30
 
 !! On-screen displays
 osd.border.color: #181818
