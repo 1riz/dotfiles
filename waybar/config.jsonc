@@ -62,7 +62,8 @@
         "memory",
         "pulseaudio",
         "battery",
-        "clock"
+        "clock",
+        "custom/dunst"
     ],
     "custom/ws-1": {
         "format": "Home",
@@ -92,15 +93,22 @@
         "exec": "labwc-current-workspace 4",
         "signal": 8
     },
+    "custom/dunst": {
+        "format": "",
+        "tooltip-format": "Notifications",
+        "on-click": "dunstctl history-pop",
+        "on-click-right": "dunstctl close-all"
+    },
     "clock": {
+        "format": " {:%H:%M}",
         "tooltip-format": "<big>{:%Y-%m-%d}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "cpu": {
-        "format": "{usage}%  ",
+        "format": "{usage}%  ",
         "tooltip": true
     },
     "memory": {
-        "format": "{}%  "
+        "format": "{}%   "
     },
     "battery": {
         "states": {
