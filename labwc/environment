@@ -1,3 +1,2 @@
 XKB_DEFAULT_LAYOUT=es
-XDG_CURRENT_DESKTOP=wlroots
 GTK_THEME=Adwaita:dark

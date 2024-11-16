@@ -96,6 +96,12 @@
     <keybind key="W-b">
       <action name="Execute" command="killall -SIGUSR1 waybar" />
     </keybind>
+    <keybind key="W-S-b">
+      <action name="Execute" command="waybar" />
+    </keybind>
+    <keybind key="W-C-b">
+      <action name="Execute" command="killall -SIGINT waybar" />
+    </keybind>
     <keybind key="W-S-c">
       <action name="Reconfigure" />
     </keybind>
@@ -143,16 +149,16 @@
     </keybind>
 
     <keybind key="W-Left">
-      <action name="SnapToEdge" direction="left" />
+      <action name="ToggleSnapToEdge" direction="left" />
     </keybind>
     <keybind key="W-Right">
-      <action name="SnapToEdge" direction="right" />
+      <action name="ToggleSnapToEdge" direction="right" />
     </keybind>
     <keybind key="W-Up">
-      <action name="SnapToEdge" direction="up" />
+      <action name="ToggleSnapToEdge" direction="up" />
     </keybind>
     <keybind key="W-Down">
-      <action name="SnapToEdge" direction="down" />
+      <action name="ToggleSnapToEdge" direction="down" />
     </keybind>
 
     <keybind key="W-KP_7">

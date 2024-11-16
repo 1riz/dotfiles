@@ -6,6 +6,10 @@ menu.items.active.bg.color: #6495ed
 window.inactive.title.bg.color: #414141
 window.inactive.title.bg.colorTo: #202020
 
+!! Titlebar text
+window.active.label.text.color: #cccccc
+window.inactive.label.text.color: #747474
+
 !! Windows shadows
 window.active.shadow.size: 30
 window.inactive.shadow.size: 30

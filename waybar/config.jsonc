@@ -4,6 +4,7 @@
     "layer": "bottom",
     "position": "bottom",
     "exclusive": false,
+    "start_hidden": true,
     "width": 4,
     "spacing": 0,
     "margin-bottom": 4,
@@ -48,6 +49,8 @@
     "name": "top-bar",
     "layer": "top",
     "position": "top",
+    "exclusive": true,
+    "start_hidden": false,
     "height": 26,
     "spacing": 4,
     "modules-left": [
