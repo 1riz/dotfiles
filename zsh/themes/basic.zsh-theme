@@ -1,8 +1,6 @@
-# Custom OMZ theme
+# Linux console OMZ theme
 
-prompt_host="%(!.%{$fg_bold[red]%}.%{$fg_bold[yellow]%})hp%{$reset_color%}"
-prompt_arrow="%(?:%{$fg_bold[green]%}%1{»%} :%{$fg_bold[red]%}%1{»%} )%{$reset_color%}"
+local _host="hp"
+local _arrow="»"
 
-PROMPT="${prompt_host} %2~ ${prompt_arrow}"
-
-unset prompt_host prompt_arrow
+PROMPT="%(!.%{$fg[red]%}.%{$fg[cyan]%})$_host%{$reset_color%} %2~ ${_arrow} "

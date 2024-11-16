@@ -26,7 +26,7 @@ export ZSH_THEME_TERM_TITLE_IDLE="%~"
 
 alias v='nvim'
 alias vc='~/.config/nvim/scripts/nvim-cleanup.lua'
-alias t='tmux'
+alias t='tmux new-session -A -s DEV'
 alias root='sudo su -'
 alias n='nnn -deHoQTv'
 alias sp='ncspot'

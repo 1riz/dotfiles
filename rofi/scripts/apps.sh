@@ -32,7 +32,7 @@ elif [[ ${ROFI_RETV} == 1 ]]; then
       coproc { /opt/waterfox/waterfox; }
       ;;
     nvim)
-      coproc { foot -c ~/.config/foot/foot_github.ini -a neovim -W 140x60 -e nvim; }
+      coproc { foot -c ~/.config/foot/foot_catppuccin.ini -a neovim -W 140x60 -e nvim; }
       ;;
     thunar)
       coproc { thunar; }
@@ -50,7 +50,7 @@ elif [[ ${ROFI_RETV} == 1 ]]; then
       coproc { foot -c ~/.config/foot/foot_nightfox.ini -a nnn -T nnn -e nnn -deoQTv; }
       ;;
     tmux)
-      coproc { foot -a tmux -W 140x60 -e tmux; }
+      coproc { foot -a tmux -W 140x60 -e tmux new-session -A -s DEV; }
       ;;
     qalc)
       coproc { foot -c ~/.config/foot/foot_nightfox.ini -a qalc -T qalc -W 100x20 -e qalc -c; }
