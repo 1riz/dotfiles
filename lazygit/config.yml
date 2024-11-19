@@ -1,0 +1,12 @@
+gui:
+  showRandomTip: false
+  showCommandLog: false
+  showBottomLine: false
+  showPanelJumps: false
+  nerdFontsVersion: "3"
+
+update:
+  method: never
+
+disableStartupPopups: true
+notARepository: skip

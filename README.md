@@ -10,6 +10,7 @@ My personal dotfiles.
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [tmux](https://github.com/tmux/tmux)
 - [lsd](https://github.com/lsd-rs/lsd)
+- [lazygit](https://github.com/jesseduffield/lazygit)
 - [labwc](https://github.com/labwc/labwc)
 - [sway](https://github.com/swaywm/sway)
 - [swayfx](https://github.com/WillPower3309/swayfx)

@@ -12,6 +12,7 @@ if [[ ${ROFI_RETV} == 0 ]]; then
   echo -en "thunar\0display\x1f Thunar\x1ficon\x1fthunar\n"
   echo -en "nnn\0display\x1f NNN\x1ficon\x1fnnn\n"
   echo -en "btop\0display\x1f BTop\x1ficon\x1fbtop\n"
+  echo -en "lazygit\0display\x1f Lazygit\x1ficon\x1flazygit\n"
   echo -en "htop\0display\x1f HTop\x1ficon\x1fhtop\n"
   echo -en "ncspot\0display\x1f NCSpot\x1ficon\x1fncspot\n"
   echo -en "qalc\0display\x1f Qalc\x1ficon\x1faccessories-calculator\n"
@@ -36,6 +37,9 @@ elif [[ ${ROFI_RETV} == 1 ]]; then
       ;;
     thunar)
       coproc { thunar; }
+      ;;
+    lazygit)
+      coproc { foot -a lazygit -T lazygit -W 160x50 -e lazygit; }
       ;;
     btop)
       coproc { foot -a btop -T btop -e btop; }
