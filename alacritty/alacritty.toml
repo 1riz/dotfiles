@@ -12,7 +12,7 @@ blinking = "On"
 size = 10.0
 
 [font.normal]
-family = "terminal-nerd-font"
+family = "FiraCodeNerdFont"
 
 [font.offset]
 x = 0
