@@ -5,6 +5,11 @@ gui:
   showPanelJumps: false
   nerdFontsVersion: "3"
 
+git:
+  paging:
+    colorArg: always
+    pager: "delta --dark --paging=never --line-numbers"
+
 update:
   method: never
 

@@ -21,6 +21,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 export EDITOR="nvim"
+export PAGER="less"
 export GPG_TTY="$(tty)"
 export ZSH_THEME_TERM_TITLE_IDLE="%~"
 

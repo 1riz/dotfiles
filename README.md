@@ -11,6 +11,7 @@ My personal dotfiles.
 - [tmux](https://github.com/tmux/tmux)
 - [lsd](https://github.com/lsd-rs/lsd)
 - [lazygit](https://github.com/jesseduffield/lazygit)
+- [delta](https://github.com/dandavison/delta)
 - [labwc](https://github.com/labwc/labwc)
 - [sway](https://github.com/swaywm/sway)
 - [swayfx](https://github.com/WillPower3309/swayfx)
