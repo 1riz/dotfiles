@@ -12,6 +12,7 @@ My personal dotfiles.
 - [lsd](https://github.com/lsd-rs/lsd)
 - [lazygit](https://github.com/jesseduffield/lazygit)
 - [delta](https://github.com/dandavison/delta)
+- [aider](https://github.com/Aider-AI/aider)
 - [labwc](https://github.com/labwc/labwc)
 - [sway](https://github.com/swaywm/sway)
 - [swayfx](https://github.com/WillPower3309/swayfx)

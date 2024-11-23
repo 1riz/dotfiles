@@ -1,0 +1,7 @@
+dark-mode: true
+attribute-author: false
+attribute-committer: false
+attribute-commit-message-author: true
+check-update: false
+vim: true
+editor: nvim
