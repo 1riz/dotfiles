@@ -34,6 +34,10 @@ My personal dotfiles.
 
 - [1riz/nvim](https://github.com/1riz/nvim)
 
+## OhMyZsh plugins
+
+- [1riz/omz-plugins](https://github.com/1riz/omz-plugins)
+
 ## Fonts
 
 - [firacode](https://github.com/tonsky/FiraCode)

@@ -8,7 +8,7 @@ local _return_status="%{$fg[red]%}%(?..⍉ )%{$reset_color%}"
 
 function _host_name() {
   local _nick="hp"
-  echo "%{$fg[blue]%}$_nick%{$reset_color%} "
+  echo "%(!.%{$fg[red]%}.%{$fg[blue]%})$_nick%{$reset_color%} "
 }
 
 ZSH_THEME_GIT_PROMPT_SHA_BEFORE="%{$fg[yellow]%}"

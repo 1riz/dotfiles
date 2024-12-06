@@ -12,8 +12,9 @@ plugins=(
   git
   thefuck
   fzf
-  lsd
+  bat
   fp
+  lsd
   pe
   z
 )
