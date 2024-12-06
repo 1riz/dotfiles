@@ -15,3 +15,9 @@ update:
 
 disableStartupPopups: true
 notARepository: skip
+
+customCommands:
+  - key: "W"
+    context: "files"
+    command: git commit --no-verify --no-edit --amend
+    description: "Amend last commit without pre-commit hook"
