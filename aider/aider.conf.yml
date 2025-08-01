@@ -3,5 +3,6 @@ attribute-author: false
 attribute-committer: false
 attribute-commit-message-author: true
 check-update: false
+analytics: false
 vim: true
 editor: nvim
