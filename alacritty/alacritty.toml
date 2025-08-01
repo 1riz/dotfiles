@@ -10,9 +10,11 @@ blinking = "On"
 
 [font]
 size = 10.0
+# size = 12.0
 
 [font.normal]
 family = "FiraCodeNerdFont"
+# family = "FiraCode Nerd Font Mono"
 
 [font.offset]
 x = 0
@@ -20,6 +22,10 @@ y = 2
 
 [window]
 opacity = 1.0
+# decorations = "Buttonless"
+# blur = true
+# opacity = 0.5
+# option_as_alt = "OnlyLeft"
 
 [window.class]
 general = "alacritty"
@@ -28,9 +34,15 @@ general = "alacritty"
 columns = 130
 lines = 35
 
+# [window.position]
+# x = 514
+# y = 366
+
 [window.padding]
 x = 2
 y = 2
+# x = 8
+# y = 8
 
 [[keyboard.bindings]]
 action = "CreateNewWindow"
