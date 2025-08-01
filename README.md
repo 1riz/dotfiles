@@ -13,6 +13,7 @@ My personal dotfiles.
 - [lazygit](https://github.com/jesseduffield/lazygit)
 - [delta](https://github.com/dandavison/delta)
 - [aider](https://github.com/Aider-AI/aider)
+- [aichat](https://github.com/sigoden/aichat)
 - [labwc](https://github.com/labwc/labwc)
 - [sway](https://github.com/swaywm/sway)
 - [swayfx](https://github.com/WillPower3309/swayfx)
