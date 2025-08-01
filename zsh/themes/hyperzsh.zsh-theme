@@ -8,6 +8,7 @@ local _return_status="%{$fg[red]%}%(?..⍉ )%{$reset_color%}"
 
 function _host_name() {
   local _nick="hp"
+  # local _nick="mac"
   echo "%(!.%{$fg[red]%}.%{$fg[blue]%})$_nick%{$reset_color%} "
 }
 
