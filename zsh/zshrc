@@ -1,10 +1,10 @@
-export ZSH=$HOME/.oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
 export ZSHZ_DATA="$HOME/.zshz"
 
 if [[ "${TERM}" =~ "256color" ]]; then
   ZSH_THEME="hyperzsh"
 else
-  ZSH_THEME="basic"
+  ZSH_THEME="console"
 fi
 
 zstyle ':omz:update' mode disabled

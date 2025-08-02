@@ -1,15 +1,19 @@
 # Based on Hyperzsh theme
 # https://github.com/tylerreckart/hyperzsh
 
-PROMPT='$(_host_name)%{$fg[cyan]%}%c $(git_prompt_info)%{$reset_color%}$(_git_time_since_commit)$(git_prompt_status)${_return_status}${_arrow} '
+PROMPT='$(_host_name)%{$fg[cyan]%}%c $(git_prompt_info)%{$reset_color%}$(_git_time_since_commit)$(git_prompt_status)$(_return_status)${_arrow} '
 
 local _arrow="➜"
-local _return_status="%{$fg[red]%}%(?..⍉ )%{$reset_color%}"
 
 function _host_name() {
   local _nick="hp"
   # local _nick="mac"
   echo "%(!.%{$fg[red]%}.%{$fg[blue]%})$_nick%{$reset_color%} "
+}
+
+function _return_status() {
+  local _error="⍉"
+  echo "%{$fg[red]%}%(?..${_error} )%{$reset_color%}"
 }
 
 ZSH_THEME_GIT_PROMPT_SHA_BEFORE="%{$fg[yellow]%}"
