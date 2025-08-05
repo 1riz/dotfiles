@@ -3,10 +3,10 @@ wlr-randr --output HDMI-A-1 --mode 2560x1440@74.968002Hz --pos 0,0
 wlr-randr --output eDP-1 --mode 1920x1080@60.000000Hz --pos 2560,0
 
 ### Background
-# wpaperd -d &
+# wpaperd -d
 # swaybg -c '#43689a' &
 # swaybg -m stretch -i ~/Pictures/Wallpapers/swaybg/macos-wallpaper-10-3.png &
-wpaperd -d
+swaybg -c '#00416A' &
 
 ### Lock Screen
 swayidle -w timeout 600 swaylock &

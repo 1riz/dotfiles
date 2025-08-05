@@ -5,6 +5,7 @@
   <theme>
     <name>Onyx</name>
     <font name="DejaVuSans" size="10" />
+    <titlebar><layout>menu:iconify,max,close</layout></titlebar>
     <dropShadows>yes</dropShadows>
   </theme>
 
