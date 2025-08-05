@@ -30,7 +30,8 @@ My personal dotfiles.
 - [grim](https://git.sr.ht/~emersion/grim)
 - [slurp](https://github.com/emersion/slurp)
 - [autotiling](https://github.com/nwg-piotr/autotiling)
-- [wireplumber](https://pipewire.pages.freedesktop.org/wireplumber)
+- [wireplumber](https://gitlab.freedesktop.org/pipewire/wireplumber)
+- [vim](https://github.com/vim/vim)
 
 ## Neovim config
 
