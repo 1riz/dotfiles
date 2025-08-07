@@ -3,8 +3,8 @@
 <labwc_config>
 
   <theme>
-    <name>Onyx</name>
-    <font name="DejaVuSans" size="10" />
+    <name>Adwaita-Labwc-dark</name>
+    <font name="DejaVuSans" size="11" />
     <titlebar><layout>menu:iconify,max,close</layout></titlebar>
     <dropShadows>yes</dropShadows>
   </theme>
@@ -62,13 +62,13 @@
 
     <!-- Basics -->
     <keybind key="W-Return">
-      <action name="Execute" command="foot" />
+      <action name="Execute" command="ghostty" />
     </keybind>
     <keybind key="W-C-Return">
-      <action name="Execute" command="foot -F" />
+      <action name="Execute" command="ghostty --title=ghostty-fullscreen" />
     </keybind>
     <keybind key="W-S-Return">
-      <action name="Execute" command="foot -o colors.alpha=0.85" />
+      <action name="Execute" command="ghostty --background-opacity=0.8" />
     </keybind>
     <keybind key="W-Space">
       <action name="Execute" command="rofi -show-icons -show apps" />
@@ -341,10 +341,14 @@
   </mouse>
 
   <windowRules>
-    <windowRule identifier="imv" serverDecoration="yes"/>
+    <windowRule identifier="imv" serverDecoration="yes" />
     <windowRule title="Waterfox — Sharing Indicator">
       <skipTaskbar>yes</skipTaskbar>
       <action name="Iconify" />
+    </windowRule>
+    <windowRule title="ghostty-fullscreen">
+      <action name="SetDecorations" decorations="none" />
+      <action name="Maximize" />
     </windowRule>
   </windowRules>
 </labwc_config>

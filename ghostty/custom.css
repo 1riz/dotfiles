@@ -1,0 +1,17 @@
+tabbar {
+  margin: -12px;
+}
+tabbar tabbox {
+  transform: translateY(-6px);
+  margin: 0;
+  padding: 0;
+  background-color: #050505;
+  color:  #cdd6f4;
+}
+tabbar tabbox tab {
+  font-family: FiraCodeNerdFont;
+  font-size: 11px;
+}
+tabbar tabbox tab:selected {
+  background-color: #111111;
+}

@@ -1,0 +1,33 @@
+theme = catppuccin-mocha
+background = #000000
+foreground = #cdd6f4
+cursor-color = #cdd6f4
+cursor-text = #000000
+
+shell-integration = none
+app-notifications = false
+
+font-family = FiraCodeNerdFont
+font-size = 10
+adjust-cell-height = 4
+
+cursor-style = block
+mouse-hide-while-typing
+focus-follows-mouse
+unfocused-split-opacity = 1
+
+window-width = 130
+window-height = 35
+gtk-single-instance = true
+gtk-tabs-location = bottom
+gtk-wide-tabs = false
+gtk-custom-css = custom.css
+
+keybind = ctrl+enter=new_window
+keybind = ctrl+shift+enter=new_split:right
+keybind = alt+shift+enter=new_split:down
+
+keybind = ctrl+page_up=unbind
+keybind = ctrl+page_down=unbind
+keybind = ctrl+shift+page_up=goto_split:previous
+keybind = ctrl+shift+page_down=goto_split:next

@@ -4,7 +4,7 @@ configuration {
   case-sensitive: false;
   matching: "normal";
   terminal: "foot";
-  window-format: " <span text_transform=\"lowercase\">{c}</span>  {t}";
+  window-format: "  {t}";
   window {
     fallback-icon: "application-x-generic";
   }

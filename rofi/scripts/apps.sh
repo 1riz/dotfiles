@@ -5,6 +5,7 @@ echo -en "\0prompt\x1fapps\n"
 if [[ ${ROFI_RETV} == 0 ]]; then
 
   echo -en "foot\0display\x1f Foot\x1ficon\x1ffoot\n"
+  echo -en "ghostty\0display\x1f Ghostty\x1ficon\x1fcom.mitchellh.ghostty\n"
   echo -en "firefox\0display\x1f Firefox\x1ficon\x1ffirefox\n"
   echo -en "waterfox\0display\x1f Waterfox\x1ficon\x1fwaterfox\n"
   echo -en "nvim\0display\x1f Neovim\x1ficon\x1fneovim\n"
@@ -25,6 +26,9 @@ elif [[ ${ROFI_RETV} == 1 ]]; then
   case "${1}" in
     foot)
       coproc { foot; }
+      ;;
+    ghostty)
+      coproc { ghostty; }
       ;;
     firefox)
       coproc { /usr/lib/firefox/firefox; }
