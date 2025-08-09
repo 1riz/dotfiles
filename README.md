@@ -33,6 +33,7 @@ My personal dotfiles.
 - [autotiling](https://github.com/nwg-piotr/autotiling)
 - [wireplumber](https://gitlab.freedesktop.org/pipewire/wireplumber)
 - [vim](https://github.com/vim/vim)
+- [neovide](https://github.com/neovide/neovide)
 
 ## Neovim config
 

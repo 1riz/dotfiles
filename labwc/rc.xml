@@ -91,6 +91,9 @@
     <keybind key="W-n">
       <action name="Execute" command="thunar" />
     </keybind>
+    <keybind key="W-e">
+      <action name="Execute" command="neovide" />
+    </keybind>
     <keybind key="W-l">
       <action name="Execute" command="swaylock" />
     </keybind>
