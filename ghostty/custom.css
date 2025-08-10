@@ -5,13 +5,22 @@ tabbar tabbox {
   transform: translateY(-6px);
   margin: 0;
   padding: 0;
-  background-color: #050505;
-  color:  #cdd6f4;
+  background-color: #101019;
+  color: #9399b2;
 }
 tabbar tabbox tab {
+  background-color: #161622;
   font-family: FiraCodeNerdFont;
   font-size: 11px;
 }
 tabbar tabbox tab:selected {
-  background-color: #111111;
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+  font-weight: bold;
+}
+tabbar tabbox tab .image-button {
+  background-color: #1e1e2e;
+}
+tabbar tabbox separator {
+  background-color: #101019;
 }

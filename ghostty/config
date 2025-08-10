@@ -23,11 +23,6 @@ gtk-tabs-location = bottom
 gtk-wide-tabs = false
 gtk-custom-css = custom.css
 
-keybind = ctrl+enter=new_window
+keybind = ctrl+enter=new_tab
 keybind = ctrl+shift+enter=new_split:right
-keybind = alt+shift+enter=new_split:down
-
-keybind = ctrl+page_up=unbind
-keybind = ctrl+page_down=unbind
-keybind = ctrl+shift+page_up=goto_split:previous
-keybind = ctrl+shift+page_down=goto_split:next
+keybind = ctrl+alt+enter=new_split:down
