@@ -26,7 +26,8 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR="nvim"
 export PAGER="less"
 export GPG_TTY="$(tty)"
-export ZSH_THEME_TERM_TITLE_IDLE="zsh (%~)"
+export ZSH_THEME_TERM_TAB_TITLE_IDLE="zsh (%12<..<%~%<<)"
+export ZSH_THEME_TERM_TITLE_IDLE=$ZSH_THEME_TERM_TAB_TITLE_IDLE
 
 alias v='nvim'
 alias vc='~/.config/nvim/scripts/nvim-cleanup.lua'

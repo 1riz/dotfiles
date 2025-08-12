@@ -1,0 +1,6 @@
+window.titlebar.padding.width: 4
+window.titlebar.padding.height: 4
+
+window.button.width: 16
+window.button.height: 16
+window.button.spacing: 4

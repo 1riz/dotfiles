@@ -7,9 +7,9 @@ cursor-text = #000000
 shell-integration = none
 app-notifications = false
 
-font-family = FiraCodeNerdFont
-font-size = 10
-adjust-cell-height = 4
+font-family = IosevkaTermNerdFont
+font-size = 10.5
+adjust-cell-height = 2
 
 cursor-style = block
 mouse-hide-while-typing
