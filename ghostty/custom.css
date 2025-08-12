@@ -1,3 +1,9 @@
+/*
+lualine_a_normal guifg=#0d1117 guibg=#58a6ff
+lualine_b_normal guifg=#4988d1 guibg=#1c2f45
+lualine_c_normal guifg=#3a6aa2 guibg=#0e1219
+*/
+
 tabbar {
   margin: -12px;
 }
@@ -5,22 +11,23 @@ tabbar tabbox {
   transform: translateY(-6px);
   margin: 0;
   padding: 0;
-  background-color: #101019;
-  color: #9399b2;
+  background-color: #0e1219;
+  color: #3a6aa2;
 }
 tabbar tabbox tab {
-  background-color: #161622;
-  font-family: FiraCodeNerdFont;
+  background-color: #1c2f45;
+  color: #4988d1;
+  font-family: DejaVu Sans Mono;
   font-size: 11px;
 }
 tabbar tabbox tab:selected {
-  background-color: #1e1e2e;
-  color: #cdd6f4;
+  color: #58a6ff;
   font-weight: bold;
 }
 tabbar tabbox tab .image-button {
-  background-color: #1e1e2e;
+  background-color: #1c2f45;
 }
 tabbar tabbox separator {
-  background-color: #101019;
+  background-color: #0e1219;
+  color: #3a6aa2;
 }

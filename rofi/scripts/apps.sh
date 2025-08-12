@@ -7,7 +7,6 @@ if [[ ${ROFI_RETV} == 0 ]]; then
   echo -en "ghostty\0display\x1f Ghostty\x1ficon\x1fcom.mitchellh.ghostty\n"
   echo -en "foot\0display\x1f Foot\x1ficon\x1ffoot\n"
   echo -en "firefox\0display\x1f Firefox\x1ficon\x1ffirefox\n"
-  echo -en "waterfox\0display\x1f Waterfox\x1ficon\x1fwaterfox\n"
   echo -en "neovide\0display\x1f Neovide\x1ficon\x1fneovim\n"
   echo -en "nvim\0display\x1f Neovim\x1ficon\x1fneovim\n"
   echo -en "tmux\0display\x1f Tmux\x1ficon\x1ftmux\n"
@@ -34,9 +33,6 @@ elif [[ ${ROFI_RETV} == 1 ]]; then
     firefox)
       coproc { /usr/lib/firefox/firefox; }
       ;;
-    waterfox)
-      coproc { /opt/waterfox/waterfox; }
-      ;;
     neovide)
       coproc { neovide; }
       ;;
@@ -44,7 +40,7 @@ elif [[ ${ROFI_RETV} == 1 ]]; then
       coproc { thunar; }
       ;;
     nvim)
-      coproc { foot -c ~/.config/foot/foot_catppuccin.ini -a neovim -W 140x60 -e nvim; }
+      coproc { foot -c ~/.config/foot/foot_github.ini -a neovim -W 140x60 -e nvim; }
       ;;
     lazygit)
       coproc { foot -a lazygit -T lazygit -W 160x50 -e lazygit; }

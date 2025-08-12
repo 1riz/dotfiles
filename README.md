@@ -45,7 +45,7 @@ My personal dotfiles.
 
 ## Fonts
 
-- [firacode](https://github.com/tonsky/FiraCode)
+- [monaspace](https://github.com/githubnext/monaspace)
 - [firacode-nerd](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
 - [noto-fonts-emoji](https://fonts.google.com/noto/specimen/Noto+Color+Emoji)
 

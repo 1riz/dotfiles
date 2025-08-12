@@ -3,22 +3,21 @@ TERM = "xterm-256color"
 
 [colors.primary]
 background = "#000000"
-foreground = "#cdd6f4"
+foreground = "#e6edf3"
 
 [cursor.style]
 blinking = "On"
 
 [font]
-size = 10.0
-# size = 12.0
+size = 9.5
+# size = 11.5
 
 [font.normal]
-family = "FiraCodeNerdFont"
-# family = "FiraCode Nerd Font Mono"
+family = "Monaspace Krypton"
 
 [font.offset]
 x = 0
-y = 2
+y = 3
 
 [window]
 opacity = 1.0

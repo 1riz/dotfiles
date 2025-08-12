@@ -1,15 +1,16 @@
-theme = catppuccin-mocha
+theme = GitHub-Dark-Default
 background = #000000
-foreground = #cdd6f4
-cursor-color = #cdd6f4
+foreground = #e6edf3
+cursor-color = #e6edf3
 cursor-text = #000000
 
 shell-integration = none
 app-notifications = false
 
-font-family = IosevkaTermNerdFont
-font-size = 10.5
-adjust-cell-height = 2
+font-family = Monaspace Krypton
+font-size = 9.5
+font-feature = +calt, +ss01, +ss02, +ss03, +ss04, +ss05, +ss06, +ss07, +ss08, +ss09, +liga
+adjust-cell-height = 3
 
 cursor-style = block
 mouse-hide-while-typing

@@ -34,7 +34,3 @@
   foreground = "#ffffff"
   frame_color = "#ff0000"
   timeout = 0
-
-[waterfox]
-  desktop_entry = "Waterfox"
-  default_icon = "/opt/waterfox/browser/chrome/icons/default/default128.png"
