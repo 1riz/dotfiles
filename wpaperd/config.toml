@@ -3,7 +3,7 @@ mode = "stretch"
 sorting = "ascending"
 
 [eDP-1]
-path = "~/Pictures/Wallpapers/1920x1080"
+path = "~/Pictures/Wallpapers/macOS"
 
 [HDMI-A-1]
-path = "~/Pictures/Wallpapers/2560x1440"
+path = "~/Pictures/Wallpapers/macOS"

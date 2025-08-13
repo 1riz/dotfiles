@@ -41,10 +41,26 @@ window#waybar.bottom-bar {
     background-color: #555555;
 }
 
-#custom-ws-1,
-#custom-ws-2,
-#custom-ws-3,
-#custom-ws-4,
+#workspaces button {
+    padding: 0 8px;
+    color: #ffffff;
+    border: none;
+    border-radius: 0;
+}
+
+#taskbar button.minimized {
+    background-color: #151515;
+}
+
+#taskbar button.active,
+#workspaces button.active {
+    background-color: #333333;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
 #custom-dunst,
 #network,
 #cpu,
@@ -56,10 +72,6 @@ window#waybar.bottom-bar {
     color: #ffffff;
 }
 
-#custom-ws-1:hover,
-#custom-ws-2:hover,
-#custom-ws-3:hover,
-#custom-ws-4:hover,
 #custom-dunst:hover,
 #network:hover,
 #cpu:hover,
@@ -70,7 +82,8 @@ window#waybar.bottom-bar {
     background-color: #555555;
 }
 
-#window {
+#window,
+#workspaces {
     margin: 0 4px;
 }
 
@@ -80,13 +93,6 @@ window#waybar.bottom-bar {
 
 .modules-right > widget:last-child > #workspaces {
     margin-right: 0;
-}
-
-#custom-ws-1.active,
-#custom-ws-2.active,
-#custom-ws-3.active,
-#custom-ws-4.active {
-    background-color: #333333;
 }
 
 #battery.charging, #battery.plugged {

@@ -3,6 +3,12 @@
 <openbox_menu>
 
 <menu id="root-menu">
+  <item label="Run an application">
+    <action name="Execute" command="rofi -show-icons -show apps" />
+  </item>
+  <item label="Switch between windows">
+    <action name="Execute" command="rofi -show-icons -modes window -show window" />
+  </item>
   <item label="Go to right desktop">
     <action name="GoToDesktop" to="right" wrap="yes" />
   </item>

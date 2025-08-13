@@ -5,14 +5,14 @@
   <theme>
     <name>Adwaita-dark-maccish</name>
     <font name="DejaVuSans" size="11" />
-    <titlebar><layout>menu:iconify,max,close</layout></titlebar>
+    <titlebar><layout>close,iconify,max:</layout></titlebar>
     <dropShadows>yes</dropShadows>
   </theme>
 
-  <windowSwitcher show="no" preview="yes" outlines="yes" allWorkspaces="no">
+  <windowSwitcher show="no" preview="yes" outlines="no" allWorkspaces="no">
     <fields>
-      <field content="trimmed_identifier" width="20%" />
-      <field content="title" width="80%" />
+      <field content="icon" width="5%" />
+      <field content="title" width="95%" />
     </fields>
   </windowSwitcher>
 
@@ -65,10 +65,10 @@
       <action name="Execute" command="ghostty" />
     </keybind>
     <keybind key="W-C-Return">
-      <action name="Execute" command="ghostty --title=ghostty-fullscreen" />
+      <action name="Execute" command="ghostty --gtk-single-instance=false --title=ghostty-fullscreen" />
     </keybind>
     <keybind key="W-S-Return">
-      <action name="Execute" command="ghostty --background-opacity=0.8" />
+      <action name="Execute" command="ghostty --gtk-single-instance=false --background-opacity=0.7" />
     </keybind>
     <keybind key="W-Space">
       <action name="Execute" command="rofi -show-icons -show apps" />
@@ -91,6 +91,9 @@
     <keybind key="W-n">
       <action name="Execute" command="thunar" />
     </keybind>
+    <keybind key="W-i">
+      <action name="Execute" command="firefox" />
+    </keybind>
     <keybind key="W-e">
       <action name="Execute" command="neovide" />
     </keybind>
@@ -98,13 +101,10 @@
       <action name="Execute" command="swaylock" />
     </keybind>
     <keybind key="W-b">
-      <action name="Execute" command="killall -SIGUSR1 waybar" />
+      <action name="Execute" command="killall -SIGINT waybar" />
     </keybind>
     <keybind key="W-S-b">
       <action name="Execute" command="waybar" />
-    </keybind>
-    <keybind key="W-C-b">
-      <action name="Execute" command="killall -SIGINT waybar" />
     </keybind>
     <keybind key="W-S-c">
       <action name="Reconfigure" />
@@ -205,35 +205,27 @@
     </keybind>
     <keybind key="W-1">
       <action name="GoToDesktop" to="1" wrap="no" />
-      <action name="Execute" command="bash -c 'echo 1 > ~/.cache/labwc-workspace; pkill -SIGRTMIN+8 waybar'" />
     </keybind>
     <keybind key="W-2">
       <action name="GoToDesktop" to="2" wrap="no" />
-      <action name="Execute" command="bash -c 'echo 2 > ~/.cache/labwc-workspace; pkill -SIGRTMIN+8 waybar'" />
     </keybind>
     <keybind key="W-3">
       <action name="GoToDesktop" to="3" wrap="no" />
-      <action name="Execute" command="bash -c 'echo 3 > ~/.cache/labwc-workspace; pkill -SIGRTMIN+8 waybar'" />
     </keybind>
     <keybind key="W-4">
       <action name="GoToDesktop" to="4" wrap="no" />
-      <action name="Execute" command="bash -c 'echo 4 > ~/.cache/labwc-workspace; pkill -SIGRTMIN+8 waybar'" />
     </keybind>
     <keybind key="W-S-1">
       <action name="SendToDesktop" to="1" wrap="no" />
-      <action name="Execute" command="bash -c 'echo 1 > ~/.cache/labwc-workspace; pkill -SIGRTMIN+8 waybar'" />
     </keybind>
     <keybind key="W-S-2">
       <action name="SendToDesktop" to="2" wrap="no" />
-      <action name="Execute" command="bash -c 'echo 2 > ~/.cache/labwc-workspace; pkill -SIGRTMIN+8 waybar'" />
     </keybind>
     <keybind key="W-S-3">
       <action name="SendToDesktop" to="3" wrap="no" />
-      <action name="Execute" command="bash -c 'echo 3 > ~/.cache/labwc-workspace; pkill -SIGRTMIN+8 waybar'" />
     </keybind>
     <keybind key="W-S-4">
       <action name="SendToDesktop" to="4" wrap="no" />
-      <action name="Execute" command="bash -c 'echo 4 > ~/.cache/labwc-workspace; pkill -SIGRTMIN+8 waybar'" />
     </keybind>
 
     <!-- Function keys -->
@@ -345,10 +337,6 @@
 
   <windowRules>
     <windowRule identifier="imv" serverDecoration="yes" />
-    <windowRule title="Waterfox — Sharing Indicator">
-      <skipTaskbar>yes</skipTaskbar>
-      <action name="Iconify" />
-    </windowRule>
     <windowRule title="ghostty-fullscreen">
       <action name="SetDecorations" decorations="none" />
       <action name="Maximize" />
