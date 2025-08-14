@@ -11,7 +11,6 @@ zstyle ':omz:update' mode disabled
 
 plugins=(
   git
-  thefuck
   fzf
   bat
   fp
