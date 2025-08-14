@@ -1,58 +1,7 @@
 // -*- mode: jsonc -*-
-[{
-    "name": "bottom-bar",
-    "layer": "bottom",
-    "position": "bottom",
-    "exclusive": false,
-    "start_hidden": true,
-    "width": 4,
-    "spacing": 0,
-    "margin-bottom": 4,
-    "modules-left": [
-        "image",
-        "image#image2",
-        "image#image3"
-    ],
-    "modules-center": [
-        "wlr/taskbar"
-    ],
-    "image": {
-        "path": ".local/share/icons/hicolor/128x128/apps/file-manager.png",
-        "size": 48,
-        "icon-size": 48,
-        "on-click": "thunar"
-    },
-    "image#image2": {
-        "path": ".local/share/icons/hicolor/128x128/apps/browser.png",
-        "size": 48,
-        "icon-size": 48,
-        "on-click": "firefox"
-    },
-    "image#image3": {
-        "path": ".local/share/icons/hicolor/128x128/apps/terminal.png",
-        "size": 48,
-        "icon-size": 48,
-        "on-click": "ghostty"
-    },
-    "wlr/taskbar": {
-        "format": "{icon}",
-        "tooltip-format": "<span text_transform=\"lowercase\">{app_id}</span>: {title}",
-        "markup": true,
-        "icon-size": 48,
-        "on-click": "minimize-raise",
-        "on-click-middle": "close",
-        "app_ids-mapping": {
-            "com.mitchellh.ghostty": "ghostty",
-            "org.pwmt.zathura": "zathura"
-        }
-    }
-},
 {
-    "name": "top-bar",
     "layer": "top",
     "position": "top",
-    "exclusive": true,
-    "start_hidden": false,
     "height": 26,
     "spacing": 4,
     "modules-left": [
@@ -65,18 +14,12 @@
         "pulseaudio",
         "battery",
         "clock",
-        "custom/dunst"
+        "custom/notifications"
     ],
     "ext/workspaces": {
         "format": "{name}",
         "on-click": "activate",
         "sort-by-id": true
-    },
-    "custom/dunst": {
-        "format": "",
-        "tooltip-format": "Notifications",
-        "on-click": "dunstctl history-pop",
-        "on-click-right": "dunstctl close-all"
     },
     "clock": {
         "format": " {:%H:%M}",
@@ -115,5 +58,11 @@
             "headphone": "",
             "default": ["", "", ""]
         }
+    },
+    "custom/notifications": {
+        "format": "",
+        "tooltip-format": "Notifications",
+        "on-click": "dunstctl history-pop",
+        "on-click-right": "dunstctl close-all"
     }
-}]
+}
