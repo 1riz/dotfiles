@@ -34,13 +34,13 @@ elif [[ ${ROFI_RETV} == 1 ]]; then
       coproc { /usr/lib/firefox/firefox; }
       ;;
     neovide)
-      coproc { neovide; }
+      coproc { neovide --grid=162x65; }
       ;;
     thunar)
       coproc { thunar; }
       ;;
     nvim)
-      coproc { foot -c ~/.config/foot/foot_github.ini -a neovim -W 140x60 -e nvim; }
+      coproc { foot -c ~/.config/foot/foot_github.ini -a neovim -W 162x65 -e nvim; }
       ;;
     lazygit)
       coproc { foot -a lazygit -T lazygit -W 160x50 -e lazygit; }

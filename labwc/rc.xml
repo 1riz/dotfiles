@@ -9,6 +9,11 @@
     <dropShadows>yes</dropShadows>
   </theme>
 
+  <placement>
+    <policy>cascade</policy>
+    <cascadeOffset x="50" y="50" />
+  </placement>
+
   <windowSwitcher show="no" preview="yes" outlines="no" allWorkspaces="no">
     <fields>
       <field content="icon" width="5%" />
@@ -92,10 +97,10 @@
       <action name="Execute" command="thunar" />
     </keybind>
     <keybind key="W-i">
-      <action name="Execute" command="firefox" />
+      <action name="Execute" command="/usr/lib/firefox/firefox" />
     </keybind>
     <keybind key="W-e">
-      <action name="Execute" command="neovide" />
+      <action name="Execute" command="neovide --grid=162x65" />
     </keybind>
     <keybind key="W-l">
       <action name="Execute" command="swaylock" />
@@ -341,5 +346,15 @@
       <action name="SetDecorations" decorations="none" />
       <action name="Maximize" />
     </windowRule>
+    <windowRule identifier="firefox">
+      <action name="ResizeTo" width="1300" height="900" />
+    </windowRule>
+    <windowRule identifier="neovide">
+      <action name="MoveRelative" x="-600" y="0" />
+    </windowRule>
+    <windowRule identifier="com.mitchellh.ghostty" matchOnce="true">
+      <action name="MoveRelative" x="665" y="260" />
+    </windowRule>
   </windowRules>
+
 </labwc_config>
