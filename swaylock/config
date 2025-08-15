@@ -1,6 +1,6 @@
 daemonize
-color=000000
-# image=~/Pictures/Wallpapers/swaylock/wallpaper-001-UHD-text-arch-linux-dark-logo.jpg
-# scaling=stretch
-font=MonaspaceKryptonFrozen
+# color=000000
+image=~/Pictures/Wallpapers/macOS/001-macos-wallpaper-10-14-Night.jpg
+scaling=stretch
+font=DejaVuSans
 font-size=12
