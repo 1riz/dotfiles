@@ -8,21 +8,30 @@ shell-integration = none
 app-notifications = false
 
 font-family = Monaspace Krypton
+# font-family = Monaspace Krypton Var
 font-size = 9.5
+# font-size = 12
 font-feature = +calt, +ss01, +ss02, +ss03, +ss04, +ss05, +ss06, +ss07, +ss08, +ss09, +liga
 adjust-cell-height = 3
+# adjust-cell-height = 4
 
 cursor-style = block
 mouse-hide-while-typing
 focus-follows-mouse
 unfocused-split-opacity = 1
+quit-after-last-window-closed = true
 
 window-width = 130
 window-height = 35
+
 gtk-single-instance = true
 gtk-tabs-location = bottom
 gtk-wide-tabs = false
 gtk-custom-css = custom.css
+# background-opacity = 0.5
+# background-blur = true
+# macos-titlebar-proxy-icon = hidden
+# macos-option-as-alt = left
 
 keybind = ctrl+enter=new_tab
 keybind = ctrl+shift+enter=new_split:right
