@@ -6,6 +6,7 @@
     <name>Adwaita-dark-maccish</name>
     <font name="DejaVuSans" size="11" />
     <titlebar><layout>close,iconify,max:</layout></titlebar>
+    <cornerRadius>8</cornerRadius>
     <dropShadows>yes</dropShadows>
   </theme>
 
@@ -40,10 +41,10 @@
   <desktops>
     <popupTime>0</popupTime>
     <names>
-      <name>Home</name>
-      <name>Devel</name>
-      <name>Work</name>
-      <name>Admin</name>
+      <name>1</name>
+      <name>2</name>
+      <name>3</name>
+      <name>4</name>
     </names>
   </desktops>
 

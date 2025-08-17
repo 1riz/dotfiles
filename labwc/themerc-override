@@ -1,6 +1,6 @@
 window.titlebar.padding.width: 7
 window.titlebar.padding.height: 5
 
-window.button.width: 15
-window.button.height: 15
-window.button.spacing: 5
+window.button.width: 13
+window.button.height: 13
+window.button.spacing: 7

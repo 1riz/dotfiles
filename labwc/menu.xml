@@ -9,10 +9,10 @@
   <item label="Switch between windows">
     <action name="Execute" command="rofi -show-icons -modes window -show window" />
   </item>
-  <item label="Go to right desktop">
+  <item label="Go to right space">
     <action name="GoToDesktop" to="right" wrap="yes" />
   </item>
-  <item label="Go to left desktop">
+  <item label="Go to left space">
     <action name="GoToDesktop" to="left" wrap="yes" />
   </item>
   <item label="Lock screen">

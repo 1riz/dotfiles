@@ -20,13 +20,13 @@
 [urgency_low]
   background = "#303030"
   foreground = "#ffffff"
-  frame_color = "#303030"
+  frame_color = "#3f3f3f"
   timeout = 0
 
 [urgency_normal]
   background = "#303030"
   foreground = "#ffffff"
-  frame_color = "#303030"
+  frame_color = "#3f3f3f"
   timeout = 0
 
 [urgency_critical]
