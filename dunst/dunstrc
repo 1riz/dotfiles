@@ -7,7 +7,7 @@
   padding = 10
   horizontal_padding = 10
   corner_radius = 8
-  frame_width = 1
+  frame_width = 2
   gap_size = 10
   show_indicators = false
   icon_theme = "Adwaita"
@@ -18,19 +18,19 @@
   enable_posix_regex = true
 
 [urgency_low]
-  background = "#303030"
+  background = "#09142b"
   foreground = "#ffffff"
-  frame_color = "#3f3f3f"
+  frame_color = "#2c3952"
   timeout = 0
 
 [urgency_normal]
-  background = "#303030"
+  background = "#09142b"
   foreground = "#ffffff"
-  frame_color = "#3f3f3f"
+  frame_color = "#2c3952"
   timeout = 0
 
 [urgency_critical]
-  background = "#303030"
+  background = "#09142b"
   foreground = "#ffffff"
   frame_color = "#ff0000"
   timeout = 0
