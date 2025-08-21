@@ -16,31 +16,37 @@ window#waybar {
     padding-right: 8px;
 }
 
-#tags,
-#window {
-    margin: 0 4px;
+#taskbar button {
+    padding: 0;
+    margin: 0;
 }
 
-#tags button {
+#taskbar button.active,
+#workspaces button {
     padding: 0 8px;
     border: none;
     border-radius: 0;
-    color: #ffffff;
 }
 
-#tags button:hover {
+#taskbar button:hover,
+#workspaces button:hover {
     background: inherit;
 }
 
-#tags button.urgent {
+#workspaces button.urgent {
     background-color: #182741;
 }
 
-#window.focused,
-#tags button.focused {
+#taskbar button box label {
+    font-size: 0px;
+}
+
+#taskbar button.active box label {
+    font-size: 11px;
     font-weight: bold;
 }
 
+#custom-launcher,
 #custom-notifications,
 #network,
 #cpu,
@@ -62,6 +68,19 @@ window#waybar {
 #pulseaudio:hover,
 #clock:hover {
     background-color: #2c3952;
+}
+
+#taskbar,
+#window {
+    margin: 0 4px;
+}
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
 }
 
 #battery.critical:not(.charging),

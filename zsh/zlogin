@@ -1,3 +1,21 @@
 fastfetch
 fortune | cowsay
 echo ""
+
+if [[ -z "${WAYLAND_DISPLAY}" ]]; then
+while true; do
+  echo -n "Do you want to start a Wayland session now? [Y/n] "
+  read -r yn
+  case "${yn}" in
+    [Nn])
+      echo ""
+      break
+      ;;
+    *)
+      printf "\n\e[32m==> %s...\e[0m\n\n" "Running River wayland compositor"
+      exec river > /tmp/river.log 2>&1
+      break
+      ;;
+  esac
+done
+fi

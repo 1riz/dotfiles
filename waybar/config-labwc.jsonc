@@ -5,12 +5,11 @@
     "height": 26,
     "spacing": 4,
     "modules-left": [
-        "river/tags"
-    ],
-    "modules-center": [
-        "river/window"
+        "custom/launcher",
+        "wlr/taskbar"
     ],
     "modules-right": [
+        "ext/workspaces",
         "network",
         "cpu",
         "memory",
@@ -19,8 +18,23 @@
         "clock",
         "custom/notifications"
     ],
-    "river/tags": {
-        "num-tags": 4
+    "ext/workspaces": {
+        "format": "{name}  ",
+        "on-click": "activate",
+        "sort-by-id": true,
+        "active-only": true
+    },
+    "wlr/taskbar": {
+        "format": "<span text_transform=\"capitalize\">{app_id}</span>",
+        "tooltip-format": "",
+        "markup": true,
+        "on-click": "activate",
+        "on-click-right": "minimize",
+        "active-first": true,
+        "app_ids-mapping": {
+            "com.mitchellh.ghostty": "ghostty",
+            "org.pwmt.zathura": "zathura"
+        }
     },
     "clock": {
         "format": " {:%H:%M}",
@@ -65,5 +79,10 @@
         "tooltip-format": "Notifications",
         "on-click": "dunstctl history-pop",
         "on-click-right": "dunstctl close-all"
+    },
+    "custom/launcher": {
+        "format": "",
+        "on-click": "rofi -show-icons -show apps",
+        "tooltip-format": "Application Launcher"
     }
 }

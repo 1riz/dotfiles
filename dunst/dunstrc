@@ -1,7 +1,7 @@
 [global]
   follow = keyboard
   origin = top-right
-  offset = 20x20
+  offset = (20, 20)
   font = NotoColorEmoji 11, DejaVuSans 11
   format = "<b>%s</b>\n%b"
   padding = 10

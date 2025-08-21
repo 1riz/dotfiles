@@ -15,6 +15,7 @@ My personal dotfiles.
 - [delta](https://github.com/dandavison/delta)
 - [aider](https://github.com/Aider-AI/aider)
 - [aichat](https://github.com/sigoden/aichat)
+- [river](https://codeberg.org/river/river)
 - [labwc](https://github.com/labwc/labwc)
 - [sway](https://github.com/swaywm/sway)
 - [swayfx](https://github.com/WillPower3309/swayfx)
