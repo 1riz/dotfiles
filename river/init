@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # https://codeberg.org/river/river/src/tag/v0.3.11/example/init
 #
@@ -6,10 +6,16 @@
 # Super+Return to start foot
 riverctl map normal Super Return spawn foot
 
-# Super+I to start a firefox
-riverctl map normal Super I spawn firefox
+# Super+D to start fuzzel
+riverctl map normal Super D spawn "${HOME}/.config/fuzzel/scripts/apps.sh list | fuzzel -d --with-nth=1 --accept-nth=2 | ${HOME}/.config/fuzzel/scripts/apps.sh"
 
-# Super+E to start a neovim
+# Super+P to show clipboard history
+riverctl map normal Super P spawn 'cliphist list | fuzzel -d --with-nth=2 | cliphist decode | wl-copy'
+
+# Super+I to start firefox
+riverctl map normal Super I spawn /usr/lib/firefox/firefox
+
+# Super+E to start neovim
 riverctl map normal Super E spawn 'foot -c ~/.config/foot/foot_github.ini -a neovim -e nvim'
 
 # Super+X to lock screen
@@ -158,9 +164,12 @@ riverctl set-repeat 50 300
 # Set cursor focus
 riverctl focus-follows-cursor normal
 
-# Make all views with an app-id that starts with "float" and title "foo" start floating.
+# Make all views with these app ids start floating
 riverctl rule-add -app-id 'firefox' -title 'Library' float
 riverctl rule-add -app-id 'firefox' -title 'About*' float
+riverctl rule-add -app-id 'qalc' float
+riverctl rule-add -app-id 'qemu' float
+riverctl rule-add -app-id 'dosbox' float
 
 # Configure monitors
 riverctl spawn 'wlr-randr --output HDMI-A-1 --mode 2560x1440@74.968002Hz --pos 0,0'

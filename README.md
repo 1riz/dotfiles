@@ -26,6 +26,7 @@ My personal dotfiles.
 - [wpaperd](https://github.com/danyspin97/wpaperd)
 - [sway-contrib](https://github.com/OctopusET/sway-contrib)
 - [dunst](https://github.com/dunst-project/dunst)
+- [fuzzel](https://codeberg.org/dnkl/fuzzel)
 - [rofi](https://github.com/lbonn/rofi)
 - [cliphist](https://github.com/sentriz/cliphist)
 - [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
