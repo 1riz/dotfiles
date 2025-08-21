@@ -92,7 +92,7 @@
       <action name="Execute" command="rofi -show-icons -modes filebrowser -show filebrowser" />
     </keybind>
     <keybind key="W-p">
-      <action name="Execute" command="rofi-clipboard-menu" />
+      <action name="Execute" command="bash -c 'cliphist list | rofi -dmenu -display-columns 2 -p clipboard -i | cliphist decode | wl-copy'" />
     </keybind>
     <keybind key="W-n">
       <action name="Execute" command="thunar" />

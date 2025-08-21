@@ -13,6 +13,8 @@ while true; do
       ;;
     *)
       printf "\n\e[32m==> %s...\e[0m\n\n" "Running River wayland compositor"
+      export XDG_CURRENT_DESKTOP=river
+      export GTK_THEME=Adwaita:dark
       exec river > /tmp/river.log 2>&1
       break
       ;;
