@@ -2,19 +2,19 @@
 
 if [[ "${1}" == "list" ]]; then
 
-  echo -e "󰘔   Foot\tfoot"
-  echo -e "󰘔   Firefox\tfirefox"
-  echo -e "󰘔   Neovim\tnvim"
-  echo -e "󰘔   Tmux\ttmux"
-  echo -e "󰘔   NNN\tnnn"
-  echo -e "󰘔   BTop\tbtop"
-  echo -e "󰘔   HTop\thtop"
-  echo -e "󰘔   Lazygit\tlazygit"
-  echo -e "󰘔   NCSpot\tncspot"
-  echo -e "󰘔   Qalc\tqalc"
-  echo -e "󰘔   QEMU\tqemu"
-  echo -e "󰘔   Dosbox\tdosbox"
-  echo -e "󰘔   Pavucontrol\tpavucontrol"
+  echo -e " Foot            Terminal Emulator\tfoot"
+  echo -e "󰈹 Firefox         Web Browser\tfirefox"
+  echo -e " Neovim          Code Editor\tnvim"
+  echo -e " Tmux            Terminal Multiplexer\ttmux"
+  echo -e " NNN             File Manager\tnnn"
+  echo -e " BTop            Resource Monitor\tbtop"
+  echo -e " HTop            Process Viewer\thtop"
+  echo -e " Lazygit         Version Control\tlazygit"
+  echo -e "󰓇 NCSpot          Music Player\tncspot"
+  echo -e " Qalc            Advanced Calculator\tqalc"
+  echo -e " QEMU            Emulator (OpenBSD)\tqemu"
+  echo -e " Dosbox          Emulator (DOS)\tdosbox"
+  echo -e " Pavucontrol     Volume Control\tpavucontrol"
 
 else
 
@@ -22,43 +22,43 @@ else
 
   case "${APP}" in
     foot)
-      coproc { foot; }
+      riverctl spawn 'foot'
       ;;
     firefox)
-      coproc { /usr/lib/firefox/firefox; }
+      riverctl spawn '/usr/lib/firefox/firefox'
       ;;
     nvim)
-      coproc { foot -c ~/.config/foot/foot_github.ini -a neovim nvim; }
+      riverctl spawn 'foot -c ~/.config/foot/foot_github.ini -a neovim nvim'
       ;;
     tmux)
-      coproc { foot -a tmux tmux new-session -A -s DEV; }
+      riverctl spawn 'foot -a tmux tmux new-session -A -s DEV'
       ;;
     nnn)
-      coproc { foot -c ~/.config/foot/foot_nightfox.ini -a nnn -T nnn nnn -deoQTv; }
+      riverctl spawn 'foot -c ~/.config/foot/foot_nightfox.ini -a nnn -T nnn nnn -deoQTv'
       ;;
     btop)
-      coproc { foot -a btop -T btop btop; }
+      riverctl spawn 'foot -a btop -T btop btop'
       ;;
     htop)
-      coproc { foot -a htop -T htop htop; }
+      riverctl spawn 'foot -a htop -T htop htop'
       ;;
     lazygit)
-      coproc { foot -a lazygit -T lazygit lazygit; }
+      riverctl spawn 'foot -a lazygit -T lazygit lazygit'
       ;;
     ncspot)
-      coproc { exec foot -a ncspot -T ncspot ncspot; }
+      riverctl spawn 'exec foot -a ncspot -T ncspot ncspot'
       ;;
     qalc)
-      coproc { foot -c ~/.config/foot/foot_nightfox.ini -a qalc -T qalc -W 100x20 qalc -c; }
+      riverctl spawn 'foot -c ~/.config/foot/foot_nightfox.ini -a qalc -T qalc -W 100x20 qalc -c'
       ;;
     qemu)
-      coproc { ~/Projects/QEMU/openbsd/bin/run.sh; }
+      riverctl spawn "${HOME}/Projects/QEMU/openbsd/bin/run.sh"
       ;;
     dosbox)
-      coproc { dosbox ~/Projects/DOS/devel; }
+      riverctl spawn 'dosbox ~/Projects/DOS/devel'
       ;;
     pavucontrol)
-      coproc { pavucontrol; }
+      riverctl spawn 'pavucontrol'
       ;;
   esac
 
