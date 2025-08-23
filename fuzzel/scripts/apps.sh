@@ -34,7 +34,7 @@ else
       riverctl spawn 'foot -a tmux tmux new-session -A -s DEV'
       ;;
     nnn)
-      riverctl spawn 'foot -c ~/.config/foot/foot_nightfox.ini -a nnn -T nnn nnn -deoQTv'
+      riverctl spawn 'foot -c ~/.config/foot/foot_nightfox.ini -a nnn -T nnn bash -c "NNN_OPENER=nuke GUI=1 nnn -cdQTv"'
       ;;
     btop)
       riverctl spawn 'foot -a btop -T btop btop'

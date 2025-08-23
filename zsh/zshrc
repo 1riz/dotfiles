@@ -31,7 +31,7 @@ export ZSH_THEME_TERM_TITLE_IDLE=$ZSH_THEME_TERM_TAB_TITLE_IDLE
 alias v='nvim'
 alias t='tmux new-session -A -s DEV'
 alias root='sudo su -'
-alias n='nnn -deHoQTv'
+alias n='NNN_OPENER=nuke GUI=1 nnn -cdQTv'
 alias sp='ncspot'
 alias lg='lazygit'
 alias ff='fastfetch'
