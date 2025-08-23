@@ -6,6 +6,9 @@
 # Super+Return to start foot
 riverctl map normal Super Return spawn foot
 
+# Super+Shift+Return to start foot
+riverctl map normal Super+Shift Return spawn 'foot -o alpha=0.8'
+
 # Super+D to start fuzzel
 riverctl map normal Super D spawn "${HOME}/.config/fuzzel/scripts/apps.sh list | fuzzel -l 13 -d --with-nth=1 --accept-nth=2 | ${HOME}/.config/fuzzel/scripts/apps.sh"
 
@@ -32,6 +35,12 @@ riverctl map normal Super N spawn 'dunstctl close'
 
 # Super+Shift+N to close all notifications
 riverctl map normal Super+Shift N spawn 'dunstctl close-all'
+
+# Super+W to show next wallpaper
+riverctl map normal Super W spawn 'wpaperctl next eDP-1'
+
+# Super+Shift+W to show next wallpaper on external monitor
+riverctl map normal Super+Shift W spawn 'wpaperctl next HDMI-A-1'
 
 # Super+Q to close the focused view
 riverctl map normal Super Q close
@@ -62,17 +71,6 @@ riverctl map normal Super Comma focus-output previous
 riverctl map normal Super+Shift Period send-to-output next
 riverctl map normal Super+Shift Comma send-to-output previous
 
-# Super+Shift+Return to bump the focused view to the top of the layout stack
-riverctl map normal Super+Shift Return zoom
-
-# Super+H and Super+L to decrease/increase the main ratio of rivertile(1)
-riverctl map normal Super H send-layout-cmd rivertile "main-ratio -0.05"
-riverctl map normal Super L send-layout-cmd rivertile "main-ratio +0.05"
-
-# Super+Shift+H and Super+Shift+L to increment/decrement the main count of rivertile(1)
-riverctl map normal Super+Shift H send-layout-cmd rivertile "main-count +1"
-riverctl map normal Super+Shift L send-layout-cmd rivertile "main-count -1"
-
 # Super+Alt+{H,J,K,L} to move views
 riverctl map normal Super+Alt H move left 100
 riverctl map normal Super+Alt J move down 100
@@ -100,19 +98,19 @@ riverctl map-pointer normal Super BTN_RIGHT resize-view
 # Super + Middle Mouse Button to toggle float
 riverctl map-pointer normal Super BTN_MIDDLE toggle-float
 
-for i in $(seq 1 4); do
+for i in $(seq 1 9); do
   tags=$((1 << (i - 1)))
 
-  # Super+[1-4] to focus tag [0-3]
+  # Super+[1-9] to focus tag [0-8]
   riverctl map normal Super "${i}" set-focused-tags $tags
 
-  # Super+Shift+[1-4] to tag focused view with tag [0-3]
+  # Super+Shift+[1-9] to tag focused view with tag [0-8]
   riverctl map normal Super+Shift "${i}" set-view-tags $tags
 
-  # Super+Control+[1-4] to toggle focus of tag [0-3]
+  # Super+Control+[1-9] to toggle focus of tag [0-8]
   riverctl map normal Super+Control "${i}" toggle-focused-tags $tags
 
-  # Super+Shift+Control+[1-4] to toggle tag [0-3] of focused view
+  # Super+Shift+Control+[1-9] to toggle tag [0-8] of focused view
   riverctl map normal Super+Shift+Control "${i}" toggle-view-tags $tags
 done
 
@@ -125,14 +123,53 @@ riverctl map normal Super+Shift 0 set-view-tags $all_tags
 # Super+Space to toggle float
 riverctl map normal Super Space toggle-float
 
+# Super+Alt+Space to bump the focused view to the top of the layout stack
+riverctl map normal Super+Alt Space zoom
+
 # Super+F to toggle fullscreen
 riverctl map normal Super F toggle-fullscreen
 
-# Super+{Up,Right,Down,Left} to change layout orientation
-riverctl map normal Super Up send-layout-cmd rivertile "main-location top"
-riverctl map normal Super Right send-layout-cmd rivertile "main-location right"
-riverctl map normal Super Down send-layout-cmd rivertile "main-location bottom"
-riverctl map normal Super Left send-layout-cmd rivertile "main-location left"
+# --------------------------
+
+# Super+H and Super+L to decrease/increase the main ratio of rivertile
+# riverctl map normal Super H send-layout-cmd rivertile "main-ratio -0.05"
+# riverctl map normal Super L send-layout-cmd rivertile "main-ratio +0.05"
+
+# Super+Shift+H and Super+Shift+L to increment/decrement the main count of rivertile
+# riverctl map normal Super+Shift H send-layout-cmd rivertile "main-count +1"
+# riverctl map normal Super+Shift L send-layout-cmd rivertile "main-count -1"
+
+# Super+{Up,Right,Down,Left} to change layout orientation of rivertile
+# riverctl map normal Super Up send-layout-cmd rivertile "main-location top"
+# riverctl map normal Super Right send-layout-cmd rivertile "main-location right"
+# riverctl map normal Super Down send-layout-cmd rivertile "main-location bottom"
+# riverctl map normal Super Left send-layout-cmd rivertile "main-location left"
+
+# --------------------------
+
+# Super+H and Super+L to decrease/increase the main ratio of wideriver
+riverctl map normal Super H send-layout-cmd wideriver "--ratio -0.025"
+riverctl map normal Super L send-layout-cmd wideriver "--ratio +0.025"
+
+# Super+Shift+H and Super+Shift+L to increment/decrement the main count of wideriver
+riverctl map normal Super+Shift H send-layout-cmd wideriver "--count +1"
+riverctl map normal Super+Shift L send-layout-cmd wideriver "--count -1"
+
+# Super+{Up,Right,Down,Left} to change layout of wideriver
+riverctl map normal Super Up send-layout-cmd wideriver "--layout monocle"
+riverctl map normal Super Right send-layout-cmd wideriver "--layout right"
+riverctl map normal Super Down send-layout-cmd wideriver "--layout wide"
+riverctl map normal Super Left send-layout-cmd wideriver "--layout left"
+
+# Super+Control+Up to toggle alternative layout of wideriver
+riverctl map normal Super+Control Up send-layout-cmd wideriver "--layout-toggle"
+
+# Super+Control+{Right,Down,Left} to change stacking method of wideriver
+riverctl map normal Super+Control Right send-layout-cmd wideriver "--stack dwindle"
+riverctl map normal Super+Control Down send-layout-cmd wideriver "--stack diminish"
+riverctl map normal Super+Control Left send-layout-cmd wideriver "--stack even"
+
+# --------------------------
 
 # Control pipewire audio volume with wpctl
 riverctl map normal None XF86AudioMute spawn wireplumber-mute-toggle
@@ -164,7 +201,8 @@ riverctl map normal Control+Shift Print spawn 'grimshot --notify copy area'
 
 # --------------------------
 
-# Set border color
+# Set background and border color
+riverctl background-color 0x00416A
 riverctl border-width 2
 riverctl border-color-focused 0x2c3952
 riverctl border-color-unfocused 0x09142b
@@ -177,6 +215,12 @@ riverctl set-repeat 50 300
 
 # Set cursor focus mode
 riverctl focus-follows-cursor normal
+
+# Hide the cursor if it wasn't moved in the last 5 seconds
+riverctl hide-cursor timeout 5000
+
+# Display borders on all windows
+riverctl rule-add ssd
 
 # Make all views with these app ids start floating
 riverctl rule-add -app-id 'firefox' -title 'Library' float
@@ -191,8 +235,8 @@ riverctl rule-add -app-id 'org.pulseaudio.pavucontrol' float
 riverctl spawn 'wlr-randr --output HDMI-A-1 --mode 2560x1440@74.968002Hz --pos 0,0'
 riverctl spawn 'wlr-randr --output eDP-1 --mode 1920x1080@60.000000Hz --pos 2560,0'
 
-# Set background image
-riverctl spawn 'swaybg -m stretch -i ~/Pictures/Wallpapers/macOS/001-macos-wallpaper-10-14-Night.jpg'
+# Start background image service
+riverctl spawn 'wpaperd -d'
 
 # Lock screen timeout
 riverctl spawn 'swayidle -w timeout 600 swaylock'
@@ -211,7 +255,19 @@ systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 systemctl --user restart xdg-desktop-portal
 
-# Set the default layout generator to be rivertile and start it.
-# River will send the process group of the init executable SIGTERM on exit.
-riverctl default-layout rivertile
-rivertile -view-padding 6 -outer-padding 6 &
+# Set the default layout generator and start it
+# riverctl default-layout rivertile
+# rivertile > "/tmp/rivertile.log" 2>&1 &
+riverctl default-layout wideriver
+wideriver \
+  --layout left \
+  --stack even \
+  --ratio-master 0.55 \
+  --smart-gaps \
+  --inner-gaps 6 \
+  --outer-gaps 12 \
+  --border-width 2 \
+  --border-color-focused "0x2c3952" \
+  --border-color-focused-monocle "0x09142b" \
+  --border-color-unfocused "0x09142b" \
+  --log-threshold info > "/tmp/wideriver.log" 2>&1 &

@@ -11,6 +11,7 @@
         "river/window"
     ],
     "modules-right": [
+        "river/layout",
         "network",
         "cpu",
         "memory",
@@ -20,7 +21,10 @@
         "custom/notifications"
     ],
     "river/tags": {
-        "num-tags": 4
+        "num-tags": 9
+    },
+    "river/layout": {
+        "format": "{}  "
     },
     "clock": {
         "format": " {:%H:%M}",
