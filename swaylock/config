@@ -1,25 +1,25 @@
 daemonize
-image=~/Pictures/Wallpapers/macOS/001-macos-wallpaper-10-14-Night.jpg
+image=~/Pictures/Wallpapers/swaybg/wallpaper-001-1024x768-unix-logo-binary-blue.png
 scaling=stretch
 disable-caps-lock-text
 
 font=DejaVuSans
 font-size=12
 
-inside-color=09142b
-inside-clear-color=09142b
-inside-ver-color=09142b
-inside-wrong-color=09142b
-separator-color=09142b
+inside-color=000125
+inside-clear-color=000125
+inside-ver-color=000125
+inside-wrong-color=000125
+separator-color=000125
 line-uses-inside
 
-key-hl-color=516378
-bs-hl-color=516378
+key-hl-color=292199
+bs-hl-color=292199
 
-ring-color=2c3952
-ring-clear-color=2c3952
-ring-ver-color=2c3952
-ring-wrong-color=2c3952
+ring-color=0f096a
+ring-clear-color=0f096a
+ring-ver-color=0f096a
+ring-wrong-color=0f096a
 
 text-color=ffffff
 text-clear-color=ffffff

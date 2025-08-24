@@ -7,7 +7,7 @@
 riverctl map normal Super Return spawn foot
 
 # Super+Shift+Return to start foot
-riverctl map normal Super+Shift Return spawn 'foot -o alpha=0.8'
+riverctl map normal Super+Shift Return spawn 'foot -o colors.alpha=0.8'
 
 # Super+D to start fuzzel
 riverctl map normal Super D spawn "${HOME}/.config/fuzzel/scripts/apps.sh list | fuzzel -l 13 -d --with-nth=1 --accept-nth=2 | ${HOME}/.config/fuzzel/scripts/apps.sh"
@@ -35,12 +35,6 @@ riverctl map normal Super N spawn 'dunstctl close'
 
 # Super+Shift+N to close all notifications
 riverctl map normal Super+Shift N spawn 'dunstctl close-all'
-
-# Super+W to show next wallpaper
-riverctl map normal Super W spawn 'wpaperctl next eDP-1'
-
-# Super+Shift+W to show next wallpaper on external monitor
-riverctl map normal Super+Shift W spawn 'wpaperctl next HDMI-A-1'
 
 # Super+Q to close the focused view
 riverctl map normal Super Q close
@@ -202,10 +196,13 @@ riverctl map normal Control+Shift Print spawn 'grimshot --notify copy area'
 # --------------------------
 
 # Set background and border color
-riverctl background-color 0x00416A
+riverctl background-color 0x000125
 riverctl border-width 2
-riverctl border-color-focused 0x2c3952
-riverctl border-color-unfocused 0x09142b
+riverctl border-color-focused 0x0f096a
+riverctl border-color-unfocused 0x020149
+
+# Set background image
+riverctl spawn 'swaybg -m stretch -i ~/Pictures/Wallpapers/swaybg/wallpaper-001-1024x768-unix-logo-binary-blue.png'
 
 # Set keyboard layout
 riverctl keyboard-layout es
@@ -234,9 +231,6 @@ riverctl rule-add -app-id 'org.pulseaudio.pavucontrol' float
 # Configure monitors
 riverctl spawn 'wlr-randr --output HDMI-A-1 --mode 2560x1440@74.968002Hz --pos 0,0'
 riverctl spawn 'wlr-randr --output eDP-1 --mode 1920x1080@60.000000Hz --pos 2560,0'
-
-# Start background image service
-riverctl spawn 'wpaperd -d'
 
 # Lock screen timeout
 riverctl spawn 'swayidle -w timeout 600 swaylock'
@@ -267,7 +261,7 @@ wideriver \
   --inner-gaps 6 \
   --outer-gaps 12 \
   --border-width 2 \
-  --border-color-focused "0x2c3952" \
-  --border-color-focused-monocle "0x09142b" \
-  --border-color-unfocused "0x09142b" \
+  --border-color-focused "0x0f096a" \
+  --border-color-focused-monocle "0x020149" \
+  --border-color-unfocused "0x020149" \
   --log-threshold info > "/tmp/wideriver.log" 2>&1 &

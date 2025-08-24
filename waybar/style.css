@@ -1,10 +1,10 @@
 * {
-    font-family: FontAwesome, DejaVuSans, sans-serif;
+    font-family: DejaVuSans, FiraCodeNerdFont;
     font-size: 11px;
 }
 
 window#waybar {
-    background-color: #09142b;
+    background-color: #000125;
     color: #ffffff;
 }
 
@@ -33,11 +33,11 @@ window#waybar {
 }
 
 #tags button.urgent {
-    background-color: #182741;
+    background-color: #4039aa;
 }
 
 #tags button.focused {
-    background-color: #2c3952;
+    background-color: #0f096a;
 }
 
 #window.focused {
@@ -66,10 +66,10 @@ window#waybar {
 #battery:hover,
 #pulseaudio:hover,
 #clock:hover {
-    background-color: #2c3952;
+    background-color: #292199;
 }
 
 #battery.critical:not(.charging),
 #network.disconnected {
-    background-color: #2c3952;
+    background-color: #4039aa;
 }

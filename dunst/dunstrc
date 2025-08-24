@@ -18,19 +18,19 @@
   enable_posix_regex = true
 
 [urgency_low]
-  background = "#09142b"
+  background = "#000125"
   foreground = "#ffffff"
-  frame_color = "#2c3952"
+  frame_color = "#0f096a"
   timeout = 0
 
 [urgency_normal]
-  background = "#09142b"
+  background = "#000125"
   foreground = "#ffffff"
-  frame_color = "#2c3952"
+  frame_color = "#0f096a"
   timeout = 0
 
 [urgency_critical]
-  background = "#09142b"
+  background = "#000125"
   foreground = "#ffffff"
-  frame_color = "#ff0000"
+  frame_color = "#4039aa"
   timeout = 0

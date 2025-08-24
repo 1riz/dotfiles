@@ -41,8 +41,11 @@ My personal dotfiles.
 ## Fonts
 
 - [monaspace](https://github.com/githubnext/monaspace)
-- [firacode-nerd](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
-- [noto-fonts-emoji](https://fonts.google.com/noto/specimen/Noto+Color+Emoji)
+- [firacode-nerd](https://github.com/ryanoasis/nerd-fonts)
+
+## Wallpaper
+
+- [unix-blue-digital](https://wallpapers.com/wallpapers/unix-blue-digital-logo-kxb7r2sx50zqdi6a.html)
 
 ## Screenshots
 
