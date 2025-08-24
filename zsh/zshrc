@@ -1,7 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export ZSHZ_DATA="$HOME/.zshz"
 
-if [[ "${TERM}" =~ ("256color"|"ghostty") ]]; then
+if [[ "${TERM}" =~ "256color" ]]; then
   ZSH_THEME="hyperzsh"
 else
   ZSH_THEME="console"
