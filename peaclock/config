@@ -1,0 +1,9 @@
+margin 10 10
+mode clock
+view digital
+set hour-24 on
+set seconds on
+set date off
+
+style active-fg #0f096a
+style colon-fg #000125

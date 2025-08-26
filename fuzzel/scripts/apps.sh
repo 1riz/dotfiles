@@ -13,6 +13,7 @@ if [[ "${1}" == "list" ]]; then
   echo -e " Lazygit         Version Control\tlazygit"
   echo -e "󰓇 NCSpot          Music Player\tncspot"
   echo -e " Qalc            Advanced Calculator\tqalc"
+  echo -e " Peaclock        Digital Clock\tpeaclock"
   echo -e " QEMU            Emulator (OpenBSD)\tqemu"
   echo -e " Dosbox          Emulator (DOS)\tdosbox"
   echo -e " Pavucontrol     Volume Control\tpavucontrol"
@@ -54,6 +55,9 @@ else
       ;;
     qalc)
       riverctl spawn 'foot -c ~/.config/foot/foot_nightfox.ini -a qalc -T qalc -W 100x20 qalc -c'
+      ;;
+    peaclock)
+      riverctl spawn 'foot -a peaclock -T peaclock peaclock --config-dir ~/.config/peaclock'
       ;;
     qemu)
       riverctl spawn "${HOME}/Projects/QEMU/openbsd/bin/run.sh"

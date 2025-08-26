@@ -15,6 +15,7 @@ My personal dotfiles.
 - [lazygit](https://github.com/jesseduffield/lazygit)
 - [delta](https://github.com/dandavison/delta)
 - [aichat](https://github.com/sigoden/aichat)
+- [peaclock](https://github.com/octobanana/peaclock)
 - [river](https://codeberg.org/river/river)
 - [wideriver](https://github.com/alex-courtis/wideriver)
 - [fuzzel](https://codeberg.org/dnkl/fuzzel)
