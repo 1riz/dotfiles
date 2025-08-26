@@ -12,6 +12,7 @@ if [[ "${1}" == "list" ]]; then
   echo -e " HTop            Process Viewer\thtop"
   echo -e " Lazygit         Version Control\tlazygit"
   echo -e "󰓇 NCSpot          Music Player\tncspot"
+  echo -e "󰝚 Cava            Audio Visualizer\tcava"
   echo -e " Qalc            Advanced Calculator\tqalc"
   echo -e " Peaclock        Digital Clock\tpeaclock"
   echo -e " QEMU            Emulator (OpenBSD)\tqemu"
@@ -52,6 +53,9 @@ else
       ;;
     ncspot)
       riverctl spawn 'exec foot -a ncspot -T ncspot ncspot'
+      ;;
+    cava)
+      riverctl spawn 'exec foot -o colors.alpha=0.6 -a cava -T cava cava'
       ;;
     qalc)
       riverctl spawn 'foot -c ~/.config/foot/foot_nightfox.ini -a qalc -T qalc -W 100x20 qalc -c'
