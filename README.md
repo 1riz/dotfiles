@@ -10,6 +10,7 @@ My personal dotfiles.
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [tmux](https://github.com/tmux/tmux)
 - [nnn](https://github.com/jarun/nnn)
+- [elinks](https://github.com/rkd77/elinks)
 - [lsd](https://github.com/lsd-rs/lsd)
 - [lazygit](https://github.com/jesseduffield/lazygit)
 - [delta](https://github.com/dandavison/delta)
@@ -25,8 +26,6 @@ My personal dotfiles.
 - [dunst](https://github.com/dunst-project/dunst)
 - [cliphist](https://github.com/sentriz/cliphist)
 - [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
-- [grim](https://git.sr.ht/~emersion/grim)
-- [slurp](https://github.com/emersion/slurp)
 - [sway-contrib](https://github.com/OctopusET/sway-contrib)
 - [wireplumber](https://gitlab.freedesktop.org/pipewire/wireplumber)
 

@@ -4,6 +4,7 @@ if [[ "${1}" == "list" ]]; then
 
   echo -e " Foot            Terminal Emulator\tfoot"
   echo -e "󰈹 Firefox         Web Browser\tfirefox"
+  echo -e "󰖟 Elinks          Text Web Browser\telinks"
   echo -e " Neovim          Code Editor\tnvim"
   echo -e " Tmux            Terminal Multiplexer\ttmux"
   echo -e " NNN             File Manager\tnnn"
@@ -26,6 +27,9 @@ else
       ;;
     firefox)
       riverctl spawn '/usr/lib/firefox/firefox'
+      ;;
+    elinks)
+      riverctl spawn 'exec foot -a elinks -T elinks elinks'
       ;;
     nvim)
       riverctl spawn 'foot -c ~/.config/foot/foot_github.ini -a neovim nvim'
