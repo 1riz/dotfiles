@@ -11,7 +11,7 @@
         "river/window"
     ],
     "modules-right": [
-        "river/layout",
+        "mpris",
         "network",
         "cpu",
         "memory",
@@ -22,9 +22,6 @@
     ],
     "river/tags": {
         "num-tags": 9
-    },
-    "river/layout": {
-        "format": "{}  "
     },
     "clock": {
         "format": " {:%H:%M}",
@@ -55,6 +52,17 @@
         "tooltip-format": "{essid}: {ipaddr}/{cidr}",
         "format-linked": "{ifname} (No IP)  ",
         "format-disconnected": "Disconnected  ⚠"
+    },
+    "mpris": {
+        "format": "{player_icon}   {artist} - <i>{title}</i>",
+        "format-paused": "{status_icon}  {artist} - <i>{title}</i>",
+        "player-icons": {
+            "default": "󰝚"
+        },
+        "status-icons": {
+            "paused": ""
+        },
+        "ignored-players": ["firefox"]
     },
     "pulseaudio": {
         "format": "{volume}%  {icon}",

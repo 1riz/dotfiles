@@ -31,7 +31,7 @@ else
       riverctl spawn '/usr/lib/firefox/firefox'
       ;;
     elinks)
-      riverctl spawn 'exec foot -a elinks -T elinks elinks'
+      riverctl spawn 'foot -a elinks -T elinks elinks'
       ;;
     nvim)
       riverctl spawn 'foot -c ~/.config/foot/foot_github.ini -a neovim nvim'
@@ -52,10 +52,10 @@ else
       riverctl spawn 'foot -a lazygit -T lazygit lazygit'
       ;;
     ncspot)
-      riverctl spawn 'exec foot -a ncspot -T ncspot ncspot'
+      riverctl spawn 'foot -c ~/.config/foot/foot_github.ini -a ncspot -T ncspot ncspot'
       ;;
     cava)
-      riverctl spawn 'exec foot -o colors.alpha=0.6 -a cava -T cava cava'
+      riverctl spawn 'foot -o colors.alpha=0.6 -a cava -T cava cava'
       ;;
     qalc)
       riverctl spawn 'foot -c ~/.config/foot/foot_nightfox.ini -a qalc -T qalc -W 100x20 qalc -c'

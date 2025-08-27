@@ -34,3 +34,7 @@
   foreground = "#ffffff"
   frame_color = "#4039aa"
   timeout = 0
+
+[ncspot_notifications]
+  appname = "ncspot"
+  timeout = 3s

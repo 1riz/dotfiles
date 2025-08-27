@@ -1,5 +1,5 @@
 * {
-    font-family: DejaVuSans, FiraCodeNerdFont;
+    font-family: "DejaVu Sans", "FiraCode Nerd Font", "Font Awesome 7 Free";
     font-size: 11px;
 }
 
@@ -45,12 +45,12 @@ window#waybar {
 }
 
 #custom-notifications,
-#layout,
+#mpris,
 #network,
 #cpu,
 #memory,
-#battery,
 #pulseaudio,
+#battery,
 #clock {
     padding: 0 8px;
     color: #ffffff;
@@ -59,14 +59,19 @@ window#waybar {
 }
 
 #custom-notifications:hover,
-#layout:hover,
+#mpris:hover,
 #network:hover,
 #cpu:hover,
 #memory:hover,
-#battery:hover,
 #pulseaudio:hover,
+#battery:hover,
 #clock:hover {
     background-color: #292199;
+}
+
+#mpris.playing,
+#mpris.paused {
+    background-color: #020149;
 }
 
 #battery.critical:not(.charging),

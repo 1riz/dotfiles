@@ -15,6 +15,7 @@ My personal dotfiles.
 - [lazygit](https://github.com/jesseduffield/lazygit)
 - [delta](https://github.com/dandavison/delta)
 - [aichat](https://github.com/sigoden/aichat)
+- [ncspot](https://github.com/hrkfdn/ncspot)
 - [cava](https://github.com/karlstav/cava)
 - [peaclock](https://github.com/octobanana/peaclock)
 - [river](https://codeberg.org/river/river)
