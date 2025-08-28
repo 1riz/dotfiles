@@ -18,16 +18,17 @@ My personal dotfiles.
 - [ncspot](https://github.com/hrkfdn/ncspot)
 - [cava](https://github.com/karlstav/cava)
 - [peaclock](https://github.com/octobanana/peaclock)
+- [sway](https://github.com/swaywm/sway)
 - [fuzzel](https://codeberg.org/dnkl/fuzzel)
 - [waybar](https://github.com/Alexays/Waybar)
 - [swayidle](https://github.com/swaywm/swayidle)
 - [swalock](https://github.com/swaywm/swaylock)
 - [swabg](https://github.com/swaywm/swaybg)
+- [sway-contrib](https://github.com/OctopusET/sway-contrib)
 - [wpaperd](https://github.com/danyspin97/wpaperd)
 - [dunst](https://github.com/dunst-project/dunst)
 - [cliphist](https://github.com/sentriz/cliphist)
 - [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
-- [sway-contrib](https://github.com/OctopusET/sway-contrib)
 - [wireplumber](https://gitlab.freedesktop.org/pipewire/wireplumber)
 
 ## Neovim config

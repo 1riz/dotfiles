@@ -25,52 +25,52 @@ else
 
   case "${APP}" in
     foot)
-      riverctl spawn 'foot'
+      swaymsg exec 'foot'
       ;;
     firefox)
-      riverctl spawn '/usr/lib/firefox/firefox'
+      swaymsg exec '/usr/lib/firefox/firefox'
       ;;
     elinks)
-      riverctl spawn 'foot -a elinks -T elinks elinks'
+      swaymsg exec 'foot -a elinks -T elinks elinks'
       ;;
     nvim)
-      riverctl spawn 'foot -c ~/.config/foot/foot_github.ini -a neovim nvim'
+      swaymsg exec 'foot -c ~/.config/foot/foot_github.ini -a neovim nvim'
       ;;
     tmux)
-      riverctl spawn 'foot -a tmux tmux new-session -A -s DEV'
+      swaymsg exec 'foot -a tmux tmux new-session -A -s DEV'
       ;;
     nnn)
-      riverctl spawn 'foot -c ~/.config/foot/foot_nightfox.ini -a nnn -T nnn bash -c "NNN_OPENER=nuke GUI=1 nnn -cdQTv"'
+      swaymsg exec 'foot -c ~/.config/foot/foot_nightfox.ini -a nnn -T nnn bash -c "NNN_OPENER=nuke GUI=1 nnn -cdQTv"'
       ;;
     btop)
-      riverctl spawn 'foot -a btop -T btop btop'
+      swaymsg exec 'foot -a btop -T btop btop'
       ;;
     htop)
-      riverctl spawn 'foot -a htop -T htop htop'
+      swaymsg exec 'foot -a htop -T htop htop'
       ;;
     lazygit)
-      riverctl spawn 'foot -a lazygit -T lazygit lazygit'
+      swaymsg exec 'foot -a lazygit -T lazygit lazygit'
       ;;
     ncspot)
-      riverctl spawn 'foot -c ~/.config/foot/foot_github.ini -a ncspot -T ncspot ncspot'
+      swaymsg exec 'foot -c ~/.config/foot/foot_github.ini -a ncspot -T ncspot ncspot'
       ;;
     cava)
-      riverctl spawn 'foot -o colors.alpha=0.6 -a cava -T cava cava'
+      swaymsg exec 'foot -o colors.alpha=0.6 -a cava -T cava cava'
       ;;
     qalc)
-      riverctl spawn 'foot -c ~/.config/foot/foot_nightfox.ini -a qalc -T qalc -W 100x20 qalc -c'
+      swaymsg exec 'foot -c ~/.config/foot/foot_nightfox.ini -a qalc -T qalc -W 100x20 qalc -c'
       ;;
     peaclock)
-      riverctl spawn 'foot -a peaclock -T peaclock peaclock --config-dir ~/.config/peaclock'
+      swaymsg exec 'foot -a peaclock -T peaclock peaclock --config-dir ~/.config/peaclock'
       ;;
     qemu)
-      riverctl spawn "${HOME}/Projects/QEMU/openbsd/bin/run.sh"
+      swaymsg exec "${HOME}/Projects/QEMU/openbsd/bin/run.sh"
       ;;
     dosbox)
-      riverctl spawn 'dosbox ~/Projects/DOS/devel'
+      swaymsg exec 'dosbox ~/Projects/DOS/devel'
       ;;
     pavucontrol)
-      riverctl spawn 'pavucontrol'
+      swaymsg exec 'pavucontrol'
       ;;
   esac
 

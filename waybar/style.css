@@ -16,36 +16,37 @@ window#waybar {
     padding-right: 8px;
 }
 
-#tags,
+#workspaces,
 #window {
     margin: 0 4px;
 }
 
-#tags button {
+#workspaces button {
     padding: 0 8px;
     border: none;
     border-radius: 0;
     color: #ffffff;
 }
 
-#tags button:hover {
+#workspaces button:hover {
     background: inherit;
 }
 
-#tags button.urgent {
+#workspaces button.urgent {
     background-color: #4039aa;
 }
 
-#tags button.focused {
+#workspaces button.focused {
     background-color: #0f096a;
 }
 
-#window.focused {
+#window {
     font-weight: bold;
 }
 
 #custom-notifications,
 #mpris,
+#scratchpad,
 #network,
 #cpu,
 #memory,
@@ -60,6 +61,7 @@ window#waybar {
 
 #custom-notifications:hover,
 #mpris:hover,
+#scratchpad:hover,
 #network:hover,
 #cpu:hover,
 #memory:hover,
