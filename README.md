@@ -18,8 +18,6 @@ My personal dotfiles.
 - [ncspot](https://github.com/hrkfdn/ncspot)
 - [cava](https://github.com/karlstav/cava)
 - [peaclock](https://github.com/octobanana/peaclock)
-- [river](https://codeberg.org/river/river)
-- [wideriver](https://github.com/alex-courtis/wideriver)
 - [fuzzel](https://codeberg.org/dnkl/fuzzel)
 - [waybar](https://github.com/Alexays/Waybar)
 - [swayidle](https://github.com/swaywm/swayidle)
