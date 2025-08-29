@@ -65,6 +65,8 @@ set $mod Mod4
 # Basics
     bindsym $mod+d exec ~/.config/fuzzel/scripts/apps.sh list | fuzzel -d --with-nth=1 --accept-nth=2 | ~/.config/fuzzel/scripts/apps.sh
     bindsym $mod+p exec cliphist list | fuzzel -d -p "clipboard " --with-nth=2 | cliphist decode | wl-copy
+    bindsym $mod+o exec ~/.config/fuzzel/scripts/files.sh list | fuzzel -d -p "files " --with-nth=1 --accept-nth=1 | ~/.config/fuzzel/scripts/files.sh
+    bindsym $mod+Tab exec ~/.config/fuzzel/scripts/windows.sh list | fuzzel -d -l 8 -p "windows " --with-nth="{2..4}" --accept-nth=1 | ~/.config/fuzzel/scripts/windows.sh
 
     floating_modifier $mod normal
     bindsym $mod+Shift+c reload

@@ -75,4 +75,3 @@ else
   esac
 
 fi
-exit 0
