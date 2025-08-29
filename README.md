@@ -20,7 +20,6 @@ My personal dotfiles.
 - [peaclock](https://github.com/octobanana/peaclock)
 - [sway](https://github.com/swaywm/sway)
 - [fuzzel](https://codeberg.org/dnkl/fuzzel)
-- [waybar](https://github.com/Alexays/Waybar)
 - [swayidle](https://github.com/swaywm/swayidle)
 - [swalock](https://github.com/swaywm/swaylock)
 - [swabg](https://github.com/swaywm/swaybg)
