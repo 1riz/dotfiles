@@ -1,0 +1,78 @@
+icons_format = "{icon}"
+
+[theme]
+theme = "native"
+
+[icons]
+icons = "awesome6"
+
+# [[block]]
+# block = "focused_window"
+# format = "{ \uf2d0 $title.str(max_w:99) |}"
+
+[[block]]
+block = "custom"
+format = " \uf2d0 $text "
+command = "~/.config/swaybar/scripts/window.sh"
+interval = "once"
+persistent = true
+hide_when_empty = true
+
+[[block]]
+block = "music"
+format = "{ $icon $combo.str(max_w:99) |}"
+player = "ncspot"
+
+[[block]]
+block = "scratchpad"
+format = "{ $count.eng(range:1..) $icon |}"
+
+[[block]]
+block = "cpu"
+info_cpu = 20
+warning_cpu = 50
+critical_cpu = 90
+format = " $utilization $icon "
+[block.icons_overrides]
+cpu = [ "\uf2db", "\uf2db", "\uf2db" ]
+
+[[block]]
+block = "disk_space"
+path = "/"
+info_type = "used"
+warning = 50
+alert = 75
+format = " $percentage $icon "
+
+[[block]]
+block = "memory"
+format = " $mem_total_used_percents.eng(w:2) $icon "
+[block.icons_overrides]
+memory_mem = "\uf538"
+
+[[block]]
+block = "sound"
+format =" $volume.eng(w:2) $icon "
+[[block.click]]
+button = "right"
+[[block.click]]
+button = "wheel_up"
+[[block.click]]
+button = "wheel_down"
+
+[[block]]
+block = "net"
+device = "^wlan0$"
+format = " $signal_strength $icon "
+[block.icons_overrides]
+net_wireless = "\uf012"
+
+[[block]]
+block = "battery"
+format = " $percentage $icon "
+full_format = " $percentage $icon "
+
+[[block]]
+block = "time"
+interval = 5
+format = " $timestamp.datetime(f:'%a %e %b %k:%M:%S')   "
