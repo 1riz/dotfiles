@@ -37,6 +37,7 @@ for_window [app_id="firefox" title="About*"] floating enable
 for_window [app_id="org.pulseaudio.pavucontrol"] floating enable
 for_window [app_id="qalc"] floating enable
 for_window [app_id="nnn"] floating enable
+for_window [app_id="peaclock"] floating enable
 for_window [app_id="qemu"] floating enable
 for_window [app_id="dosbox"] floating enable
 

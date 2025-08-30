@@ -42,7 +42,7 @@ My personal dotfiles.
 ## Fonts
 
 - [monaspace](https://github.com/githubnext/monaspace)
-- [firacode-nerd](https://github.com/ryanoasis/nerd-fonts)
+- [fontawesome](https://fontawesome.com)
 
 ## Wallpaper
 
