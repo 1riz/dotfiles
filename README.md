@@ -26,7 +26,6 @@ My personal dotfiles.
 - [sway-contrib](https://github.com/OctopusET/sway-contrib)
 - [fuzzel](https://codeberg.org/dnkl/fuzzel)
 - [i3status-rs](https://github.com/greshake/i3status-rust)
-- [wpaperd](https://github.com/danyspin97/wpaperd)
 - [dunst](https://github.com/dunst-project/dunst)
 - [cliphist](https://github.com/sentriz/cliphist)
 - [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
