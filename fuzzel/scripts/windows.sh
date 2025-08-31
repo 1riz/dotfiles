@@ -23,9 +23,9 @@ if [[ "${1}" == "list" ]]; then
   jq_windows_to_tsv='
     [
       (.id | tostring),
+      ("[" + .w + "]" | sub("__i3_scratch"; "S")),
       (.app_id),
-      ("— " + .name),
-      ("[" + .w + "]" | sub("__i3_scratch"; "S"))
+      ("— " + .name)
     ]
     | @tsv'
 

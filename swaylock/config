@@ -1,7 +1,8 @@
 daemonize
 image=~/Pictures/Wallpapers/swaybg/wallpaper-001-1024x768-unix-logo-binary-blue.png
-scaling=stretch
+scaling=fill
 disable-caps-lock-text
+color=000000
 
 font=DejaVuSans
 font-size=12
