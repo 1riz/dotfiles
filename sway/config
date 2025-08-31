@@ -40,6 +40,8 @@ for_window [app_id="nnn"] floating enable
 for_window [app_id="peaclock"] floating enable
 for_window [app_id="qemu"] floating enable
 for_window [app_id="dosbox"] floating enable
+for_window [app_id="foot-term"] floating enable
+for_window [title="btop-(.*)"] floating enable
 
 ### Workspaces configuration
 workspace 1 output HDMI-A-1
@@ -93,6 +95,7 @@ set $mod Mod4
 # Apps
     bindsym $mod+Return exec foot
     bindsym $mod+Shift+Return exec foot -o colors.alpha=0.8
+    bindsym $mod+Ctrl+Return exec foot -a foot-term
     bindsym $mod+n exec foot -c ~/.config/foot/foot_github.ini -a neovim -e nvim
     bindsym $mod+i exec /usr/lib/firefox/firefox
 
