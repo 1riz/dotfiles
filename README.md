@@ -10,6 +10,7 @@ My personal dotfiles.
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [tmux](https://github.com/tmux/tmux)
 - [htop](https://github.com/htop-dev/htop)
+- [btop](https://github.com/aristocratos/btop)
 - [nnn](https://github.com/jarun/nnn)
 - [elinks](https://github.com/rkd77/elinks)
 - [lsd](https://github.com/lsd-rs/lsd)
