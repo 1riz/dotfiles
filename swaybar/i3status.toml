@@ -2,6 +2,10 @@ icons_format = "{icon}"
 
 [theme]
 theme = "native"
+[theme.overrides]
+info_bg = "#0f096a"
+warning_bg = "#292199"
+critical_bg = "#4039aa"
 
 [icons]
 icons = "awesome6"
@@ -32,7 +36,7 @@ warning_cpu = 50
 critical_cpu = 90
 [[block.click]]
 button = "middle"
-cmd = "foot -a btop-cpu-ps -T btop-cpu-ps -W 160x40 btop -p 4"
+cmd = "foot -a htop-cpu -T htop-cpu -W 160x40 htop"
 [block.icons_overrides]
 cpu = [ "\uf2db", "\uf2db", "\uf2db" ]
 
@@ -52,6 +56,8 @@ cmd = "foot -a btop-mem-disk -T btop-mem-disk -W 160x40 btop -p 6"
 block = "memory"
 format = " $mem_total_used_percents.eng(w:2) $icon "
 format_alt = " $mem_avail / $mem_total $icon "
+warning_mem = 60
+critical_mem = 90
 [block.icons_overrides]
 memory_mem = "\uf538"
 [[block.click]]
@@ -62,8 +68,10 @@ cmd = "foot -a btop-mem-disk -T btop-mem-disk -W 160x40 btop -p 6"
 block = "temperature"
 format = " $max $icon "
 format_alt = " $min min / $max max / $average avg $icon "
-interval = 10
 chip = "coretemp-isa-0000"
+idle = 60
+info = 70
+warning = 80
 [[block.click]]
 button = "middle"
 cmd = "foot -a btop-cpu -T btop-cpu -W 160x40 btop -p 5"
@@ -71,6 +79,7 @@ cmd = "foot -a btop-cpu -T btop-cpu -W 160x40 btop -p 5"
 [[block]]
 block = "sound"
 format =" $volume.eng(w:2) $icon "
+show_volume_when_muted = true
 [[block.click]]
 button = "right"
 [[block.click]]
@@ -104,6 +113,9 @@ cmd = "foot -a btop-net -T btop-net -W 160x40 btop -p 7"
 block = "battery"
 format = " $percentage $icon "
 full_format = " $percentage $icon "
+info = 90
+warning = 40
+critical = 10
 
 [[block]]
 block = "time"

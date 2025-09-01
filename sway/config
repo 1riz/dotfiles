@@ -43,6 +43,7 @@ for_window [app_id="qemu"] floating enable
 for_window [app_id="dosbox"] floating enable
 for_window [app_id="foot-term"] floating enable
 for_window [title="btop-(.*)"] floating enable
+for_window [title="htop-(.*)"] floating enable
 
 ### Workspaces configuration
 workspace 1 output HDMI-A-1
@@ -63,6 +64,7 @@ bar {
     font DejaVuSansMono, FontAwesome7Free 11px
     height 26
     status_padding 0
+    tray_output none
     workspace_min_width 32
     separator_symbol ""
     colors {
