@@ -12,6 +12,7 @@ My personal dotfiles.
 - [htop](https://github.com/htop-dev/htop)
 - [btop](https://github.com/aristocratos/btop)
 - [nnn](https://github.com/jarun/nnn)
+- [vim](https://github.com/vim/vim)
 - [elinks](https://github.com/rkd77/elinks)
 - [lsd](https://github.com/lsd-rs/lsd)
 - [lazygit](https://github.com/jesseduffield/lazygit)

@@ -1,0 +1,77 @@
+" Environment
+set nocompatible
+
+" General
+set background=dark
+syntax enable
+filetype plugin indent on
+set mouse=a
+set mousehide
+set encoding=utf-8
+set noautowrite
+set autoread
+set history=1000
+set nospell
+set hidden
+set nobackup
+set directory=/var/tmp,/tmp
+set updatetime=100
+set viminfo='100,<50,s10,h,!
+set grepprg="rg -uuu --glob '!**/.git/*' --vimgrep"
+set grepformat=%f:%l:%c:%m
+
+" Vim UI
+set showmode
+set cursorline
+set ruler
+set showcmd
+set laststatus=2
+set backspace=indent,eol,start
+set number
+set relativenumber
+set showmatch
+set incsearch
+set hlsearch
+set noignorecase
+set wildmenu
+set wildmode=list:longest,full
+set whichwrap=b,s,<,>
+set scrolloff=1
+set foldenable
+set list
+set listchars=tab:▸\ ,trail:▫
+set completeopt=menuone,noinsert,noselect
+set pumheight=25
+set showtabline=0
+set timeoutlen=1000
+
+" Formatting
+set nowrap
+set autoindent
+set smartindent
+set smarttab
+set expandtab
+set nojoinspaces
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+autocmd FileType c setlocal tabstop=4 softtabstop=4 shiftwidth=4
+autocmd FileType go setlocal tabstop=4 softtabstop=4 shiftwidth=4
+autocmd FileType rust setlocal tabstop=4 softtabstop=4 shiftwidth=4
+
+" Key Mappings
+noremap <silent><C-Del> :bd<CR>
+noremap <silent><C-PageDown> :bn<CR>
+noremap <silent><C-PageUp> :bp<CR>
+noremap <silent><C-Left> <C-w>h
+noremap <silent><C-Down> <C-w>j
+noremap <silent><C-Up> <C-w>k
+noremap <silent><C-Right> <C-w>l
+noremap <silent><C-s> :wa<CR>
+noremap <silent><C-q> :qa<CR>
+noremap <silent><C-n> :new<CR>
+noremap <silent><C-l> :vnew<CR>
+noremap <silent><M-r> :set relativenumber!<CR>
+
+" Vim Theme
+colorscheme sorbet

@@ -6,6 +6,7 @@ if [[ "${1}" == "list" ]]; then
   echo -e "󰈹 Firefox         Web Browser\tfirefox"
   echo -e "󰖟 Elinks          Text Web Browser\telinks"
   echo -e " Neovim          Code Editor\tnvim"
+  echo -e " Vim             Improved Text Editor\tvim"
   echo -e " Tmux            Terminal Multiplexer\ttmux"
   echo -e " NNN             File Manager\tnnn"
   echo -e " BTop            Resource Monitor\tbtop"
@@ -35,6 +36,9 @@ else
       ;;
     nvim)
       swaymsg exec 'foot -c ~/.config/foot/foot_github.ini -a neovim nvim'
+      ;;
+    vim)
+      swaymsg exec 'foot -a vim -T vim vim'
       ;;
     tmux)
       swaymsg exec 'foot -a tmux tmux new-session -A -s DEV'
