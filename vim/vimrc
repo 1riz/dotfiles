@@ -17,6 +17,7 @@ set nobackup
 set directory=/var/tmp,/tmp
 set updatetime=100
 set viminfo='100,<50,s10,h,!
+set viminfofile=~/.local/state/vim/viminfo
 set grepprg="rg -uuu --glob '!**/.git/*' --vimgrep"
 set grepformat=%f:%l:%c:%m
 
