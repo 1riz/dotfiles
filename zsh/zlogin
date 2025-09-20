@@ -1,3 +1,5 @@
+# .zlogin Linux
+
 fastfetch
 fortune | cowsay
 echo ""
