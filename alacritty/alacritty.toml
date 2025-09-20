@@ -1,47 +1,36 @@
-[env]
-TERM = "xterm-256color"
+[terminal]
+shell = { program = "/usr/local/bin/zsh", args = ["-l"] }
+
+[mouse]
+hide_when_typing = true
 
 [colors.primary]
 background = "#000000"
-foreground = "#e6edf3"
+foreground = "#dadada"
 
 [cursor.style]
 blinking = "On"
 
 [font]
-size = 9.5
-# size = 11
+size = 9
 
 [font.normal]
-family = "Monaspace Krypton"
+family = "FiraCodeNerdFont"
 
 [font.offset]
 x = 0
 y = 3
-# y = 4
 
 [window]
 opacity = 1.0
-# decorations = "Buttonless"
-# blur = true
-# opacity = 0.5
-# option_as_alt = "OnlyLeft"
-
-[window.class]
-general = "alacritty"
 
 [window.dimensions]
 columns = 130
 lines = 35
 
 [window.padding]
-x = 2
-y = 2
-# x = 8
-# y = 8
+x = 4
+y = 4
 
-[[keyboard.bindings]]
-action = "CreateNewWindow"
-key = "Return"
-mode = "AppCursor"
-mods = "Control"
+[env]
+WINIT_X11_SCALE_FACTOR = "1.0"
