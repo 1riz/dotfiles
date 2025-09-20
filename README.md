@@ -46,6 +46,7 @@ My personal dotfiles.
 
 - [monaspace](https://github.com/githubnext/monaspace)
 - [fontawesome](https://fontawesome.com)
+- [firacode-nerd](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
 
 ## Wallpaper
 
