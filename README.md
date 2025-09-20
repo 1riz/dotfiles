@@ -21,6 +21,7 @@ My personal dotfiles.
 - [ncspot](https://github.com/hrkfdn/ncspot)
 - [cava](https://github.com/karlstav/cava)
 - [peaclock](https://github.com/octobanana/peaclock)
+- [cwm](https://cvsweb.openbsd.org/cgi-bin/cvsweb/xenocara/app/cwm/)
 - [sway](https://github.com/swaywm/sway)
 - [swaybar](https://github.com/swaywm/sway)
 - [swabg](https://github.com/swaywm/swaybg)
