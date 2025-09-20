@@ -17,6 +17,7 @@ My personal dotfiles.
 - [lsd](https://github.com/lsd-rs/lsd)
 - [lazygit](https://github.com/jesseduffield/lazygit)
 - [delta](https://github.com/dandavison/delta)
+- [most](https://github.com/jedsoft/most)
 - [aichat](https://github.com/sigoden/aichat)
 - [ncspot](https://github.com/hrkfdn/ncspot)
 - [cava](https://github.com/karlstav/cava)
