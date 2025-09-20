@@ -16,7 +16,7 @@ Common:
 - [delta](https://github.com/dandavison/delta)
 - [most](https://github.com/jedsoft/most)
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
-- [ncspot](https://github.com/hrkfdn/ncspot)
+- [splayer](https://github.com/aome510/spotify-player)
 
 Only OpenBSD (X11):
 - [alacritty](https://github.com/alacritty/alacritty)
