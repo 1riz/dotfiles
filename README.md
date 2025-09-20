@@ -4,10 +4,8 @@ My personal dotfiles.
 
 ## Configs
 
+Common:
 - [zsh](https://github.com/zsh-users/zsh) + [omz](https://github.com/ohmyzsh/ohmyzsh)
-- [foot](https://codeberg.org/dnkl/foot)
-- [alacritty](https://github.com/alacritty/alacritty)
-- [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [tmux](https://github.com/tmux/tmux)
 - [htop](https://github.com/htop-dev/htop)
 - [btop](https://github.com/aristocratos/btop)
@@ -15,20 +13,25 @@ My personal dotfiles.
 - [vim](https://www.vim.org)
 - [lynx](https://lynx.invisible-island.net)
 - [lsd](https://github.com/lsd-rs/lsd)
-- [lazygit](https://github.com/jesseduffield/lazygit)
 - [delta](https://github.com/dandavison/delta)
 - [most](https://github.com/jedsoft/most)
-- [aichat](https://github.com/sigoden/aichat)
+- [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [ncspot](https://github.com/hrkfdn/ncspot)
+
+Only OpenBSD (X11):
+- [alacritty](https://github.com/alacritty/alacritty)
+- [cwm](https://cvsweb.openbsd.org/cgi-bin/cvsweb/xenocara/app/cwm/)
+- [spectrwm](https://github.com/conformal/spectrwm)
+
+Only ArchLinux (Wayland):
+- [foot](https://codeberg.org/dnkl/foot)
+- [lazygit](https://github.com/jesseduffield/lazygit)
+- [aichat](https://github.com/sigoden/aichat)
 - [cava](https://github.com/karlstav/cava)
 - [peaclock](https://github.com/octobanana/peaclock)
-- [cwm](https://cvsweb.openbsd.org/cgi-bin/cvsweb/xenocara/app/cwm/)
 - [sway](https://github.com/swaywm/sway)
 - [swaybar](https://github.com/swaywm/sway)
-- [swabg](https://github.com/swaywm/swaybg)
 - [swalock](https://github.com/swaywm/swaylock)
-- [swayidle](https://github.com/swaywm/swayidle)
-- [sway-contrib](https://github.com/OctopusET/sway-contrib)
 - [fuzzel](https://codeberg.org/dnkl/fuzzel)
 - [i3status-rs](https://github.com/greshake/i3status-rust)
 - [dunst](https://github.com/dunst-project/dunst)
