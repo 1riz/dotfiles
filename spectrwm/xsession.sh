@@ -11,8 +11,12 @@ export XDG_STATE_HOME=$HOME/.local/state
 export CM_DIR=$HOME/.cache/clipmenu
 export CM_LAUNCHER=fzf
 
-if [ -x /usr/local/bin/dbus-launch -a -z "${DBUS_SESSION_BUS_ADDRESS}" ]; then
-  eval `dbus-launch --sh-syntax --exit-with-x11`
+if [ -z "${DBUS_SESSION_BUS_ADDRESS}" ]; then
+  eval $(dbus-launch --sh-syntax --exit-with-x11)
+fi
+if [ "${SSH_AGENT_PID}" ]; then
+  ssh-add -D < /dev/null
+  eval $(ssh-agent -s -k)
 fi
 
 xset -dpms
@@ -30,4 +34,4 @@ pkill -qf xsel
 pkill -qf clipmenud
 clipmenud &
 
-exec spectrwm > ~/.local/state/spectrwm/spectrwm.log 2>&1
+spectrwm
