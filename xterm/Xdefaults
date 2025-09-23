@@ -1,0 +1,8 @@
+XTerm*loginShell:true
+XTerm*background:#000000
+XTerm*foreground:#dadada
+XTerm*scrollBar:false
+XTerm*geometry:135x35
+XTerm*internalBorder:4
+XTerm*faceName:Terminus:pixelsize=14
+XTerm*scaleHeight:1.2

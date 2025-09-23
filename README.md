@@ -11,7 +11,7 @@ Common:
 - [btop](https://github.com/aristocratos/btop)
 - [nnn](https://github.com/jarun/nnn)
 - [vim](https://www.vim.org)
-- [lynx](https://lynx.invisible-island.net)
+- [lynx](https://invisible-island.net/lynx/)
 - [lsd](https://github.com/lsd-rs/lsd)
 - [delta](https://github.com/dandavison/delta)
 - [most](https://github.com/jedsoft/most)
@@ -20,6 +20,7 @@ Common:
 
 Only OpenBSD (X11):
 - [alacritty](https://github.com/alacritty/alacritty)
+- [xterm](https://invisible-island.net/xterm/)
 - [cwm](https://cvsweb.openbsd.org/cgi-bin/cvsweb/xenocara/app/cwm/)
 - [spectrwm](https://github.com/conformal/spectrwm)
 
