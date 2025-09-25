@@ -18,27 +18,18 @@ Common:
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [splayer](https://github.com/aome510/spotify-player)
 
-Only OpenBSD (X11):
+Common (GUI):
 - [alacritty](https://github.com/alacritty/alacritty)
+
+Only OpenBSD:
 - [xterm](https://invisible-island.net/xterm/)
 - [cwm](https://cvsweb.openbsd.org/cgi-bin/cvsweb/xenocara/app/cwm/)
 - [spectrwm](https://github.com/conformal/spectrwm)
 
-Only ArchLinux (Wayland):
-- [foot](https://codeberg.org/dnkl/foot)
+Only macOS:
 - [lazygit](https://github.com/jesseduffield/lazygit)
 - [aichat](https://github.com/sigoden/aichat)
-- [cava](https://github.com/karlstav/cava)
-- [peaclock](https://github.com/octobanana/peaclock)
-- [sway](https://github.com/swaywm/sway)
-- [swaybar](https://github.com/swaywm/sway)
-- [swalock](https://github.com/swaywm/swaylock)
-- [fuzzel](https://codeberg.org/dnkl/fuzzel)
-- [i3status-rs](https://github.com/greshake/i3status-rust)
-- [dunst](https://github.com/dunst-project/dunst)
-- [cliphist](https://github.com/sentriz/cliphist)
-- [wl-clipboard](https://github.com/bugaevc/wl-clipboard)
-- [wireplumber](https://gitlab.freedesktop.org/pipewire/wireplumber)
+- [ollama](https://github.com/ollama/ollama)
 
 ## Neovim config
 
@@ -47,17 +38,3 @@ Only ArchLinux (Wayland):
 ## OhMyZsh plugins
 
 - [1riz/omz-plugins](https://github.com/1riz/omz-plugins)
-
-## Fonts
-
-- [monaspace](https://github.com/githubnext/monaspace)
-- [fontawesome](https://fontawesome.com)
-- [firacode-nerd](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
-
-## Wallpaper
-
-- [unix-blue-digital](https://wallpapers.com/wallpapers/unix-blue-digital-logo-kxb7r2sx50zqdi6a.html)
-
-## Screenshots
-
-![Demo](./demo.png)

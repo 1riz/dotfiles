@@ -38,8 +38,8 @@ alias root='su -l'
 alias rbt='doas shutdown -r now'
 alias off='doas shutdown -p now'
 # alias root='sudo su -'
-# alias rbt='sudo systemctl reboot'
-# alias off='sudo systemctl poweroff'
+# alias rbt='sudo shutdown -r now'
+# alias off='sudo shutdown -p now'
 
 if [[ -f ~/.zshrc.local ]]; then
   . ~/.zshrc.local

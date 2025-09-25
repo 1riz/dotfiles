@@ -7,7 +7,7 @@ local _arrow="➜"
 
 function _host_name() {
   local _nick="bsd"
-  # local _nick="hp"
+  # local _nick="mac"
   echo "%(!.%{$fg[red]%}.%{$fg[blue]%})$_nick%{$reset_color%} "
 }
 

@@ -34,4 +34,5 @@ pkill -qf xsel
 pkill -qf clipmenud
 clipmenud &
 
+# cwm -c "${XDG_CONFIG_HOME}/cwm/config"
 spectrwm
