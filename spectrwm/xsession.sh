@@ -23,6 +23,7 @@ xset -dpms
 xset -b
 xset s off
 xset r rate 300 50
+xrdb ~/.config/spectrwm/xcursor.conf
 feh --no-fehbg --bg-fill ~/Pictures/Wallpapers/unix-blue-digital-logo.png
 sndioctl -q output.level=0.7
 sndioctl -q input.level=0.7
@@ -34,5 +35,5 @@ pkill -qf xsel
 pkill -qf clipmenud
 clipmenud &
 
-# cwm -c "${XDG_CONFIG_HOME}/cwm/config"
+# cwm -c ~/.config/cwm/config"
 spectrwm
