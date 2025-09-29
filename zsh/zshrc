@@ -1,7 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export ZSHZ_DATA="$HOME/.zshz"
 
-if [[ "${TERM}" =~ "alacritty|tmux" ]]; then
+if [[ "${TERM}" =~ "alacritty|tmux|st-git-256color" ]]; then
   ZSH_THEME="hyperzsh"
 else
   ZSH_THEME="console"
@@ -33,13 +33,9 @@ alias n='nnn -dHQTv'
 alias lx='lynx -cfg=~/.config/lynx/lynx.cfg'
 alias sp='spotify_player'
 alias ff='fastfetch'
-alias cm='clipmenu'
 alias root='su -l'
 alias rbt='doas shutdown -r now'
 alias off='doas shutdown -p now'
-# alias root='sudo su -'
-# alias rbt='sudo shutdown -r now'
-# alias off='sudo shutdown -p now'
 
 if [[ -f ~/.zshrc.local ]]; then
   . ~/.zshrc.local
