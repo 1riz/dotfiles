@@ -6,11 +6,11 @@ gap 1 1 1 1
 fontname "DejaVuSans:pixelsize=14:bold"
 
 # colors
-color activeborder "#0f096a"
-color inactiveborder "#020149"
-color menubg "#000014"
-color menufg "#ffffff"
-color font "#ffffff"
+color activeborder "#656c76"
+color inactiveborder "#3d444d"
+color menubg "#151b23"
+color menufg "#f0f6fc"
+color font "#f0f6fc"
 
 # groups
 sticky yes
@@ -23,14 +23,13 @@ htile 55
 vtile 55
 
 # key bindings (apps)
-bind-key CM-Return alacritty
+bind-key CM-Return xterm
 bind-key CM-Delete xlock
-bind-key 4-Return alacritty
+bind-key 4-Return xterm
 bind-key 4-f firefox
-bind-key 4-n "alacritty -o window.dimensions.lines=70 -e nvim"
-bind-key 4-v "alacritty -o window.dimensions.lines=70 -T vim -e vim"
-bind-key 4-h "alacritty -o window.dimensions.lines=50 -T htop -e htop"
-bind-key 4-t xterm
+bind-key 4-n "xterm -e nvim"
+bind-key 4-v "xterm -T vim -e vim"
+bind-key 4-h "xterm -T htop -e htop"
 bind-key 4-c xclock
 bind-key 4-l xlock
 bind-key 4-e xeyes
