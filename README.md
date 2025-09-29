@@ -16,7 +16,6 @@ My personal dotfiles.
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [splayer](https://github.com/aome510/spotify-player)
 - [cwm](https://cvsweb.openbsd.org/cgi-bin/cvsweb/xenocara/app/cwm/)
-- [spectrwm](https://github.com/conformal/spectrwm)
 - [xterm](https://invisible-island.net/xterm/)
 - [alacritty](https://github.com/alacritty/alacritty)
 
