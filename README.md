@@ -2,7 +2,7 @@
 
 My personal dotfiles.
 
-## Configs
+## configs
 
 - [zsh](https://www.zsh.org/)
 - [omz](https://github.com/ohmyzsh/ohmyzsh)
@@ -16,13 +16,23 @@ My personal dotfiles.
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [splayer](https://github.com/aome510/spotify-player)
 - [cwm](https://cvsweb.openbsd.org/cgi-bin/cvsweb/xenocara/app/cwm/)
+- [dwm](https://dwm.suckless.org/)
+- [st](https://st.suckless.org/)
 - [xterm](https://invisible-island.net/xterm/)
 - [alacritty](https://github.com/alacritty/alacritty)
 
-## Neovim config
+## dwm build
+
+- [1riz/dwm](https://github.com/1riz/dwm)
+
+## st build
+
+- [1riz/st](https://github.com/1riz/st)
+
+## neovim config
 
 - [1riz/nvim](https://github.com/1riz/nvim)
 
-## OhMyZsh plugins
+## omz plugins
 
 - [1riz/omz-plugins](https://github.com/1riz/omz-plugins)
