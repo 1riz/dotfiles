@@ -22,7 +22,8 @@ xset -dpms
 xset -b
 xset s off
 xset r rate 300 50
-xrdb ~/.config/dwm/xcursor.conf
+xrdb -merge ~/.config/dwm/xcursor.conf
+xrdb -merge ~/.config/xterm/xresources
 xsetroot -solid "#0d1117"
 sndioctl -q output.level=0.7
 sndioctl -q input.level=0.7

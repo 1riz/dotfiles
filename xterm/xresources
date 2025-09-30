@@ -4,5 +4,5 @@ XTerm*foreground:#dadada
 XTerm*scrollBar:false
 XTerm*geometry:135x35
 XTerm*internalBorder:4
-XTerm*faceName:Terminus:pixelsize=14
+XTerm*faceName:Terminus:pixelsize=13
 XTerm*scaleHeight:1.2
