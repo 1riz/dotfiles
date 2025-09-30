@@ -19,7 +19,6 @@ My personal dotfiles.
 - [dwm](https://dwm.suckless.org/)
 - [st](https://st.suckless.org/)
 - [xterm](https://invisible-island.net/xterm/)
-- [alacritty](https://github.com/alacritty/alacritty)
 
 ## dwm build
 

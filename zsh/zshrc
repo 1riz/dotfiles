@@ -1,7 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export ZSHZ_DATA="$HOME/.zshz"
 
-if [[ "${TERM}" =~ "alacritty|tmux|st-git-256color" ]]; then
+if [[ "${TERM}" =~ "st-git-256color|tmux" ]]; then
   ZSH_THEME="hyperzsh"
 else
   ZSH_THEME="console"

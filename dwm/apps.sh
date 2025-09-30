@@ -4,7 +4,6 @@ if [[ "${1}" == "list" ]]; then
 
   echo -e "st"
   echo -e "xterm"
-  echo -e "alacritty"
   echo -e "firefox"
   echo -e "lynx"
   echo -e "neovim"
@@ -29,9 +28,6 @@ else
       ;;
     xterm)
       xterm &
-      ;;
-    alacritty)
-      alacritty &
       ;;
     firefox)
       firefox &
