@@ -6,6 +6,7 @@ My personal dotfiles.
 
 - [zsh](https://www.zsh.org/)
 - [omz](https://github.com/ohmyzsh/ohmyzsh)
+- [ksh](https://cvsweb.openbsd.org/cgi-bin/cvsweb/src/bin/ksh/)
 - [tmux](https://github.com/tmux/tmux)
 - [nnn](https://github.com/jarun/nnn)
 - [vim](https://www.vim.org)

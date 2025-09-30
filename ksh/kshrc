@@ -1,0 +1,8 @@
+# /root/.kshrc
+#
+export PS1='\e[31m\h \e[36m\W \e[0m\$ '
+
+alias l='ls -alhF'
+alias la='ls -AlhF'
+alias rbt='shutdown -r now'
+alias off='shutdown -p now'
