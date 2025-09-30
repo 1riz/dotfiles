@@ -19,6 +19,7 @@ My personal dotfiles.
 - [dwm](https://dwm.suckless.org/)
 - [st](https://st.suckless.org/)
 - [xterm](https://invisible-island.net/xterm/)
+- [gtk](https://www.gtk.org/)
 
 ## dwm build
 
