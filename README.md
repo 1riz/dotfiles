@@ -20,6 +20,7 @@ My personal dotfiles.
 - [st](https://st.suckless.org/)
 - [xterm](https://invisible-island.net/xterm/)
 - [gtk](https://www.gtk.org/)
+- [xdg](https://www.freedesktop.org/wiki/Software/xdg-utils/)
 
 ## dwm build
 
