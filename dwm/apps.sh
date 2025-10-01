@@ -20,9 +20,10 @@ if [[ "${1}" == "list" ]]; then
 
 else
 
-  APP=$(< /dev/stdin)
+  app=$(< /dev/stdin)
+  set -A st_float_args -- "-c" "st-float" "-g" "100x20" "-s" "#0d1117@259" "-s" "#e6edf3@258" "-f" "FiraCodeNerdFont:pixelsize=14:antialias=true:autohint=true"
 
-  case "${APP}" in
+  case "${app}" in
     st)
       st &
       ;;
@@ -48,7 +49,7 @@ else
       st -e tmux -f ~/.config/tmux/tmux.conf new-session -A -s DEV &
       ;;
     nnn)
-      st -c st-float -g 100x20 -f "FiraCodeNerdFont:pixelsize=14:antialias=true:autohint=true" -T nnn -e nnn -QTv &
+      st "${st_float_args[@]}" -T nnn -e nnn -QTv &
       ;;
     feh)
       feh ~/Pictures/Posters/*.png &
@@ -63,7 +64,7 @@ else
       xclock &
       ;;
     bc)
-      st -c st-float -g 100x20 -f "FiraCodeNerdFont:pixelsize=14:antialias=true:autohint=true" -T bc -e bc -l &
+      st "${st_float_args[@]}" -T bc -e bc -l &
       ;;
     spotify)
       st -T spotify_player -e spotify_player &
