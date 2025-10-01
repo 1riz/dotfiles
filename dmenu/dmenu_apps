@@ -1,0 +1,71 @@
+#!/bin/sh
+
+if [ $# -eq 0 ]; then
+  cat << EOF
+firefox
+lynx
+st
+xterm
+nnn
+bc
+vi
+vim
+neovim
+tmux
+feh
+btop
+htop
+xclock
+spotify
+EOF
+elif [ "$1" = "-r" ]; then
+
+  app=$(cat /dev/stdin)
+  case "$app" in
+    firefox)
+      firefox &
+      ;;
+    lynx)
+      st -T lynx -e lynx -cfg=~/.config/lynx/lynx.cfg &
+      ;;
+    st)
+      st &
+      ;;
+    xterm)
+      xterm &
+      ;;
+    nnn)
+      st -c st-float -g 100x20 -s "#0d1117@259" -s "#e6edf3@258" -f "FiraCodeNerdFont:pixelsize=14:antialias=true:autohint=true" -T nnn -e nnn -QTv &
+      ;;
+    bc)
+      st -c st-float -g 100x20 -s "#0d1117@259" -s "#e6edf3@258" -f "FiraCodeNerdFont:pixelsize=14:antialias=true:autohint=true" -T bc -e bc -l &
+      ;;
+    vi)
+      st -T vi -e vi &
+      ;;
+    vim)
+      st -T vim -e vim &
+      ;;
+    neovim)
+      st -e nvim &
+      ;;
+    tmux)
+      st -e tmux -f ~/.config/tmux/tmux.conf new-session -A -s DEV &
+      ;;
+    feh)
+      feh ~/Pictures/Posters/*.png &
+      ;;
+    btop)
+      st -T btop -e btop &
+      ;;
+    htop)
+      st -T htop -e htop &
+      ;;
+    xclock)
+      xclock &
+      ;;
+    spotify)
+      st -T spotify_player -e spotify_player &
+      ;;
+  esac
+fi

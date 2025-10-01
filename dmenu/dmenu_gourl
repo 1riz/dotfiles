@@ -1,0 +1,2 @@
+#!/bin/sh
+dmenu_urls | dmenu "$@" | dmenu_urls -r

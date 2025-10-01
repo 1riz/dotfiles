@@ -1,0 +1,2 @@
+#!/bin/sh
+dmenu_apps | dmenu "$@" | dmenu_apps -r

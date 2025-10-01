@@ -1,0 +1,20 @@
+#!/bin/sh
+
+urls="${XDG_CONFIG_HOME}/bmks/urls"
+
+if [ $# -eq 0 ]; then
+  if [ -f "$urls" ]; then
+    cat "$urls"
+  else
+    cat << EOF
+duckduckgo.com
+openbsd.org
+wikipedia.org
+EOF
+  fi
+elif [ "$1" = "-r" ]; then
+  url=$(cat /dev/stdin)
+  if [ -n "$url" ]; then
+    firefox --new-tab "$url" &
+  fi
+fi
