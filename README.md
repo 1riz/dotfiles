@@ -22,6 +22,7 @@ My personal dotfiles.
 - [xterm](https://invisible-island.net/xterm/)
 - [gtk](https://www.gtk.org/)
 - [xdg](https://www.freedesktop.org/wiki/Software/xdg-utils/)
+- [slstatus](https://tools.suckless.org/slstatus/)
 
 ## dwm build
 

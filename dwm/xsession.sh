@@ -38,7 +38,7 @@ clipmenud &
 pkill -qf xbanish
 xbanish -i all -t 10 &
 
-pkill -SIGKILL -qf ~/.config/dwm/statusbar.sh
-~/.config/dwm/statusbar.sh &
+pkill -qf slstatus
+slstatus &
 
 dwm
