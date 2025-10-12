@@ -29,7 +29,7 @@ elif [ "$1" = "-r" ]; then
       st -T lynx -e lynx -cfg=~/.config/lynx/lynx.cfg &
       ;;
     st)
-      st &
+      st -f "IosevkaTermNerdFontMono:pixelsize=12.5:antialias=true:autohint=true" &
       ;;
     xterm)
       xterm &
