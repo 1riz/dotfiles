@@ -9,6 +9,7 @@ export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 export CM_DIR=$HOME/.cache/clipmenu
+export BROWSER=firefox
 
 if [ -z "${DBUS_SESSION_BUS_ADDRESS}" ]; then
   eval $(dbus-launch --sh-syntax --exit-with-x11)
@@ -22,14 +23,16 @@ xset -dpms
 xset -b
 xset s off
 xset r rate 300 50
+xmodmap -e "keycode 107 = End"
+xmodmap -e "keycode 103 = Delete"
 xrdb -merge ~/.config/dwm/xcursor.conf
 xrdb -merge ~/.config/xterm/xresources
 xsetroot -solid "#0d1117"
-sndioctl -q output.level=0.7
-sndioctl -q input.level=0.7
+sndioctl -q output.level=0.5
+sndioctl -q input.level=0.5
 sndioctl -q output.mute=1
 sndioctl -q input.mute=1
-xbacklight -set 50
+#xbacklight -set 50
 
 pkill -qf xsel
 pkill -qf clipmenud
@@ -42,3 +45,6 @@ pkill -qf slstatus
 slstatus &
 
 dwm
+
+pkill -qf xsel
+pkill -qf clipmenud
