@@ -6,7 +6,8 @@ PROMPT='$(_host_name)%{$fg[cyan]%}%c $(git_prompt_info)%{$reset_color%}$(_git_ti
 local _arrow="➜"
 
 function _host_name() {
-  local _nick="bsd"
+  # local _nick="bsd"
+  local _nick="mac"
   echo "%(!.%{$fg[red]%}.%{$fg[blue]%})$_nick%{$reset_color%} "
 }
 

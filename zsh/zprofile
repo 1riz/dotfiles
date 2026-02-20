@@ -1,3 +1,1 @@
-export PATH=$HOME/.local/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/opt/bin:/usr/local/bin:/usr/local/sbin
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
+eval "$(/opt/homebrew/bin/brew shellenv)"
