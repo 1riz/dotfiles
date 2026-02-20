@@ -21,6 +21,7 @@ My personal dotfiles.
 - [st](https://st.suckless.org/)
 - [xterm](https://invisible-island.net/xterm/)
 - [alacritty](https://github.com/alacritty/alacritty)
+- [ghostty](https://github.com/ghostty-org/ghostty)
 - [gtk](https://www.gtk.org/)
 - [xdg](https://www.freedesktop.org/wiki/Software/xdg-utils/)
 - [dmenu](https://tools.suckless.org/dmenu/)
