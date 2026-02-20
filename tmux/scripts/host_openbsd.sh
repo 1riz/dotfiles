@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/ksh
 
-ssh_cmd=$(ps -h -o cmd -t "${1}" | rg ssh)
+ssh_cmd=$(ps -o command -t "${1}" | rg ssh)
 
 if [[ $ssh_cmd == ssh* ]]; then
   echo "${ssh_cmd}" | cut -d "@" -f 2
