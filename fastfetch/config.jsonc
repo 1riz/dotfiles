@@ -7,36 +7,38 @@
         }
     },
     "display": {
-        "color": {
-            "keys": "cyan",
-            "separator": "cyan",
-            "output": "white"
+        "color": "yellow",
+        "percent": {
+            "type": 1
         }
     },
     "modules": [
-        "separator",
+        {
+            "type": "custom",
+            "format": "────────────────────────────────────────────────────────"
+        },
         "os",
         "host",
+        "kernel",
         "uptime",
-        "processes",
         "packages",
         "shell",
+        "lm",
         "wm",
         "terminal",
         "terminalfont",
-        "display",
-        {
-            "type": "cpu",
-            "temp": true
-        },
+        "cpu",
         "gpu",
-        "cpuusage",
+        "monitor",
         "memory",
-        "swap",
         "disk",
         "localip",
         "battery",
+        "poweradapter",
         "locale",
-        "separator"
+        {
+            "type": "custom",
+            "format": "────────────────────────────────────────────────────────"
+        }
     ]
 }
