@@ -17,6 +17,7 @@ My personal dotfiles.
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [lazygit](https://github.com/jesseduffield/lazygit)
 - [splayer](https://github.com/aome510/spotify-player)
+- [aichat](https://github.com/sigoden/aichat)
 - [cwm](https://cvsweb.openbsd.org/cgi-bin/cvsweb/xenocara/app/cwm/)
 - [dwm](https://dwm.suckless.org/)
 - [st](https://st.suckless.org/)
