@@ -1,0 +1,36 @@
+[terminal]
+shell = { program = "/usr/local/bin/zsh", args = ["-l"] }
+
+[mouse]
+hide_when_typing = true
+
+[colors.primary]
+background = "#000000"
+foreground = "#dadada"
+
+[cursor.style]
+blinking = "On"
+
+[font]
+size = 9
+
+[font.normal]
+family = "FiraCodeNerdFont"
+
+[font.offset]
+x = 0
+y = 3
+
+[window]
+opacity = 1.0
+
+[window.dimensions]
+columns = 130
+lines = 35
+
+[window.padding]
+x = 4
+y = 4
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1.0"
