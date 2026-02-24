@@ -4,18 +4,14 @@ gui:
   showBottomLine: false
   showPanelJumps: false
   nerdFontsVersion: "3"
-
 git:
-  paging:
-    colorArg: always
-    pager: "delta --dark --paging=never --line-numbers"
-
+  pagers:
+    - colorArg: always
+      pager: "delta --dark --paging=never --line-numbers"
 update:
   method: never
-
 disableStartupPopups: true
 notARepository: skip
-
 customCommands:
   - key: "W"
     context: "files"
